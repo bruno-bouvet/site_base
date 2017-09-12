@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Entity;
+namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Post
  *
  * @ORM\Table(name="post")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\PostRepository")
+ * @ORM\Entity(repositoryClass="BlogBundle\Repository\PostRepository")
  */
 class Post
 {
@@ -36,13 +36,6 @@ class Post
     private $author;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="post", type="string", length=255)
-     */
-    private $post;
-
-    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="datetime")
@@ -52,165 +45,146 @@ class Post
     /**
      * @var string
      *
-     * @ORM\Column(name="comment", type="string", length=255)
+     * @ORM\Column(name="comment", type="text", nullable=true)
      */
     private $comment;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=255)
-     */
-    private $image;
-
-    /**
-     * @ORM\Column(name="tag", type="string", length=50)
+     * @ORM\Column(name="tag", type="string", length=255, nullable=true)
      */
     private $tag;
-    /**
-     * @param int $id
-     * @return Post
-     */
-    public function setId(int $id): Post
-    {
-        $this->id = $id;
-        return $this;
-    }
+
 
     /**
+     * Get id
+     *
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
 
     /**
+     * Set title
+     *
      * @param string $title
+     *
      * @return Post
      */
-    public function setTitle(string $title): Post
+    public function setTitle($title)
     {
         $this->title = $title;
+
         return $this;
     }
 
     /**
+     * Get title
+     *
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
 
     /**
+     * Set author
+     *
      * @param string $author
+     *
      * @return Post
      */
-    public function setAuthor(string $author): Post
+    public function setAuthor($author)
     {
         $this->author = $author;
+
         return $this;
     }
 
     /**
+     * Get author
+     *
      * @return string
      */
-    public function getAuthor(): string
+    public function getAuthor()
     {
         return $this->author;
     }
 
     /**
-     * @param string $post
-     * @return Post
-     */
-    public function setPost(string $post): Post
-    {
-        $this->post = $post;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPost(): string
-    {
-        return $this->post;
-    }
-
-    /**
+     * Set date
+     *
      * @param \DateTime $date
+     *
      * @return Post
      */
-    public function setDate(\DateTime $date): Post
+    public function setDate($date)
     {
         $this->date = $date;
+
         return $this;
     }
 
     /**
+     * Get date
+     *
      * @return \DateTime
      */
-    public function getDate(): \DateTime
+    public function getDate()
     {
         return $this->date;
     }
 
     /**
+     * Set comment
+     *
      * @param string $comment
+     *
      * @return Post
      */
-    public function setComment(string $comment): Post
+    public function setComment($comment)
     {
         $this->comment = $comment;
+
         return $this;
     }
 
     /**
+     * Get comment
+     *
      * @return string
      */
-    public function getComment(): string
+    public function getComment()
     {
         return $this->comment;
     }
 
     /**
-     * @param string $image
+     * Set tag
+     *
+     * @param string $tag
+     *
      * @return Post
      */
-    public function setImage(string $image): Post
-    {
-        $this->image = $image;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImage(): string
-    {
-        return $this->image;
-    }
-
-    /**
-     * @param mixed $tag
-     * @return Post
-     */
-    public function setTag($tag): Post
+    public function setTag($tag)
     {
         $this->tag = $tag;
+
         return $this;
     }
 
     /**
-     * @return mixed
+     * Get tag
+     *
+     * @return string
      */
-    public function getTag(): string
+    public function getTag()
     {
         return $this->tag;
     }
-
-
 }
 

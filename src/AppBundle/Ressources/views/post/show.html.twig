@@ -18,6 +18,10 @@
                 <td>{{ post.author }}</td>
             </tr>
             <tr>
+                <th>Post</th>
+                <td>{{ post.post }}</td>
+            </tr>
+            <tr>
                 <th>Date</th>
                 <td>{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
@@ -26,8 +30,8 @@
                 <td>{{ post.comment }}</td>
             </tr>
             <tr>
-                <th>Tag</th>
-                <td>{{ post.tag }}</td>
+                <th>Image</th>
+                <td>{{ post.image }}</td>
             </tr>
         </tbody>
     </table>

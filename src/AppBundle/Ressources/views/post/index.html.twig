@@ -9,9 +9,10 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Author</th>
+                <th>Post</th>
                 <th>Date</th>
                 <th>Comment</th>
-                <th>Tag</th>
+                <th>Image</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,9 +22,10 @@
                 <td><a href="{{ path('post_show', { 'id': post.id }) }}">{{ post.id }}</a></td>
                 <td>{{ post.title }}</td>
                 <td>{{ post.author }}</td>
+                <td>{{ post.post }}</td>
                 <td>{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ post.comment }}</td>
-                <td>{{ post.tag }}</td>
+                <td>{{ post.image }}</td>
                 <td>
                     <ul>
                         <li>
