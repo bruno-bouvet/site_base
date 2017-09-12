@@ -3,19 +3,7 @@ blog:
     type:     annotation
     prefix:   /
 
-image:
-    resource: "@AppBundle/Controller/ImageController.php"
-    type:     annotation
-
-post:
-    resource: "@AppBundle/Controller/PostController.php"
-    type:     annotation
-
 cv:
-    resource: "@CvBundle/Controller/DefaultController.php"
+    resource: "@CvBundle/Controller/"
     type:     annotation
-    prefix:   /CV
-
-app:
-    resource: '@AppBundle/Controller/DefaultController.php'
-    type: annotation
+    prefix:   /

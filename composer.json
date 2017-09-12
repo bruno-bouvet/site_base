@@ -5,7 +5,6 @@
     "autoload": {
         "psr-4": {
             "BlogBundle\\": "src/BlogBundle",
-            "AppBundle\\": "src/AppBundle",
             "CvBundle\\": "src/CvBundle"
         },
         "classmap": [
