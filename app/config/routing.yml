@@ -1,8 +1,9 @@
+blog:
+    resource: "@BlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 cv:
     resource: "@CvBundle/Controller/"
     type:     annotation
     prefix:   /
-
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
