@@ -4,21 +4,21 @@
 
 .navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 4px 20px; margin: 10px auto; transition: transform 0.3s; }
 
-.navbar-nav.navbar-right li:hover {
-    background: RGBA(40, 129, 187, .8);
-    color: white;
-    -webkit-transition: width 2s; /* Safari */
-    transition: 2s;
-
+.test:hover {
+    background: #2881BB;
+    /*-webkit-transition: width 1s; !* Safari *!*/
+    /*transition: 1s;*/
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
 }
 .navbar-nav.navbar-right li:hover>a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
     color: #ffffff;
-    -webkit-transition: width 2s; /* Safari */
-    transition: 2s;
-}
-
-.navbar-nav.navbar-right li:visited {
-    border-bottom: 2px solid red;
 }
 
 .navbar .navbar-collapse { position: relative; overflow: hidden !important; }
@@ -34,9 +34,18 @@
 .btn.btn-outline { background-color: transparent; }
 
 .navbar-nav.navbar-right .btn:not(.collapsed) {
-    background-color: rgb(111, 84, 153);
-    border-color: rgb(111, 84, 153);
+    background-color: rgba(40, 129, 187, 1.00);
+    border-color: rgba(40, 129, 187, 1.00);
     color: rgb(255, 255, 255);
+}
+
+.navbar-nav.navbar-right .btn:hover {
+    color: #FFFFFF;
+    background: rgba(40, 129, 187, 1.00);
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
 }
 
 .navbar.navbar-default .nav-collapse,
