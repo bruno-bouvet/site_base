@@ -3,6 +3,10 @@
 }
 
 .jasgrid{padding:0;}
+
+#article-section-title {
+    margin-top: 2em;
+}
 .box-item {
     float: left;
     opacity: 1;
@@ -10,12 +14,16 @@
     position: relative;
     margin-bottom: 2em !important;
 }
+.box-item:first-child {
+    margin-top: 0;
+}
 
 .box-item img{
     width: 100%;
     -moz-transition:-moz-transform 0.3s ease-in;
     -webkit-transition:-webkit-transform 0.3s ease-in;
     -o-transition:-o-transform 0.3s ease-in;
+    max-height: 500px;
 }
 .box-item img:hover{
     -moz-transform:scale(1.1);
@@ -66,14 +74,16 @@
 /*.sidebar-tabing .media{margin-top: 20px}*/
 /*.sidebar-tabing img{width: 120px;height: 100px;}*/
 /*.sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px}*/
+
 .side-bar .nav-tabs{border-bottom:none;}
 .side-bar .nav-tabs .nav-link {color: #aeaeae; text-transform: uppercase; border: none;}
 .side-bar .nav-tabs .nav-link.active, .side-bar .nav-tabs .nav-link:hover{border-bottom:2px solid #ff0000;  text-transform: uppercase; color: #222}
-.sidebar-tabing .media{margin-top: 20px}
+.sidebar-tabing .media{margin-top: 20px; float: left}
 .sidebar-tabing {max-height: 1000px; overflow-y: scroll;}
 .sidebar-tabing img{width: 120px;height: 100px;}
-.sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px}
-
+.sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px; text-decoration: none; margin-left: 1em}
+.sidebar-tabing .title-small>a {text-decoration: none}
+.sidebar-tabing .news-auther {margin-left: 1em}
 
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
@@ -84,8 +94,11 @@ a, a:hover, .btn{outline:none!important;}
 section{padding: 30px 0; float: left; width: 100%}
 .card{float: left; width:100%}
 .navbar {border: medium none; float: left; margin-bottom: 0px; width: 100%;  border-radius: 0}
-.title-large {font-size: 20px; margin: 10px 0 5px; line-height: 27px; color: #141517;}
-.title-small { color: #141517; font-size: 16px; font-weight: 400; line-height: 23px; margin: 6px 0 0;}
+.title-large {font-size: 20px; margin: 10px 0 5px; line-height: 27px; color: #141517; text-decoration: none;}
+.title-large:hover { color: #2881BB; text-decoration: none;}
+.title-small { color: #141517; font-size: 16px; font-weight: 400; line-height: 23px; margin: 6px 0 0;
+    text-decoration: none;}
+.title-small:hover { color: #2881BB; text-decoration: none;}
 .title-x-small {font-size: 18px; margin: 0px;}
 .title-large a, .title-small a, .title-x-small a{color: inherit}
 .banner-sec{float: left; width: 100%; background: #EBEBEB}
