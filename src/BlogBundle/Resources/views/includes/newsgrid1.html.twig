@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <h1 id="article-section-title">Dernier articles</h1><br><br>
+        <h1 id="title-large">Dernier articles</h1><br><br>
         <!-- Article section -->
         <div class="col-lg-8  col-md-8 col-sm-12 jasgrid pull-left">
             <div class="box-item">
@@ -230,10 +230,8 @@
 
         <aside class="col-lg-4 col-md-4 col-sm-12 side-bar">
             <ul class="nav nav-tabs" role="tablist" id="myTab">
-                <li class="nav-item active"><a class="nav-link active" data-toggle="tab" href="#home" role="tab">LES DERNIÈRES ACTUS</a>
+                <li><a>LES DERNIÈRES ACTUS</a>
                 </li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab">Top</a></li>
-                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab">Featured</a></li>
             </ul>
 
             <!-- Tab panes -->
@@ -247,7 +245,15 @@
                                 <p class="title-small"><a href="#">Key Republicans sign letter warning against
                                         candidate</a></p>
                             </div>
-                            <div class="news-auther"><p class="time">1h ago</p></div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="news-auther"><p class="time">1h ago</p></div>
+                                </div>
+                                <div class="col-sm-6 pull-right">
+                                    <i class="fa fa-comment-o pull-right nbr-comments" aria-hidden="true">10</i>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
@@ -344,13 +350,13 @@
                 </div>
             </div>
             {#<div class="video-sec">#}
-                {#<h4 class="heading-small">Featured Video</h4>#}
-                {#<div class="video-block">#}
-                    {#<div class="embed-responsive embed-responsive-4by3">#}
-                        {#<iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"#}
-                                {#allowfullscreen></iframe>#}
-                    {#</div>#}
-                {#</div>#}
+            {#<h4 class="heading-small">Featured Video</h4>#}
+            {#<div class="video-block">#}
+            {#<div class="embed-responsive embed-responsive-4by3">#}
+            {#<iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"#}
+            {#allowfullscreen></iframe>#}
+            {#</div>#}
+            {#</div>#}
             {#</div>#}
         </aside>
         <!-- /.Last news section -->
@@ -365,16 +371,16 @@
     })
 
 
-    $(window).load(function() {
+    $(window).load(function () {
         var boxheight = $('#myCarousel .carousel-inner').innerHeight();
         var itemlength = $('#myCarousel .item').length;
-        var triggerheight = Math.round(boxheight/itemlength+1);
+        var triggerheight = Math.round(boxheight / itemlength + 1);
         $('#myCarousel .list-group-item').outerHeight(triggerheight);
     });
 
-    var monthNames = [ "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December" ];
-    var dayNames= ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+    var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
     var newDate = new Date();
     newDate.setDate(newDate.getDate() + 1);

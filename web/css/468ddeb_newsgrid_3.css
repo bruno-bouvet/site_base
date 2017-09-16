@@ -4,9 +4,7 @@
 
 .jasgrid{padding:0;}
 
-#article-section-title {
-    margin-top: 2em;
-}
+
 .box-item {
     float: left;
     opacity: 1;
@@ -79,11 +77,12 @@
 .side-bar .nav-tabs .nav-link {color: #aeaeae; text-transform: uppercase; border: none;}
 .side-bar .nav-tabs .nav-link.active, .side-bar .nav-tabs .nav-link:hover{border-bottom:2px solid #ff0000;  text-transform: uppercase; color: #222}
 .sidebar-tabing .media{margin-top: 20px; float: left}
-.sidebar-tabing {max-height: 1000px; overflow-y: scroll;}
+.sidebar-tabing {max-height: 1000px;}
 .sidebar-tabing img{width: 120px;height: 100px;}
 .sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px; text-decoration: none; margin-left: 1em}
 .sidebar-tabing .title-small>a {text-decoration: none}
 .sidebar-tabing .news-auther {margin-left: 1em}
+.sidebar-tabing .nbr-comments { margin:5px;}
 
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
