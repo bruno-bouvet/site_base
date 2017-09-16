@@ -1,0 +1,57 @@
+<div style="position: fixed;
+bottom: 0;
+border-top : 2px solid #69d2e7;
+display: block;
+background-color: #ffffff;
+color: #69d2e7;
+width: 100%;
+opacity: 0.9;
+font-size: 12px;
+z-index: 98;
+" id="proarti-cookie"
+>
+    <div class="container" style="padding-left: 15px; padding-right: 15px;">
+        <div class="row text-center">
+            <div class="col-xs-10 col-sm-offset-1">
+                <p style="margin-top: 10px; line-height: 1.5;">En
+                    poursuivant votre navigation sur ce site, vous acceptez
+                    l'utilisation de cookies utilisés pour vous proposer un contenu adapté à vos centres
+                    d'intérêt.
+                    <br>
+                    Pour en savoir plus, veuillez <a href="#"
+                                                     target="_blank">cliquez ici</a>.
+                </p>
+            </div>
+            <div class="col-xs-1">
+                <p style="padding: 14px; margin: 0;">
+                    <button style="
+						border: 1px solid #69d2e7;
+						width: 24px;
+						height: 24px;
+						font-size: 15px;
+						color: #69d2e7;
+						background-color: transparent;"
+                            id="proarti-cookie-button-remove">
+                        X
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        if ($.cookie('Proarti_cookie_display') == undefined) {
+
+            $('#proarti-cookie-button-remove').on('click', function () {
+                $('#proarti-cookie').hide();
+            });
+
+            var date = new Date();
+            date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
+            $.cookie('Proarti_cookie_display', true, {expires: date, path: '/'})
+        } else {
+            $('#proarti-cookie').hide();
+        }
+    });
+</script>

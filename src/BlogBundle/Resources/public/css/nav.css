@@ -59,6 +59,32 @@
     transform: translate(0px,0px);
 }
 
+.navbar .container {
+    text-align: center;
+}
+.navbar-collapse .navbar-brand {
+    display: inline-block;
+    float: none;
+    padding: 0;
+    margin: 0 !important;
+    overflow: visible;
+}
+.navbar-collapse .navbar-brand .white-circle {
+    display: block;
+    width: 161px;
+    height: 161px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px dotted red;
+    position: relative;
+    z-index: 2;
+}
+.navbar-collapse .navbar-brand .white-circle .logo {
+    width: 161px;
+    height: 161px;
+}
+
+
 
 @media screen and (max-width: 767px) {
     .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }

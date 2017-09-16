@@ -222,9 +222,6 @@ fieldset[disabled] .btn-xl.active {
     background-color: white;
 }
 
-/*!*////////////////////////////////////////!*/*/
-/*!*/////////////////NAVBAR/////////////////!*/*/
-/*!*///////////////////////////////////////!*/*/
 
 
 /*.navbar {*/
@@ -666,7 +663,10 @@ section#contact .text-danger {
 footer {
     padding: 25px 0;
     text-align: center;
+    background: #dadada;
+    margin-top: 2em;
 }
+
 footer span.copyright {
     line-height: 40px;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
