@@ -1,5 +1,4 @@
-{#<div class="container-fluid">#}
-
+{% block navbar %}
 <nav class="navbar navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -30,7 +29,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4">
                     <h1>Grafreez News
-                        <small>Get the latest News</small>
+                        <small >Get the latest News</small>
                     </h1>
                 </div>
                 <div class="col-md-6 col-lg-3 ml-auto admin-bar hidden-sm-down pull-right">
@@ -46,8 +45,6 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-collapse-2">
-
-
         <ul class="nav navbar-nav navbar-right">
             <li class="test"><a href="#">Home</a></li>
             <li class="test"><a href="#">About</a></li>
@@ -70,41 +67,47 @@
                     <label class="sr-only" for="Password">Password</label>
                     <input type="password" class="form-control" id="Password" placeholder="Password" required/>
                 </div>
-                <button type="submit" class="btn btn-success">Sign in</button>
+                <button type="submit" class="btn btn-success">Se connecter</button>
+                <button type="submit" class="btn btn-success">Créer compte</button>
+
             </form>
         </div>
     </div><!-- /.navbar-collapse -->
+
 </nav><!-- /.navbar -->
-{#</div>#}
-{% block javascript %}
-    <script>
-        $(document).ready(function () {
 
-            var navPos, winPos, navHeight;
+    {% endblock navbar %}
 
-            function refreshVar() {
-                navPos = $('nav').offset().top;
-                navHeight = $('nav').outerHeight(true);
-            }
 
-            refreshVar();
-            $(window).resize(refreshVar);
+{#{% block javascript %}#}
+    {#<script>#}
+        {#$(document).ready(function () {#}
 
-            $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
+            {#var navPos, winPos, navHeight;#}
 
-            $(window).scroll(function () {
-                winPos = $(window).scrollTop();
+            {#function refreshVar() {#}
+                {#navPos = $('nav').offset().top;#}
+                {#navHeight = $('nav').outerHeight(true);#}
+            {#}#}
 
-                if (winPos >= navPos) {
-                    $('nav').addClass('fixed shadow');
-                    $('.clone-nav').show();
-                }
-                else {
-                    $('nav').removeClass('fixed shadow');
-                    $('.clone-nav').hide();
-                }
-            });
+            {#refreshVar();#}
+            {#$(window).resize(refreshVar);#}
 
-        });
-    </script>
-{% endblock javascript %}
+            {#$('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();#}
+
+            {#$(window).scroll(function () {#}
+                {#winPos = $(window).scrollTop();#}
+
+                {#if (winPos >= navPos) {#}
+                    {#$('nav').addClass('fixed shadow');#}
+                    {#$('.clone-nav').show();#}
+                {#}#}
+                {#else {#}
+                    {#$('nav').removeClass('fixed shadow');#}
+                    {#$('.clone-nav').hide();#}
+                {#}#}
+            {#});#}
+
+        {#});#}
+    {#</script>#}
+{#{% endblock javascript %}#}
