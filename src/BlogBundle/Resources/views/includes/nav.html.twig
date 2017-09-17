@@ -10,11 +10,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-2">
+            <div class="navbar-brand hidden-xs">
+                <a class="white-circle" href="">
+                    <img class="logo" src="http://excitive.me/demo/temp/logo.svg" alt="Logo">
+                </a>
+            </div>
+
             <ul class="nav navbar-nav navbar-right">
                 <li class="test"><a href="#">Home</a></li>
                 <li class="test"><a href="#">About</a></li>
@@ -43,3 +49,35 @@
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
 {#</div>#}
+{% block javascript %}
+<script>
+    $(document).ready(function() {
+
+        var navPos, winPos, navHeight;
+
+        function refreshVar() {
+            navPos = $('nav').offset().top;
+            navHeight = $('nav').outerHeight(true);
+        }
+
+        refreshVar();
+        $(window).resize(refreshVar);
+
+        $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
+
+        $(window).scroll(function() {
+            winPos = $(window).scrollTop();
+
+            if (winPos >= navPos) {
+                $('nav').addClass('fixed shadow');
+                $('.clone-nav').show();
+            }
+            else {
+                $('nav').removeClass('fixed shadow');
+                $('.clone-nav').hide();
+            }
+        });
+
+    });
+</script>
+{% endblock javascript %}
