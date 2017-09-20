@@ -5,7 +5,11 @@ namespace BlogBundle\Controller;
 use BlogBundle\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Form\Form;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Post controller.
@@ -17,8 +21,10 @@ class PostController extends Controller
     /**
      * Lists all post entities.
      *
-     * @Route("/", name="post_index")
+     * @Route("/post", name="post_index")
      * @Method("GET")
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
     public function indexAction()
     {
@@ -26,7 +32,7 @@ class PostController extends Controller
 
         $posts = $em->getRepository('BlogBundle:Post')->findAll();
 
-        return $this->render('post/index.html.twig', array(
+        return $this->render('@Blog/Default/post/index.html.twig', array(
             'posts' => $posts,
         ));
     }
@@ -36,6 +42,8 @@ class PostController extends Controller
      *
      * @Route("/new", name="post_new")
      * @Method({"GET", "POST"})
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
     public function newAction(Request $request)
     {
@@ -51,7 +59,7 @@ class PostController extends Controller
             return $this->redirectToRoute('post_show', array('id' => $post->getId()));
         }
 
-        return $this->render('post/new.html.twig', array(
+        return $this->render('@Blog/Default/post/new.html.twig', array(
             'post' => $post,
             'form' => $form->createView(),
         ));
@@ -67,7 +75,7 @@ class PostController extends Controller
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('post/show.html.twig', array(
+        return $this->render('@Blog/Default/post/show.html.twig', array(
             'post' => $post,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -78,6 +86,10 @@ class PostController extends Controller
      *
      * @Route("/{id}/edit", name="post_edit")
      * @Method({"GET", "POST"})
+     * @param Request $request
+     * @param Post $post
+     * @return RedirectResponse|Response
+     * @throws \LogicException
      */
     public function editAction(Request $request, Post $post)
     {
@@ -91,7 +103,7 @@ class PostController extends Controller
             return $this->redirectToRoute('post_edit', array('id' => $post->getId()));
         }
 
-        return $this->render('post/edit.html.twig', array(
+        return $this->render('@Blog/Default/post/edit.html.twig', array(
             'post' => $post,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -103,8 +115,13 @@ class PostController extends Controller
      *
      * @Route("/{id}", name="post_delete")
      * @Method("DELETE")
+     * @param Request $request
+     * @param Post $post
+     * @return RedirectResponse
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
-    public function deleteAction(Request $request, Post $post)
+    public function deleteAction(Request $request, Post $post): RedirectResponse
     {
         $form = $this->createDeleteForm($post);
         $form->handleRequest($request);
@@ -123,9 +140,9 @@ class PostController extends Controller
      *
      * @param Post $post The post entity
      *
-     * @return \Symfony\Component\Form\Form The form
+     * @return Form The form
      */
-    private function createDeleteForm(Post $post)
+    private function createDeleteForm(Post $post): Form
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('post_delete', array('id' => $post->getId())))

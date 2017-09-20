@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% block html_tag %}
+<html lang="{{ app.request.locale }}">
+{% endblock html_tag %}
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="fr"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="fr"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="fr"> <!--<![endif]-->
+{% block head %}
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="{{ _charset }}"/>
+        <title>{% block title %}CV Bruno Bouvet{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/cv/image/favicon.png') }}"/>
+
+        {% block stylesheets %}
+
+            {% stylesheets
+            '@CvBundle/Resources/public/css/default.css'
+            '@CvBundle/Resources/public/css/fonts.css'
+            '@CvBundle/Resources/public/css/layout.css'
+            '@CvBundle/Resources/public/css/magnific-popup.css'
+            '@CvBundle/Resources/public/css/media-queries.css'
+
+            filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+
+
+            <!-- Latest compiled and minified CSS -->
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+                  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+                  crossorigin="anonymous">
+
+            <!-- load css font awesome-->
+            <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css"
+                  integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU"
+                  crossorigin="anonymous">
+
+            <!-- load google fonts-->
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        {% endblock stylesheets %}
+
+
+    </head>
+{% endblock head %}
+<body>
+{% block body %}
+
+{% endblock body %}
+
+{% block footer %}
+    {#{% include '@Blog/includes/footer.html.twig' %}#}
+{% endblock %}
+
+
+{% block javascripts %}
+
+    {% javascripts
+    '@CvBundle/Resources/public/javascript/init.js'
+    '@CvBundle/Resources/public/javascript/jquery.fittext.js'
+    '@CvBundle/Resources/public/javascript/magnific-popup.js'
+    '@CvBundle/Resources/public/javascript/waypoints.js'
+    '@CvBundle/Resources/public/javascript/jquery.flexslider.js'
+    '@CvBundle/Resources/public/javascript/jquery.fittext.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+{% endblock %}
+</body>
+</html>
