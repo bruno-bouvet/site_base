@@ -1,112 +1,79 @@
 {% block navbar %}
-<nav class="navbar navbar-default">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <div class="container">
-                <div class="row">
-                    <div class=" col-sm-12 pull-right">
-                        <div class="social-icon pull-right">
-
-                            <a target="_blank" href="#" class=" fa fa-facebook"></a>
-                            <a target="_blank" href="#" class=" fa fa-twitter"></a>
-                            <a target="_blank" href="#" class=" fa fa-linkedin"></a>
-                        </div>
-                    </div>
-                </div>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
             </div>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#navbar-collapse-2">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
 
-        </div>
-        <div class="top-head left">
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <h1>Techsquids News
-                        <small >Get the latest News</small>
-                    </h1>
-                </div>
-                <div class="col-md-6  ml-auto admin-bar hidden-sm-down pull-right">
-                    <nav class="nav nav-inline"><a href="#" class="nav-link"><i
-                                    class="fa fa-envelope-o"></i></a> <a href="#" class="nav-link"><i
-                                    class="fa fa-bell-o"></i></a> <a href="#" class="nav-link">Bruno Bouvet <img
-                                    style="border-radius: 50%"
-                                    class="img-fluid rounded-circle"
-                                    src="{{ asset('bundles/blog/image/20271311.jpeg') }}"></a></nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbar-collapse-2">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="test"><a href="#">Home</a></li>
-            <li class="test"><a href="#">Tech</a></li>
-            <li class="test"><a href="#">Marketing</a></li>
-            <li class="test"><a href="#">Dev</a></li>
-            <li class="test"><a href="#">CV</a></li>
-            <li class="test"><a href="#">Contact</a></li>
-            <li>
-                <a class="btn btn-default btn-outline btn-circle collapsed " data-toggle="collapse"
-                   href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Connection</a>
-            </li>
-        </ul>
-        <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
-            <form class="navbar-form navbar-right form-inline" role="form">
-                <div class="form-group">
-                    <label class="sr-only" for="Email">Email</label>
-                    <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required/>
-                </div>
-                <div class="form-group">
-                    <label class="sr-only" for="Password">Password</label>
-                    <input type="password" class="form-control" id="Password" placeholder="Password" required/>
-                </div>
-                <button type="submit" class="btn btn-success">Se connecter</button>
-                <button type="submit" class="btn btn-success">Créer compte</button>
-
-            </form>
-        </div>
-    </div><!-- /.navbar-collapse -->
-
-</nav><!-- /.navbar -->
-
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="{{ path('cv_default_index') }}">CV</a></li>
+                    {#<li>#}
+                        {#<a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>#}
+                    {#</li>#}
+                </ul>
+                {#<div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">#}
+                    {#<form class="navbar-form navbar-right form-inline" role="form">#}
+                        {#<div class="form-group">#}
+                            {#<label class="sr-only" for="Email">Email</label>#}
+                            {#<input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />#}
+                        {#</div>#}
+                        {#<div class="form-group">#}
+                            {#<label class="sr-only" for="Password">Password</label>#}
+                            {#<input type="password" class="form-control" id="Password" placeholder="Password" required />#}
+                        {#</div>#}
+                        {#<button type="submit" class="btn btn-success">Sign in</button>#}
+                    {#</form>#}
+                {#</div>#}
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
     {% endblock navbar %}
 
 
-{#{% block javascript %}#}
-    {#<script>#}
-        {#$(document).ready(function () {#}
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
 
-            {#var navPos, winPos, navHeight;#}
+            var navPos, winPos, navHeight;
 
-            {#function refreshVar() {#}
-                {#navPos = $('nav').offset().top;#}
-                {#navHeight = $('nav').outerHeight(true);#}
-            {#}#}
+            function refreshVar() {
+                navPos = $('nav').offset().top;
+                navHeight = $('nav').outerHeight(true);
+            }
 
-            {#refreshVar();#}
-            {#$(window).resize(refreshVar);#}
+            refreshVar();
+            $(window).resize(refreshVar);
 
-            {#$('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();#}
+            $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
 
-            {#$(window).scroll(function () {#}
-                {#winPos = $(window).scrollTop();#}
+            $(window).scroll(function () {
+                winPos = $(window).scrollTop();
 
-                {#if (winPos >= navPos) {#}
-                    {#$('nav').addClass('fixed shadow');#}
-                    {#$('.clone-nav').show();#}
-                {#}#}
-                {#else {#}
-                    {#$('nav').removeClass('fixed shadow');#}
-                    {#$('.clone-nav').hide();#}
-                {#}#}
-            {#});#}
+                if (winPos >= navPos) {
+                    $('nav').addClass('fixed shadow');
+                    $('.clone-nav').show();
+                }
+                else {
+                    $('nav').removeClass('fixed shadow');
+                    $('.clone-nav').hide();
+                }
+            });
 
-        {#});#}
-    {#</script>#}
-{#{% endblock javascript %}#}
+        });
+    </script>
+{% endblock javascript %}
