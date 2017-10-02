@@ -193,6 +193,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 6em !important;
 }
 
 .navbar-brand>img {
@@ -927,9 +928,9 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
-body {
-    webkit-tap-highlight-color: #fed136;
-}
+/*body {*/
+    /*webkit-tap-highlight-color: #fed136;*/
+/*}*/
 
 
 /* news grid homepage*/

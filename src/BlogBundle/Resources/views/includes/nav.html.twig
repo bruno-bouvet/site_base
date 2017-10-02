@@ -1,31 +1,58 @@
-{% block navbar %}
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Brand</a>
-            </div>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbar-collapse-2">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="{{ path('cv_default_index') }}">CV</a></li>
+
+{#{% block navbar %}#}
+    {#<nav class="navbar navbar-default">#}
+        {#<div class="container">#}
+            {#<!-- Brand and toggle get grouped for better mobile display -->#}
+            {#<div class="navbar-header">#}
+                {#<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">#}
+                    {#<span class="sr-only">Toggle navigation</span>#}
+                    {#<span class="icon-bar"></span>#}
+                    {#<span class="icon-bar"></span>#}
+                    {#<span class="icon-bar"></span>#}
+                {#</button>#}
+                {#<a class="navbar-brand" href="#">Brand</a>#}
+            {#</div>#}
+
+            {#<!-- Collect the nav links, forms, and other content for toggling -->#}
+            {#<div class="collapse navbar-collapse" id="navbar-collapse-2">#}
+                {#<ul class="nav navbar-nav navbar-right">#}
+                    {#<li><a href="#">Home</a></li>#}
+                    {#<li><a href="#">About</a></li>#}
+                    {#<li><a href="#">Services</a></li>#}
+                    {#<li><a href="#">Works</a></li>#}
+                    {#<li><a href="#">News</a></li>#}
+                    {#<li><a href="#">Contact</a></li>#}
+                    {#<li><a href="{{ path('cv_default_index') }}">CV</a></li>#}
                     {#<li>#}
                         {#<a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>#}
                     {#</li>#}
-                </ul>
+                {#</ul>#}
                 {#<div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">#}
                     {#<form class="navbar-form navbar-right form-inline" role="form">#}
                         {#<div class="form-group">#}
@@ -39,41 +66,41 @@
                         {#<button type="submit" class="btn btn-success">Sign in</button>#}
                     {#</form>#}
                 {#</div>#}
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-    </nav><!-- /.navbar -->
-    {% endblock navbar %}
+            {#</div><!-- /.navbar-collapse -->#}
+        {#</div><!-- /.container -->#}
+    {#</nav><!-- /.navbar -->#}
+    {#{% endblock navbar %}#}
 
 
-{% block javascript %}
-    <script>
-        $(document).ready(function () {
+{#{% block javascript %}#}
+    {#<script>#}
+        {#$(document).ready(function () {#}
 
-            var navPos, winPos, navHeight;
+            {#var navPos, winPos, navHeight;#}
 
-            function refreshVar() {
-                navPos = $('nav').offset().top;
-                navHeight = $('nav').outerHeight(true);
-            }
+            {#function refreshVar() {#}
+                {#navPos = $('nav').offset().top;#}
+                {#navHeight = $('nav').outerHeight(true);#}
+            {#}#}
 
-            refreshVar();
-            $(window).resize(refreshVar);
+            {#refreshVar();#}
+            {#$(window).resize(refreshVar);#}
 
-            $('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();
+            {#$('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();#}
 
-            $(window).scroll(function () {
-                winPos = $(window).scrollTop();
+            {#$(window).scroll(function () {#}
+                {#winPos = $(window).scrollTop();#}
 
-                if (winPos >= navPos) {
-                    $('nav').addClass('fixed shadow');
-                    $('.clone-nav').show();
-                }
-                else {
-                    $('nav').removeClass('fixed shadow');
-                    $('.clone-nav').hide();
-                }
-            });
+                {#if (winPos >= navPos) {#}
+                    {#$('nav').addClass('fixed shadow');#}
+                    {#$('.clone-nav').show();#}
+                {#}#}
+                {#else {#}
+                    {#$('nav').removeClass('fixed shadow');#}
+                    {#$('.clone-nav').hide();#}
+                {#}#}
+            {#});#}
 
-        });
-    </script>
-{% endblock javascript %}
+        {#});#}
+    {#</script>#}
+{#{% endblock javascript %}#}
