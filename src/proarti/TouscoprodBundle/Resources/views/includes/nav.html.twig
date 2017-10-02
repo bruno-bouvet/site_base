@@ -1,4 +1,4 @@
-<nav class="navbar  navbar-fixed-top navbar-inverse">
+<nav id="navbarproarti" class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -12,17 +12,20 @@
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
+            <a class="navbar-brand pull-left" href="#"><img src="{{ asset('bundles/proartitouscoprod/image/navbar/logo.png') }}"></a>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
+                <li><a class="PrimaryNav" title="Lancer un projet" href="#"><span>Lancer</span><br>un projet</a></li>
+                <li><a class="PrimaryNav" title="Produire un film" href="#"><span>Produire</span><br>un film</a></li>
+                <li><a class="PrimaryNav" title="Produire un film" href="#"><span>Produire</span><br>un film</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Login</a></li>
-            </ul>
+            {#<ul class="nav navbar-nav navbar-right">#}
+                {#<li><a href="#">Login</a></li>#}
+            {#</ul>#}
         </div>
     </div>
 </nav>
+
+
 <script>
     $(window.onload).scroll(function() {
         if ($(document).scrollTop() > 50) {
@@ -43,5 +46,65 @@
 
 
 </script>
+<style>
+    #navbarproarti {
+        background: #ffffff;
+    }
 
+    .PrimaryNav:first-child {
+        border-left: 1px solid #dadada;
+        padding-left: 1em;
+    }
+
+    .PrimaryNav:last-child {
+        border-right: 1px solid #dadada;
+        border-left: none !important;
+    }
+
+    .PrimaryNav {
+        padding: 13px 25px 0 25px;
+        float: left;
+        display: block;
+        height: 52px;
+        color: #333;
+        font-size: 15px;
+        text-decoration: none;
+        line-height: 0.7;
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+        font-size: 10pt;
+        font-weight: 500;
+    }
+
+    /*.PrimaryNav a:hover {*/
+        /*background: #77B9C8;*/
+    /*}*/
+    .navbar-inverse .navbar-nav>li>a:hover{
+        background:  rgba(119, 185, 200, .5);
+        color: #ffffff;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .navbar-nav>li>a {
+        padding-bottom: 4em;
+        border-bottom: none !important;
+    }
+    /*.navbar-nav>li>a:hover {*/
+        /*color: #fff;*/
+        /*background-color: #77B9C8;*/
+        /*padding-bottom: 4em;*/
+        /*border-bottom: none !important;*/
+    /*}*/
+
+    .PrimaryNav span {
+        font-size: 12pt;
+        color: #2AB6C7;
+        font-weight: 700;
+    }
+
+</style>
 
