@@ -2,6 +2,13 @@
 
 {% block body %}
 
+    {% stylesheets
+    '@proartiTouscoprodBundle/Resources/public/css/index.css'
+
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
 {% include '@proartiTouscoprod/includes/carousel.html.twig' %}
     {#<section class="jumbotron text-center">#}
         {#<div class="container">#}
@@ -16,59 +23,27 @@
     {#</section>#}
 
     {% include '@proartiTouscoprod/Default/projects.html.twig' %}
-
-    <div class="row" style="margin-top: 7em;">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h3 class="jumbotron-heading ">COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>
-                    VOTRE PROJET EST-IL ÉLIGIBLE ?</h3>
+        <div class="parallax">
+            <section class=" text-center">
+                <div class="container">
+                    <h2 class="jumbotron-heading ">COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>
+                        VOTRE PROJET EST-IL ÉLIGIBLE ?</h2>
                     <a href="#" class="btn btn-primary bigbtn">En savoir plus</a>
-            </div>
-        </section>
-    </div>
+                </div>
+            </section>
 
-
-
-
-    <style>
-        .jumbotron {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-            margin-bottom: 0;
-            background-color: #E8F0F1;
-        }
-
-        .jumbotron h3:after {
-            height: 0;
-            width: 0;
-            content: '';
-            display: block;
-            margin-top: 20px;
-        }
-
-        .bigbtn {
-            padding: 20px 30px;
-            font-size: 17px;
-            text-transform: uppercase;
-            font-weight: 900;
-            background: #FF5652;
-            border: none;
-        }
-
-        .bigbtn:hover {
-            padding: 20px 30px;
-            font-size: 17px;
-            text-transform: uppercase;
-            font-weight: 900;
-            background: rgba(255, 86, 82, 0.51);
-            border: none;
-            -webkit-transition: 300ms;
-            -moz-transition: 300ms;
-            -o-transition: 300ms;
-            transition: 300ms;
-        }
-
-    </style>
+        </div>
+{#<div class="paralax">#}
+    {#<div class="row" style="margin-top: 7em;">#}
+        {#<section class=" text-center">#}
+            {#<div class="container">#}
+                {#<h3 class="jumbotron-heading ">COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>#}
+                    {#VOTRE PROJET EST-IL ÉLIGIBLE ?</h3>#}
+                    {#<a href="#" class="btn btn-primary bigbtn">En savoir plus</a>#}
+            {#</div>#}
+        {#</section>#}
+    {#</div>#}
+{#</div>#}
 
 
 {% endblock body %}

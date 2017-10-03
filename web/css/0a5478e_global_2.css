@@ -799,11 +799,11 @@ section#contact .text-danger {
 }
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 ::selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 img::selection {
     background: transparent;

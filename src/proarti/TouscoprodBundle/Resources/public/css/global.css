@@ -798,11 +798,11 @@ section#contact .text-danger {
 }
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 ::selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 img::selection {
     background: transparent;
@@ -811,5 +811,5 @@ img::-moz-selection {
     background: transparent;
 }
 body {
-    webkit-tap-highlight-color: #fed136;
+    webkit-tap-highlight-color: #77B9C8;
 }

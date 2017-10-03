@@ -1,0 +1,53 @@
+.jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: #E8F0F1;
+}
+
+.jumbotron h3:after {
+    height: 0;
+    width: 0;
+    content: '';
+    display: block;
+    margin-top: 20px;
+}
+
+.bigbtn {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #FF5652;
+    border: none;
+}
+
+.bigbtn:hover {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: rgba(255, 86, 82, 0.51);
+    border: none;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+.parallax {
+    /* The image used */
+    margin-top: 7em;
+    /* Set a specific height */
+    height: 20em;
+    /* Create the parallax scrolling effect */
+    background: url("https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&amp;fm=jpg&amp;s=9bf9f2ef5be5cb5eee5255e7765cb327") no-repeat fixed center;
+    background-size: cover;
+}
+.parallax section {
+    background: rgba(255, 255, 255, .7);
+    height: 20em;
+}
+.parallax h2 {
+    color: #2D2D2D;
+}
