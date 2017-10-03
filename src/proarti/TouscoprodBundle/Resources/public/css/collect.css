@@ -1,0 +1,11 @@
+
+
+.collect-default .projectKind {
+    display: inline-block;
+    color: black;
+    text-decoration: none !important;
+
+}
+
+.collect-default .projectLocation {
+}

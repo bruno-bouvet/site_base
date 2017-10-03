@@ -1,3 +1,16 @@
+
+{% stylesheets
+'@proartiTouscoprodBundle/Resources/public/css/projects.css'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+{% javascripts
+'@proartiTouscoprodBundle/Resources/public/javascript/projects.js'
+%}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
 <div class="row" style="margin-top: 7em;">
     <div class="col-lg-12">
         <div class="row">

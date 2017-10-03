@@ -51,3 +51,5 @@
 .parallax h2 {
     color: #2D2D2D;
 }
+
+section{padding: 30px 0; float: left; width: 100%}

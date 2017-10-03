@@ -1,0 +1,47 @@
+{% extends 'proartiTouscoprodBundle::layout.html.twig' %}
+
+{% block body %}
+
+
+    {% stylesheets
+    '@proartiTouscoprodBundle/Resources/public/css/collect.css'
+
+    filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+    {% javascripts %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-8 col-xs-12 collect-default">
+            <h2>Title</h2>
+            <div class="row">
+                {#<div class="col-md-2 pull-right">#}
+
+                    <span class="projectKind">
+                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                        Documentaire
+                    </span>
+                {#</div>#}
+                {#<div class="col-md-2 pull-left">#}
+
+                    <span class="projectLocation">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        Norvège
+                    </span>
+
+                {#</div>#}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    {% endblock %}

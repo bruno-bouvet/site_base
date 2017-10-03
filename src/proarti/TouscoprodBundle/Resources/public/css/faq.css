@@ -157,6 +157,9 @@ a:active {
     color: #2D2D2D;
 }
 
+section{padding: 30px 0; float: left; width: 100%}
+
+
 @media screen and (max-width: 767px) {
     .hint h3, .hint p, .hint a, .hint i, .hint h3:after {
         text-align: center !important;
