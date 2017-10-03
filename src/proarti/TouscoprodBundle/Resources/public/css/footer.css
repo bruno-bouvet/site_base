@@ -21,9 +21,6 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     -o-transform: scale(1.1);
 }
 
-
-
-
 .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
 .icon-ul li { line-height:75px; width:100%; float:left;}
 .icon { float:left; margin-right:5px;}
@@ -44,3 +41,16 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
 .contact-details { color: #ffffff;}
 .contact-details>a{ color: #ffffff; margin-left: 1em; }
 .contact-details a:hover { transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#77B9C8; text-decoration: none }
+
+@media screen and (min-width: 990px )and (max-width: 1199px)  {
+    .logofooter img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+   footer img, footer li, footer h6, footer p, footer .fb-page, footer .copyright p
+    {
+        text-align: center;
+    }
+}

@@ -1,3 +1,10 @@
+{% stylesheets
+'@proartiTouscoprodBundle/Resources/public/css/nav.css'
+
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
 <nav id="navbarproarti" class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,92 +30,4 @@
         </div>
     </div>
 </nav>
-
-
-<script>
-    $(window.onload).scroll(function() {
-        if ($(document).scrollTop() > 50) {
-            $('nav').removeClass('transparent');
-        } else {
-            $('nav').addClass('transparent');
-        }
-    });
-
-//    window.onload = function() {
-//        if (window.jQuery) {
-//            // jQuery is loaded
-//            alert("Yeah!");
-//        } else {
-//            location.reload();
-//        }
-//    }
-
-
-</script>
-<style>
-    #navbarproarti {
-        background: #ffffff;
-    }
-
-    .PrimaryNav:first-child {
-        border-left: 1px solid #dadada;
-        padding-left: 1em;
-    }
-
-    .PrimaryNav:last-child {
-        border-right: 1px solid #dadada;
-        border-left: none !important;
-    }
-
-    .PrimaryNav {
-        padding: 13px 25px 0 25px;
-        float: left;
-        display: block;
-        height: 52px;
-        color: #333;
-        font-size: 15px;
-        text-decoration: none;
-        line-height: 0.7;
-        transition: all 0.2s ease-in-out;
-        text-align: center;
-        font-size: 10pt;
-        font-weight: 500;
-    }
-
-    /*.PrimaryNav a:hover {*/
-        /*background: #77B9C8;*/
-    /*}*/
-    .navbar-inverse .navbar-nav>li>a:hover{
-        background:  rgba(119, 185, 200, .5);
-        color: #ffffff;
-    }
-
-    .navbar-inverse .navbar-nav>li>a:hover span{
-        color: #ffffff;
-    }
-
-
-    .navbar-inverse .navbar-nav>li>a {
-        padding-left: 3em;
-        padding-right: 3em;
-    }
-
-    .navbar-nav>li>a {
-        padding-bottom: 4em;
-        border-bottom: none !important;
-    }
-    /*.navbar-nav>li>a:hover {*/
-        /*color: #fff;*/
-        /*background-color: #77B9C8;*/
-        /*padding-bottom: 4em;*/
-        /*border-bottom: none !important;*/
-    /*}*/
-
-    .PrimaryNav span {
-        font-size: 12pt;
-        color: #2AB6C7;
-        font-weight: 700;
-    }
-
-</style>
 

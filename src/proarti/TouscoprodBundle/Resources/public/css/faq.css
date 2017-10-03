@@ -139,3 +139,35 @@ a:active {
     transform: rotate(0deg);
     transition: all 0.5s;
 }
+
+.parallax {
+    /* The image used */
+    margin-top: 1em;
+    /* Set a specific height */
+    height: 20em;
+    /* Create the parallax scrolling effect */
+    /*background: url("https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&amp;fm=jpg&amp;s=9bf9f2ef5be5cb5eee5255e7765cb327") no-repeat fixed center;*/
+    background-size: cover;
+}
+.parallax section {
+    background: rgba(255, 255, 255, .7);
+    height: 20em;
+}
+.parallax h2 {
+    color: #2D2D2D;
+}
+
+@media screen and (max-width: 767px) {
+    .hint h3, .hint p, .hint a, .hint i, .hint h3:after {
+        text-align: center !important;
+    }
+}
+.hint a:hover {
+    background: #77B9C8;
+    color: #ffffff;
+    transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+}
