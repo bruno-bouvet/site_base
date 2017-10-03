@@ -6,7 +6,7 @@ nav.navbar{
 
 .navbar-inverse {
     background-color: #222;
-    border-color: #080808;
+    border-color: #ffffff !important;
 }
 
 nav.navbar.transparent {
@@ -89,6 +89,8 @@ nav.navbar.transparent {
     padding: 0;
     margin: 0 !important;
     overflow: visible;
+    padding-top: .5em;
+
 }
 /*.navbar-collapse .navbar-brand .white-circle { display: block;  width: 161px; height: 161px; background-color: white;*/
     /*border-radius: 50%; border: 1px dotted red; position: relative; z-index: 2;*/

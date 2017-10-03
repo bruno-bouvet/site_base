@@ -12,11 +12,10 @@
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
-            <a class="navbar-brand pull-left" href="#"><img src="{{ asset('bundles/proartitouscoprod/image/navbar/logo.png') }}"></a>
+            <a class="navbar-brand pull-left" href="{{ path('proarti_touscoprod_default_index') }}"><img src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-test.png') }}"></a>
             <ul class="nav navbar-nav">
-                <li><a class="PrimaryNav" title="Lancer un projet" href="#"><span>Lancer</span><br>un projet</a></li>
-                <li><a class="PrimaryNav" title="Produire un film" href="#"><span>Produire</span><br>un film</a></li>
-                <li><a class="PrimaryNav" title="Produire un film" href="#"><span>Produire</span><br>un film</a></li>
+                <li><a class="PrimaryNav" title="Lancer un projet" href="{{ path('proarti_touscoprod_default_explanation') }}"><span>Pourquoi</span><br>proarti</a></li>
+                <li><a class="PrimaryNav" title="Produire un film" href="{{ path('proarti_touscoprod_default_faq') }}"><span>Réponses</span><br>à vos question</a></li>
             </ul>
             {#<ul class="nav navbar-nav navbar-right">#}
                 {#<li><a href="#">Login</a></li>#}
@@ -83,6 +82,11 @@
         background:  rgba(119, 185, 200, .5);
         color: #ffffff;
     }
+
+    .navbar-inverse .navbar-nav>li>a:hover span{
+        color: #ffffff;
+    }
+
 
     .navbar-inverse .navbar-nav>li>a {
         padding-left: 3em;
