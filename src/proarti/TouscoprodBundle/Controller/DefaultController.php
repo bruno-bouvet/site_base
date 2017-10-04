@@ -56,4 +56,14 @@ class DefaultController extends Controller
         return $this->render('@proartiTouscoprod/Default/collect-pages/collect-1.html.twig');
     }
 
+    /**
+     * @Route("/projectindex")
+     *
+     * @return Response
+     */
+    public function projectIndexAction()
+    {
+        return $this->render('@proartiTouscoprod/Default/project-index.html.twig');
+    }
+
 }

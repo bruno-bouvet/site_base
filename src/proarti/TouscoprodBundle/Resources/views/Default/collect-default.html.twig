@@ -18,23 +18,20 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-md-12 col-sm-8 col-xs-12 collect-default">
+            <div class="col-md-12 col-sm-12 col-xs-12 collect-default">
                 <h2 class="text-center">Title</h2>
                 <div class="row">
-                    <div class="col-md-6 ">
-
-                    <span class="projectKind pull-right">
-                        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-                        Documentaire
-                    </span>
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <span class="projectKind pull-right">
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                            Documentaire
+                        </span>
                     </div>
-                    <div class="col-md-6">
-
-                    <span class="projectLocation text-center  pull-left">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        Norvège
-                    </span>
-
+                    <div class="col-md-6 col-sm-6 col-xs-6">
+                        <span class="projectLocation text-center  pull-left">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            Norvège
+                        </span>
                     </div>
                 </div>
             </div>
@@ -43,23 +40,25 @@
         <!-- collect summary-->
 
         <div class="row">
-            <div class="collect-main col-xs-12 col-sm-10 col-md-12 ">
+            <div class="collect-main col-xs-12 col-sm-12 col-md-12 ">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-7 col-md-7">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1FyfpkDBNTw"
-                                frameborder="0"
-                                allowfullscreen></iframe>
-                        <div id="FrameForVisu">
-                            <img src="#" width="600">
-                        </div>
+
+                    <!-- image -->
+                    <div id="FrameForVisu" class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
+                        {#<iframe width="100%" height="300px" src="https://www.youtube.com/embed/1FyfpkDBNTw"#}
+                        {#frameborder="0"#}
+                        {#allowfullscreen></iframe>#}
+                        <img src="{{ asset('bundles/proartitouscoprod/image/941-1389856269.jpg') }}">
                     </div>
-                    <div class="col-xs-12 col-sm-5 col-md-5">
+                    <!--  .\ end image -->
+
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 mobile">
                         <div class="row">
-                            <div class="col-md-6 amounts collect-content">
+                            <div class="col-xs-6 col-md-6 amounts collect-content ">
                                 <span class="ChiffreAmount">1 590 €</span>
                                 <span>levés sur 1000 €</span>
                             </div>
-                            <div class="col-md-6 collect-content">
+                            <div class="col-xs-6 col-md-6 collect-content ">
                                 <div class="progress green">
                                         <span class="progress-left">
                                             <span class="progress-bar"></span>
@@ -72,7 +71,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 amounts collect-content">
+                            <div class="col-xs-6 col-md-6 amounts collect-content">
                                 <div id="ChiffreCoprod">
                                     <div>
                                         <span id="ChiffreCoprod">31 €</span>
@@ -80,8 +79,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 collect-content">
-                                <div class="TimeLeft margin-top-2">
+                            <div class="col-xs-6 col-md-6 collect-content">
+                                <div class="TimeLeft margin-top-2 text-center">
 
                                     <span class="CampaignDone">Campagne bouclée <br><span>le 10 octobre 2013</span></span>
 
@@ -90,7 +89,7 @@
 
                         </div>
                         <div class="row">
-                            <div class="col-md-12 text-center collect-content" style="background: #29C564;">
+                            <div class="col-xscol-md-12 text-center collect-content" style="background: #29C564;">
                                 <div id="ProduceProject">
 
                                     <a style="color: white; text-align: center !important;" class="ProduceMinSuccess">Projet
@@ -104,8 +103,9 @@
         </div>
         <!-- .\ end project summary  -->
 
+        <!-- .\ pitch block  -->
         <div class="row">
-            <div class="collect-pitch col-xs-12 col-sm-10 col-md-12  ">
+            <div class="collect-pitch col-xs-12 col-sm-12 col-md-12 mobile ">
                 <div class="col-md-6">
                     <h3>Le pitch</h3>
                     <p>
@@ -122,7 +122,7 @@
                         critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
                     </p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-6 mobile">
                     <h3>le porteur de projet</h3>
                     <a href="#"><img class="ProfilPicturePDP" src="#"></a>
                     <span class="PDPInfos">
@@ -138,46 +138,137 @@
 
             </div>
         </div>
+
+        {#<div class="row align-items-start text-center">#}
+        {#<div style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+        {#<a> One of three columns</a>#}
+        {#</div>#}
+        {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+        {#One of three columns#}
+        {#</div>#}
+        {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+        {#One of three columns#}
+        {#</div>#}
+        {#</div>#}
+        <nav class="ProjectNavigation">
+            <ul>
+                <li><a href="#Présentation" class="active">Le pitch</a></li>
+                <li><a href="#Team">L'équipe du projet</a></li>
+
+            </ul>
+        </nav>
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-md-12 ">
-                <div class="panel with-nav-tabs panel-primary">
-                    <div class="panel-heading">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1primary" data-toggle="tab">Primary 1</a></li>
-                            <li><a href="#tab2primary" data-toggle="tab">Primary 2</a></li>
-                            <li><a href="#tab3primary" data-toggle="tab">Primary 3</a></li>
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#tab4primary" data-toggle="tab">Primary 4</a></li>
-                                    <li><a href="#tab5primary" data-toggle="tab">Primary 5</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="panel-body">
-                        <div class="tab-content">
-                            <div class="tab-pane fade in active" id="tab1primary">Primary 1</div>
-                            <div class="tab-pane fade" id="tab2primary">
-                                <p>
-                                    Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
-                                    Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
-                                    la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
-                                    tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
-                                    l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
-                                    augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
-                                    de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
-                                    pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
-                                    des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
-                                    pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
-                                    critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
-                                </p></div>
-                            <div class="tab-pane fade" id="tab3primary">Primary 3</div>
-                            <div class="tab-pane fade" id="tab4primary">Primary 4</div>
-                            <div class="tab-pane fade" id="tab5primary">Primary 5</div>
+            <div style="border: 4px solid red;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div style="border: 4px solid green;" class="col-md-6 col-xs-12 mobile">
+                    <h3 id="Présentation">Présentation du projet</h3>
+                    <p>
+                        Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
+                        Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
+                        la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
+                        tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
+                        l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
+                        augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
+                        de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
+                        pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
+                        des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
+                        pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
+                        critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
+                    </p>
+
+                    <h3 id="Team">L'équipe du projet</h3>
+                    <p>
+                        Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
+                        Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
+                        la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
+                        tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
+                        l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
+                        augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
+                        de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
+                        pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
+                        des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
+                        pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
+                        critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
+                    </p>
+                </div>
+
+                <div style="border: 4px solid green;" class="col-md-6 pull-right col-xs-12 mobile" data-category="view">
+                    <h3>Les récompenses</h3>
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+                            <a href="#">
+                                <div class="col-md-6">
+                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lib-row lib-header">
+                                        liorem ipsum
+                                        <div class="lib-header-seperator"></div>
+                                    </div>
+                                    <div class="lib-row lib-desc">
+                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                        ipsum
+                                        dolor Lorem ipsum dolor
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+                            <a href="#">
+
+                                <div class="col-md-6">
+                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+                                </div>
+                                <div class="col-md-6 reward">
+                                    <div style="border: 3px solid red;" class="row">
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum </p>
+                                        </div>
+                                    </div>
+                                    <div class="lib-row lib-header">
+                                        liorem ipsum
+                                        <div class="lib-header-seperator"></div>
+                                    </div>
+                                    <div class="lib-row lib-desc">
+                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                        ipsum
+                                        dolor Lorem ipsum dolor
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+                            <a href="#">
+
+                                <div class="col-md-6">
+                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="lib-row lib-header">
+                                        liorem ipsum
+                                        <div class="lib-header-seperator"></div>
+                                    </div>
+                                    <div class="lib-row lib-desc">
+                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                        ipsum
+                                        dolor Lorem ipsum dolor
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>

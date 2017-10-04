@@ -1,0 +1,32 @@
+{% extends 'proartiTouscoprodBundle::layout.html.twig' %}
+
+{% block body %}
+    {% stylesheets
+    '@proartiTouscoprodBundle/Resources/public/css/index.css'
+
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+
+    {% include '@proartiTouscoprod/Default/projects.html.twig' %}<br><br>
+
+    <div class="row">
+        <div class="parallax col-xs-12">
+            <section class=" text-center">
+                <div class="container">
+                    <h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>
+                    <a href="https://www.proarti.fr/profile/collect/project/conditions"
+                       class="btn btn-primary bigbtn">En savoir plus</a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <style>
+        .no-csstransforms3d .movie .poster, .no-csstransforms3d .movie .info {
+            position: absolute;
+        }
+    </style>
+{% endblock body %}

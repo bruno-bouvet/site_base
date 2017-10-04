@@ -17,7 +17,7 @@
     background: #2D2D2D;
     margin-top: 2em;
     margin-bottom: 50px;
-    padding: 40px 30px !important;
+
     position: relative;
     box-shadow: 0 1px 21px #acacac;
     color: #333333;
@@ -37,20 +37,20 @@
 
 }
 
-.collect-pitch h3 {
+ h3 {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.collect-pitch h3::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 35px;
-    background-color: black;
-    margin-top: 10px;
-}
+ /*h3::after {*/
+    /*content: '';*/
+    /*display: block;*/
+    /*height: 3px;*/
+    /*width: 35px;*/
+    /*background-color: #77B9C8;*/
+    /*margin-top: 10px;*/
+/*}*/
 
 .collect-pitch p {
     font-family: 'Georgia', serif;
@@ -167,9 +167,9 @@
 
 #ProduceProject a {
     display: block;
-    width: 450px;
-    margin-left: -20px;
-    text-align: center;
+    /*width: 450px;*/
+    /*margin-left: -20px;*/
+    /*text-align: center;*/
     padding: 15px 0;
     color: white;
     font-weight: 900;
@@ -178,6 +178,7 @@
     text-decoration: none;
 }
 
+/*  progress  circle */
 .progress {
     width: 80px;
     height: 80px;
@@ -351,56 +352,120 @@
         margin-bottom: 20px;
     }
 }
+ /* end progress */
 
 
-
-.panel.with-nav-tabs .panel-heading{
-    padding: 5px 5px 0 5px;
+.lib-panel {
+    margin-bottom: 20Px;
+    margin-left: 2em;
 }
-.panel.with-nav-tabs .nav-tabs{
-    border-bottom: none;
-}
-.panel.with-nav-tabs .nav-justified{
-    margin-bottom: -1px;
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
 }
 
-/********************************************************************/
-/*** PANEL PRIMARY ***/
-.with-nav-tabs.panel-primary .nav-tabs > li > a,
-.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
-    color: #fff;
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
 }
-.with-nav-tabs.panel-primary .nav-tabs > .open > a,
-.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
-.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
-    color: #fff;
-    background-color: #3071a9;
-    border-color: transparent;
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
 }
-.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
-.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
-    color: #428bca;
-    background-color: #fff;
-    border-color: #428bca;
-    border-bottom-color: transparent;
+
+.lib-panel .lib-row.lib-header {
+    background-color: #FFFFFF;
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
 }
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
-    background-color: #428bca;
-    border-color: #3071a9;
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 0 7px 0;
 }
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
-    color: #fff;
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
 }
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
-    background-color: #3071a9;
+.lib-panel .lib-row.lib-desc a{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
 }
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
-.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
-    background-color: #4a9fe9;
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.reward>row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.ProjectNavigation {
+    float: left;
+    width: 100%;
+}
+
+.ProjectNavigation ul {
+    display: table;
+    width: 100%;
+}
+
+.ProjectNavigation li {
+    display: table-cell;
+    text-align: center;
+    width: 20%;
+}
+
+.ProjectNavigation a.active {
+    background: black;
+    color: white;
+}
+
+.ProjectNavigation a {
+    padding: 14px 0;
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.mobilelogo img {
+    padding: 2em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+}
+
+@media screen and (max-width: 992px){
+    .mobile {
+        text-align: center;
+    }
+    .mobile p {
+        text-align: justify;
+    }
+    .mobile .lib-panel img {
+        width: 70%;
+    }
 }

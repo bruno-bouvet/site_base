@@ -78,3 +78,17 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
     z-index: 100;
 }
 .box-item .box-post h1.post-title { font-size:10pt;}
+
+@media screen and (max-width: 992px){
+    .copyright p, .copyright ul{
+        text-align: center;
+    }
+
+    .logofooter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+}
