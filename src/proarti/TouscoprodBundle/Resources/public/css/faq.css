@@ -1,18 +1,20 @@
-/*h3 {*/
-    /*color: #fff;*/
-    /*font-size: 24px;*/
-    /*text-align: center;*/
-    /*margin-top: 30px;*/
-    /*padding-bottom: 30px;*/
-    /*border-bottom: 1px solid #eee;*/
-    /*margin-bottom: 30px;*/
-    /*font-weight: 300;*/
-/*}*/
 
-/*.container {*/
-    /*max-width: 970px;*/
-/*}*/
+h3::after {
+    height: 5px;
+    width: 50px;
+    content: '';
+    display: block;
+    background-color: #2ab6c7;
+    margin-top: 20px;
+}
 
+
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
 div[class*='col-'] {
     padding: 0 30px 5em;
 }
