@@ -524,3 +524,7 @@ table {
     }
 
 }
+
+.shuffle > :nth-child(n + 5) {
+    display: none;
+}

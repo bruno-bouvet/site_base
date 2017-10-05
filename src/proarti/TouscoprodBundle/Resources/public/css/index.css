@@ -22,6 +22,27 @@
     border: none;
 }
 
+.bigbtn-blue {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #2C6FAE;
+    border: none;
+}
+.bigbtn-blue:hover {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #77B9C8;
+    border: none;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
 .bigbtn:hover {
     padding: 20px 30px;
     font-size: 17px;

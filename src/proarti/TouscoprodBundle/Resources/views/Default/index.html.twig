@@ -8,11 +8,18 @@
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
+    <script>
 
+    </script>
     {% include '@proartiTouscoprod/includes/carousel.html.twig' %}
 
     {% include '@proartiTouscoprod/Default/projects.html.twig' %}
-
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <a href="{{ path('proarti_touscoprod_default_projectindex') }}" class="btn btn-primary bigbtn-blue">Découvrir plus de
+                projets</a>
+        </div>
+    </div>
     <div class="parallax">
         <section class=" text-center">
             <div class="container">
@@ -22,5 +29,16 @@
             </div>
         </section>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            var parent = $("#shuffle");
+            var divs = parent.children();
+            while (divs.length) {
+                parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            }
+        });
+        $(".scene:gt(3)").css("display", "none");
+    </script>
 
 {% endblock body %}
