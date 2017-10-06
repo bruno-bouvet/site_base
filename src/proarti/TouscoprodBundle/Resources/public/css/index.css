@@ -20,6 +20,20 @@
     font-weight: 900;
     background: #FF5652;
     border: none;
+    color: #ffffff;
+}
+.bigbtn:hover {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: rgba(255, 87, 85, 0.71);
+    color: #ffffff;
+    border: none;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
 }
 
 .bigbtn-blue {
@@ -29,6 +43,8 @@
     font-weight: 900;
     background: #2C6FAE;
     border: none;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 .bigbtn-blue:hover {
     padding: 20px 30px;
@@ -36,25 +52,17 @@
     text-transform: uppercase;
     font-weight: 900;
     background: #77B9C8;
+    color: #ffffff;
     border: none;
     -webkit-transition: 300ms;
     -moz-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
-.bigbtn:hover {
-    padding: 20px 30px;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: rgba(255, 87, 85, 0.71);
-    border: none;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-}
+
 
 .parallax {
     /* The image used */
