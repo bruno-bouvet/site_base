@@ -1,4 +1,8 @@
 
+#collect {
+    margin-top: 7em;
+}
+
 .collect-default .projectKind {
     display: inline-block;
     color: black;
@@ -131,11 +135,10 @@
     background-color: #dcdcdc;
 
 }
-#FrameForVisu img, #FrameForVisu iframe {
+#FrameForVisu {
     max-height: 375px;
     height: 100%;
     min-width: 100%;
-    width: auto;
 }
 
 .amounts, .amounts .ChiffreAmount, .amounts span {
@@ -359,10 +362,10 @@
     margin-bottom: 20Px;
     margin-left: 2em;
 }
-.lib-panel img {
-    width: 100%;
-    background-color: transparent;
-}
+/*.lib-panel img {*/
+    /*width: 100%;*/
+    /*background-color: transparent;*/
+/*}*/
 
 .lib-panel .row,
 .lib-panel .col-md-6 {
@@ -464,8 +467,5 @@
     }
     .mobile p {
         text-align: justify;
-    }
-    .mobile .lib-panel img {
-        width: 70%;
     }
 }

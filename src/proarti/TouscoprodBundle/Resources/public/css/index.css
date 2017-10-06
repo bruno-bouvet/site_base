@@ -13,71 +13,46 @@
     margin-top: 20px;
 }
 
-.bigbtn {
-    padding: 20px 30px;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: #FF5652;
-    border: none;
-    color: #ffffff;
-}
-.bigbtn:hover {
-    padding: 20px 30px;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: rgba(255, 87, 85, 0.71);
-    color: #ffffff;
-    border: none;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-}
-
-.bigbtn-blue {
-    padding: 20px 30px;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: #2C6FAE;
-    border: none;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
-.bigbtn-blue:hover {
-    padding: 20px 30px;
-    font-size: 17px;
-    text-transform: uppercase;
-    font-weight: 900;
-    background: #77B9C8;
-    color: #ffffff;
-    border: none;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-    margin-top: 3em;
-    margin-bottom: 3em;
-}
 
 
+/*.bigbtn-blue {*/
+    /*padding: 20px 30px;*/
+    /*font-size: 17px;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 900;*/
+    /*background: #2C6FAE;*/
+    /*border: none;*/
+    /*margin-top: 3em;*/
+    /*margin-bottom: 3em;*/
+/*}*/
+/*.bigbtn-blue:hover {*/
+    /*padding: 20px 30px;*/
+    /*font-size: 17px;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 900;*/
+    /*background: #77B9C8;*/
+    /*color: #ffffff;*/
+    /*border: none;*/
+    /*-webkit-transition: 300ms;*/
+    /*-moz-transition: 300ms;*/
+    /*-o-transition: 300ms;*/
+    /*transition: 300ms;*/
+    /*margin-top: 3em;*/
+    /*margin-bottom: 3em;*/
+/*}*/
 
-.parallax {
+#indexparallax {
     /* The image used */
-    margin-top: 7em;
+    margin-top: 1em;
     /* Set a specific height */
     height: 20em;
     /* Create the parallax scrolling effect */
-    background: url("https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&amp;fm=jpg&amp;s=9bf9f2ef5be5cb5eee5255e7765cb327") no-repeat fixed center;
-    background-size: cover;
 }
-.parallax section {
+#indexparallax section {
     background: rgba(255, 255, 255, .7);
     height: 20em;
 }
-.parallax h2 {
+#indexparallax h2 {
     color: #2D2D2D;
 }
 

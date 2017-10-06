@@ -170,18 +170,18 @@ Movie information
 }
 
 .info a {
-    background: #2ad8e9;
+    background: #25ADC0;
     border:none;
     color: #ffffff;
 }
 
 .info a:hover {
-    background: #2ab6c7;
+    background: #77B9C8;
     color: #ffffff;
 }
 
-.info a:active {
-    background: #2ab6c7;
+.info .btn:active, .info .btn:focus{
+    background: #77B9C8;
     color: #ffffff;
 }
 
@@ -544,11 +544,14 @@ table {
 
 .ribbon-content {
     background: #f1f1f1;
-    border: 1px solid #DDD;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+
 }
 
 .ribbon.base {
-    background: #77B9C8;
+    background: #25ADC0;
     color: #fff;
 }
 

@@ -9,13 +9,13 @@
 #sg-carousel .carousel-inner .item {
     /*height: 100vh;*/
 }
-.carousel-caption{top:50%;}
-.carousel-caption h1 {
-    font-size: 6em;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-}
+/*.carousel-caption{top:50%;}*/
+/*.carousel-caption h1 {*/
+    /*font-size: 6em;*/
+    /*font-weight: bold;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
 #sg-carousel .carousel-control.left {
     top: 48%;
 }
@@ -92,28 +92,36 @@
     z-index: 2;
     font-size: 80px;
 }
-.carousel-caption {
-    left: 60%;
-    padding-bottom: 5%;
-    right: 0;
-    text-align: left;
-}
+/*.carousel-caption {*/
+    /*left: 60%;*/
+    /*padding-bottom: 5%;*/
+    /*right: 0;*/
+    /*text-align: left;*/
+/*}*/
 
-.carousel-caption h1 {
-    font-family: "Roboto Slab";
-    font-size: 75px;
-    margin-right: 2em;
-}
-.carousel-caption > p {
-    font-size: 30px;
-    color: #fff;
-}
-.carousel-caption > a {
-    text-transform: uppercase;
-    color: #fff;
-    /*background: #041132;*/
-    padding: 6px 12px;
-}
+
+
+
+                                                                                      /**/
+/*.carousel-caption h1 {*/
+    /*font-size: 75px;*/
+    /*margin-right: 2em;*/
+/*}*/
+/*.carousel-caption > p {*/
+    /*font-size: 30px;*/
+    /*color: #fff;*/
+/*}*/
+/*.carousel-caption > a {*/
+    /*text-transform: uppercase;*/
+    /*color: #fff;*/
+    /*!*background: #041132;*!*/
+    /*!*padding: 6px 12px;*!*/
+/*}*/
+
+
+
+
+
 /*.button--tamaya {*/
     /*border: 2px solid #77B9C8 !important;*/
     /*border-radius: 5px;*/
@@ -209,7 +217,7 @@
 
 @media screen and (max-width: 800px) {
     h1 {
-        font-size: 15px;
+        font-size: 20px;
     }
 }
 

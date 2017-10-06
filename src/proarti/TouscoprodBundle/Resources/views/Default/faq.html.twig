@@ -1,9 +1,9 @@
 {% extends 'proartiTouscoprodBundle::layout.html.twig' %}
-
 {% block body %}
 
     {% stylesheets
     '@proartiTouscoprodBundle/Resources/public/css/faq.css'
+    '@proartiTouscoprodBundle/Resources/public/css/global.css'
 
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -20,7 +20,7 @@
 <div class="row">
 
 
-    <div id="FAQ" class="col-md-8 col-sm-8 col-xs-12">
+    <div class="col-md-8 col-sm-8 col-xs-12 FAQ">
         <h3>FAQ</h3><br>
         <h4>Voici une faq qui répondra à toutes vos questions</h4><br>
         <div class="panel-group wrap" id="bs-collapse">
@@ -100,8 +100,8 @@
         <!-- end of #bs-collapse  -->
 
     </div>
-    <div class="col-md-4 col-sm-4 col-xs-12 hint">
-        <h3 style=" padding: .5em;text-align: left; text-decoration: none !important;">
+    <div class="col-md-4 col-sm-4 col-xs-12 hint FAQ">
+        <h3 >
             <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
             ASTUCE
         </h3>
@@ -109,7 +109,7 @@
         <p> Vous avez des questions complémentaires ?</p>
         <p>contactez l'équipe proarti: </p>
 
-        <div class="list-group">
+        <div class="list-group col-sm-offset-1 text-center">
             {#<p>adresse</p>#}
             {#<a href="http://maps.google.com/?q=7 Rue Bachelet, 75018 Paris" target="_blank" class="list-group-item">7 rue Bachelet 75018 Paris</a><br>#}
             <p>Téléphone</p>
@@ -128,7 +128,7 @@
             <section class=" text-center">
                 <div class="container">
                     <h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>
-                    <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn btn-primary bigbtn-blue">En savoir plus</a>
+                    <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue">En savoir plus</a>
                 </div>
             </section>
 

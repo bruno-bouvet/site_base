@@ -5,8 +5,10 @@
 {% block head %}
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" charset="{{ _charset }}"/>
-        <title>{% block title %}test{% endblock %}</title>
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+        <title>{% block title %}Touscoprod - 1ère plateforme de financement participatif dédiée aux films"{% endblock %}</title>
+        <meta name="description" content="{% block meta_description %} {% endblock meta_description %}" />
+        <meta name="keywords" content="{% block meta_keywords %} {% endblock meta_keywords %}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/proartitouscoprod/image/favicon.ico') }}"/>
 
         {% block stylesheets %}
 

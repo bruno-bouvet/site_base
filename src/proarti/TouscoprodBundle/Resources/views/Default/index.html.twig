@@ -4,6 +4,7 @@
 
     {% stylesheets
     '@proartiTouscoprodBundle/Resources/public/css/index.css'
+    '@proartiTouscoprodBundle/Resources/public/css/global.css'
 
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -20,8 +21,8 @@
                 projets</a>
         </div>
     </div>
-    <div class="parallax">
-        <section class=" text-center">
+    <div id="indexparallax">
+        <section class=" text-center image-responsive">
             <div class="container">
                 <h2 class="jumbotron-heading ">COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>
                     VOTRE PROJET EST-IL ÉLIGIBLE ?</h2>
@@ -34,7 +35,9 @@
         //        limit the number of project item to 4
         $(".scene:gt(3)").css("display", "none");
 
-//        shuffle project li - to delete when on twig
+        $('#indexparallax').css("background","url({{ asset('bundles/proartitouscoprod/image/launch.png') }}) no-repeat fixed center");
+        $('#indexparallax').css("background-size","cover");
+        //        shuffle project li - to delete when on twig
         $(document).ready(function () {
             var parent = $("#shuffle");
             var divs = parent.children();

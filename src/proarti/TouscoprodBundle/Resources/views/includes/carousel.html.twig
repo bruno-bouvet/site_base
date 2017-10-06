@@ -3,15 +3,15 @@
 
 {% stylesheets
 '@proartiTouscoprodBundle/Resources/public/css/carousel.css'
-'@proartiTouscoprodBundle/Resources/public/css/faq.css'
+'@proartiTouscoprodBundle/Resources/public/css/global.css'
+
 
 filter='cssrewrite' %}
 <link rel="stylesheet" href="{{ asset_url }}"/>
 {% endstylesheets %}
 
             {% javascripts
-            '@proartiTouscoprodBundle/Resources/public/javascript/carousel.js'
-            %}
+            '@proartiTouscoprodBundle/Resources/public/javascript/carousel.js' %}
 <script src="{{ asset_url }}"></script>
 {% endjavascripts %}
 
@@ -21,29 +21,33 @@ filter='cssrewrite' %}
 
             <!-- Carousel items -->
             <div class="carousel-inner ">
-                <div class="item active"><img class="img-responsive" src="https://ununsplash.imgix.net/photo-1416339134316-0e91dc9ded92?q=75&fm=jpg&s=883a422e10fc4149893984019f63c818" alt="">
-                    <div class="carousel-caption col-lg-12">
-                        <h1  data-animation="animated zoomInLeft " class="cap-txt ">Touscopod <br> évolue</h1>
-                        {#<p data-animation="animated bounceInDown">Touscopod évolue</p>#}
-                        {#<button data-animation="animated bounceInUp" class="button button--tamaya button--border-thick" data-text="Lancer un projet"><span>Lancer un projet</span></button>#}
-                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn btn-primary ">En savoir plus</a>
+                <div class="active item">
+                    <div class="blueBkg"></div>
+                    <img class="img-responsive"
+                         src="{{ asset('bundles/proartitouscoprod/image/navbar/5c6cd0a4d890e1243574f2ab6001db9fa5f3b605.jpg') }}"
+                         alt="">
+                    <div class="carousel-caption slideInLeft">
 
+                        <h1 data-animation="animated zoomInLeft"><span>Laissez nous</span> vous <br>accompagner</h1>
+                        <p>Vous avez besoin d'aide pour finaliser votre projet ?<br> N'hésitez pas à contacter nos
+                            coachs,ils se feront un <br> plaisir de vous assister dans la création de votre projet.</p>
+
+                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue ">Contactez notre équipe</a>
                     </div>
                 </div>
-                {#<div class="item"><img class="img-responsive" src="https://images.pexels.com/photos/48726/pexels-photo-48726.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="">#}
-                    {#<div class="carousel-caption">#}
-                        {#<h1 data-animation="animated zoomInLeft" class="cap-txt">We are smart developers</h1>#}
-                        {#<p data-animation="animated bounceInDown">Get start your next awesome project</p>#}
-                        {#<button data-animation="animated bounceInUp" class="button button--tamaya button--border-thick" data-text="Send"><span>Send</span></button>#}
-                    {#</div>#}
-                {#</div>#}
-                <div class="item"><img class="img-responsive" src="https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&fm=jpg&s=9bf9f2ef5be5cb5eee5255e7765cb327" alt="">
-                    <div class="carousel-caption  slideInLeft">
-                        <h1 data-animation="animated zoomInLeft" class="cap-txt">We are innovative</h1>
-                        {#<p data-animation="animated bounceInDown">Get start your next awesome project</p>#}
-                        {#<button data-animation="animated bounceInUp" class="button button--tamaya button--border-thick" data-text="Send"><span>Send</span></button>#}
-                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn btn-primary ">En savoir plus</a>
+                <div class="item">
+                    <div class="blueBkg"></div>
+                    <img class="img-responsive"
+                         src="{{ asset('bundles/proartitouscoprod/image/navbar/987a934b38af0d8f9683db4d7b726d4a2bed77a8.jpg') }}"
+                         alt="">
+                    <div class="carousel-caption slideInLeft">
 
+                        <h1 data-animation="animated zoomInLeft"><span>Laissez nous</span> vous <br>accompagner</h1>
+                        <p>Vous avez besoin d'aide pour finaliser votre projet ?<br> N'hésitez pas à contacter nos
+                            coachs,ils se feront un <br> plaisir de vous assister dans la création de votre projet.</p>
+
+                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue ">En
+                            savoir plus</a>
                     </div>
                 </div>
                 <!-- Carousel nav -->
@@ -53,3 +57,64 @@ filter='cssrewrite' %}
         </div>
     </div>
 </div>
+
+<style>
+
+    .carousel-caption {
+        text-align: right;
+
+    }
+
+    @media screen and (min-width: 768px) {
+        .carousel-caption {
+            right: 10%;
+            padding-bottom: 30px;
+        }
+
+        .carousel-caption h1 {
+            font-size: 60px;
+            display: block;
+            float: right;
+            clear: both;
+        }
+
+        .carousel-caption .btn {
+            float: right;
+            clear: both;
+            margin-top: 20px;
+        }
+
+        .carousel-caption p {
+            font-size: 17px;
+            margin-top: 30px;
+            display: block;
+            float: right;
+            clear: both;
+        }
+
+        .carousel-caption h1 span {
+            display: block;
+            font-weight: 400;
+            font-size: 30px;
+            margin-bottom: -5px;
+        }
+
+        .blueBkg {
+            position: absolute;
+            height: 700px;
+            width: 30%;
+            background: rgba(3, 150, 163, 0.7);
+            z-index: 10;
+            right: 0;
+        }
+
+        .blueBkg::before {
+            content: '';
+            border: 700px solid transparent;
+            border-right: 700px solid rgba(3, 150, 163, 0.7);
+            display: block;
+            right: 100%;
+            position: absolute;
+        }
+    }
+</style>

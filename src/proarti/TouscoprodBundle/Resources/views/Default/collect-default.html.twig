@@ -15,7 +15,7 @@
     {% endjavascripts %}
 
 
-    <div class="container">
+    <div id="collect" class="container">
         <div class="row">
 
             <div class="col-md-12 col-sm-12 col-xs-12 collect-default">
@@ -40,19 +40,19 @@
         <!-- collect summary-->
 
         <div class="row">
-            <div class="collect-main col-xs-12 col-sm-12 col-md-12 ">
+            <div class="collect-main col-xs-12 col-sm-12 col-md-12">
                 <div class="row">
 
                     <!-- image -->
-                    <div id="FrameForVisu" class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
+                    <div id="FrameForVisu test" class="col-xs-12 col-sm-12 col-md-7 col-lg-6 " style="margin-right: 0 !important;">
                         {#<iframe width="100%" height="300px" src="https://www.youtube.com/embed/1FyfpkDBNTw"#}
                         {#frameborder="0"#}
                         {#allowfullscreen></iframe>#}
-                        <img src="{{ asset('bundles/proartitouscoprod/image/941-1389856269.jpg') }}">
+                        <img class="img-responsive" src="{{ asset('bundles/proartitouscoprod/image/941-1389856269.jpg') }}">
                     </div>
                     <!--  .\ end image -->
 
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 mobile">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 mobile">
                         <div class="row">
                             <div class="col-xs-6 col-md-6 amounts collect-content ">
                                 <span class="ChiffreAmount">1 590 €</span>
@@ -193,33 +193,14 @@
 
                 <div style="border: 4px solid green;" class="col-md-6 pull-right col-xs-12 mobile" data-category="view">
                     <h3>Les récompenses</h3>
-                    <div class="lib-panel">
-                        <div class="row box-shadow">
-                            <a href="#">
-                                <div class="col-md-6">
-                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="lib-row lib-header">
-                                        liorem ipsum
-                                        <div class="lib-header-seperator"></div>
-                                    </div>
-                                    <div class="lib-row lib-desc">
-                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
-                                        ipsum
-                                        dolor Lorem ipsum dolor
-                                    </div>
-                                </div>
-                            </a>
 
-                        </div>
-                    </div>
-                    <div class="lib-panel">
-                        <div class="row box-shadow">
-                            <a href="#">
+                    <!-- first reward -->
+                    <a href="#">
+                        <div class="lib-panel">
+                            <div class="row box-shadow">
 
                                 <div class="col-md-6">
-                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
                                 </div>
                                 <div class="col-md-6 reward">
                                     <div style="border: 3px solid red;" class="row">
@@ -240,18 +221,30 @@
                                         dolor Lorem ipsum dolor
                                     </div>
                                 </div>
-                            </a>
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="lib-panel">
-                        <div class="row box-shadow">
-                            <a href="#">
+                    </a>
+                    <!-- .\ end first reward -->
+
+                    <!-- second reward -->
+
+                    <a href="#">
+                        <div class="lib-panel">
+                            <div class="row box-shadow">
 
                                 <div class="col-md-6">
-                                    <img class="lib-img-show" src="http://lorempixel.com/850/850/?random=123">
+                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 reward">
+                                    <div style="border: 3px solid red;" class="row">
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum </p>
+                                        </div>
+                                    </div>
                                     <div class="lib-row lib-header">
                                         liorem ipsum
                                         <div class="lib-header-seperator"></div>
@@ -262,11 +255,42 @@
                                         dolor Lorem ipsum dolor
                                     </div>
                                 </div>
-                            </a>
 
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                    <!-- .\ end second reward -->
 
+                    <!-- third reward -->
+                    <a href="#">
+                        <div class="lib-panel">
+                            <div class="row box-shadow">
+                                <div class="col-md-6">
+                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                                </div>
+                                <div class="col-md-6 reward">
+                                    <div style="border: 3px solid red;" class="row">
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>Lorem ipsum dolor Lorem ipsum </p>
+                                        </div>
+                                    </div>
+                                    <div class="lib-row lib-header">
+                                        liorem ipsum
+                                        <div class="lib-header-seperator"></div>
+                                    </div>
+                                    <div class="lib-row lib-desc">
+                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                        ipsum
+                                        dolor Lorem ipsum dolor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- .\ end third reward -->
                 </div>
 
             </div>
