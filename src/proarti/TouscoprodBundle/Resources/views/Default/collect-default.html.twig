@@ -7,294 +7,329 @@
     '@proartiTouscoprodBundle/Resources/public/css/collect.css'
 
     filter='cssrewrite' %}
-    <link rel="stylesheet" href="{{ asset_url }}"/>
-    {% endstylesheets %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
 
     {% javascripts %}
-    <script src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
 
 
-    <div id="collect" class="container">
-        <div class="row">
+<div id="collect" class="container">
+    <div class="row">
 
-            <div class="col-md-12 col-sm-12 col-xs-12 collect-default">
-                <h2 class="text-center">Title</h2>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="col-md-12 col-sm-12 col-xs-12 collect-default">
+            <h2 class="text-center">Title</h2>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
                         <span class="projectKind pull-right">
                             <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                             Documentaire
                         </span>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
                         <span class="projectLocation text-center  pull-left">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
                             Norvège
                         </span>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- collect summary-->
+    <!-- collect summary-->
 
-        <div class="row">
-            <div class="collect-main col-xs-12 col-sm-12 col-md-12">
-                <div class="row">
+    <div class="row">
+        <div class="collect-main col-xs-12 col-sm-12 col-md-12">
+            <div class="row">
 
-                    <!-- image -->
-                    <div id="FrameForVisu test" class="col-xs-12 col-sm-12 col-md-7 col-lg-6 " style="margin-right: 0 !important;">
-                        {#<iframe width="100%" height="300px" src="https://www.youtube.com/embed/1FyfpkDBNTw"#}
-                        {#frameborder="0"#}
-                        {#allowfullscreen></iframe>#}
-                        <img class="img-responsive" src="{{ asset('bundles/proartitouscoprod/image/941-1389856269.jpg') }}">
-                    </div>
-                    <!--  .\ end image -->
+                <!-- image -->
+                <div id="FrameForVisu test" class="col-xs-12 col-sm-12 col-md-7 col-lg-6 "
+                     style="margin-right: 0 !important;">
+                    {#<iframe width="100%" height="300px" src="https://www.youtube.com/embed/1FyfpkDBNTw"#}
+                    {#frameborder="0"#}
+                    {#allowfullscreen></iframe>#}
+                    <img class="img-responsive"
+                         src="{{ asset('bundles/proartitouscoprod/image/941-1389856269.jpg') }}">
+                </div>
+                <!--  .\ end image -->
 
-                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 mobile">
-                        <div class="row">
-                            <div class="col-xs-6 col-md-6 amounts collect-content ">
-                                <span class="ChiffreAmount">1 590 €</span>
-                                <span>levés sur 1000 €</span>
-                            </div>
-                            <div class="col-xs-6 col-md-6 collect-content ">
-                                <div class="progress green">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-6 mobile">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 amounts collect-content ">
+                            <span class="ChiffreAmount">1 590 €</span>
+                            <span>levés sur 1000 €</span>
+                        </div>
+                        <div class="col-xs-6 col-md-6 collect-content ">
+                            <div class="progress green">
                                         <span class="progress-left">
                                             <span class="progress-bar"></span>
                                         </span>
-                                    <span class="progress-right">
+                                <span class="progress-right">
                                             <span class="progress-bar"></span>
                                         </span>
-                                    <div class="progress-value">100%</div>
+                                <div class="progress-value">100%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 amounts collect-content">
+                            <div id="ChiffreCoprod">
+                                <div>
+                                    <span id="ChiffreCoprod">31</span>
+                                    <span>coprods</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-6 col-md-6 amounts collect-content">
-                                <div id="ChiffreCoprod">
-                                    <div>
-                                        <span id="ChiffreCoprod">31 €</span>
-                                        <span>coprods</span>
-                                    </div>
-                                </div>
+                        <div class="col-xs-6 col-md-6 collect-content">
+                            <div class="TimeLeft margin-top-2 text-center">
+
+                                <span class="CampaignDone">Campagne bouclée <br><span>le 10 octobre 2013</span></span>
+
                             </div>
-                            <div class="col-xs-6 col-md-6 collect-content">
-                                <div class="TimeLeft margin-top-2 text-center">
-
-                                    <span class="CampaignDone">Campagne bouclée <br><span>le 10 octobre 2013</span></span>
-
-                                </div>
-                            </div>
-
                         </div>
-                        <div class="row">
-                            <div class="col-xscol-md-12 text-center collect-content" style="background: #29C564;">
-                                <div id="ProduceProject">
 
-                                    <a style="color: white; text-align: center !important;" class="ProduceMinSuccess">Projet
-                                        financé</a>
-                                </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xscol-md-12 text-center collect-content" style="background: #29C564;">
+                            <div id="ProduceProject">
+
+                                <a style="color: white; text-align: center !important;" class="ProduceMinSuccess">Projet
+                                    financé</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- .\ end project summary  -->
+    </div>
+    <!-- .\ end project summary  -->
 
-        <!-- .\ pitch block  -->
-        <div class="row">
-            <div class="collect-pitch col-xs-12 col-sm-12 col-md-12 mobile ">
-                <div class="col-md-6">
-                    <h3>Le pitch</h3>
-                    <p>
-                        Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
-                        Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
-                        la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
-                        tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
-                        l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
-                        augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
-                        de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
-                        pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
-                        des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
-                        pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
-                        critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 mobile">
-                    <h3>le porteur de projet</h3>
-                    <a href="#"><img class="ProfilPicturePDP" src="#"></a>
-                    <span class="PDPInfos">
+    <!-- .\ pitch block  -->
+    <div class="row">
+        <div class="collect-pitch col-xs-12 col-sm-12 col-md-12 mobile ">
+            <div class="col-md-6">
+                <h3>Le pitch</h3>
+                <p>
+                    Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
+                    Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
+                    la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
+                    tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
+                    l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
+                    augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
+                    de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
+                    pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
+                    des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
+                    pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
+                    critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mobile">
+                <h3>le porteur de projet</h3>
+                <a href="#"><img class="ProfilPicturePDP" src="#"></a>
+                <span class="PDPInfos">
                         <a href="#" target="_blank">Simon</a>
                         Norvège
                         <a href="#" target="_blank" class="btn pdp-btn">voir mon profil</a>
                     </span>
-                    <div class="row socialLinks">
-                        <span><a class=" socialLink btn btn-primary" href="#">Facebook </a> </span>
-                        <span><a class="socialLink btn btn-primary" href="#">Website </a> </span>
-                    </div>
+                <div class="row socialLinks">
+                    <span><a class=" socialLink btn btn-primary" href="#">Facebook </a> </span>
+                    <span><a class="socialLink btn btn-primary" href="#">Website </a> </span>
                 </div>
-
             </div>
+
         </div>
+    </div>
 
-        {#<div class="row align-items-start text-center">#}
-        {#<div style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
-        {#<a> One of three columns</a>#}
-        {#</div>#}
-        {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
-        {#One of three columns#}
-        {#</div>#}
-        {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
-        {#One of three columns#}
-        {#</div>#}
-        {#</div>#}
-        <nav class="ProjectNavigation">
-            <ul>
-                <li><a href="#Présentation" class="active">Le pitch</a></li>
-                <li><a href="#Team">L'équipe du projet</a></li>
+    {#<div class="row align-items-start text-center">#}
+    {#<div style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+    {#<a> One of three columns</a>#}
+    {#</div>#}
+    {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+    {#One of three columns#}
+    {#</div>#}
+    {#<div  style="border: 2px solid white; background: #77B9C8; padding: 1em;" class="col-md-4">#}
+    {#One of three columns#}
+    {#</div>#}
+    {#</div>#}
+    {#<nav class="ProjectNavigation">#}
+        {#<ul>#}
+            {#<li><a href="#Présentation" class="active">Le pitch</a></li>#}
+            {#<li><a href="#Team">L'équipe du projet</a></li>#}
 
-            </ul>
-        </nav>
-        <div class="row">
-            <div style="border: 4px solid red;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div style="border: 4px solid green;" class="col-md-6 col-xs-12 mobile">
-                    <h3 id="Présentation">Présentation du projet</h3>
-                    <p>
-                        Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
-                        Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
-                        la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
-                        tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
-                        l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
-                        augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
-                        de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
-                        pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
-                        des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
-                        pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
-                        critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
-                    </p>
+        {#</ul>#}
+    {#</nav>#}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="col-md-6 col-xs-12 mobile">
+                <h3 id="Présentation">Présentation du projet</h3>
+                <p>
+                    Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
+                    Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
+                    la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
+                    tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
+                    l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
+                    augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
+                    de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
+                    pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
+                    des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
+                    pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
+                    critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
+                </p>
 
-                    <h3 id="Team">L'équipe du projet</h3>
-                    <p>
-                        Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
-                        Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
-                        la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
-                        tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
-                        l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
-                        augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
-                        de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
-                        pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
-                        des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
-                        pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
-                        critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
-                    </p>
-                </div>
+                <h3 id="Team">L'équipe du projet</h3>
+                <p>
+                    Depuis plusieurs centaines d'années et l'arrivée des colons espagnols, la richesse de l'île de
+                    Negros, située dans la partie occidentale de la région des Visayas aux Philippines, provient de
+                    la culture de la canne à sucre. Malgré cela les nombreuses communautés vivant le long des côtes
+                    tirent leurs principaux revenus de la pêche. Les pêcheurs locaux, pauvres et ayant peu accès à
+                    l'éducation, ont dû répondre à leurs besoins ainsi qu’à ceux d'une population en constante
+                    augmentation (comme partout aux Philippines). Ils sont sommairement équipés de bancas, et durant
+                    de longues décennies, ont utilisé des techniques de pêche néfastes pour les écosystèmes marins :
+                    pêche à l'explosif, au cyanure, surpêche. La destruction des mangroves (lieux de reproduction
+                    des poissons) pour l'exploitation du bois, ainsi que la pression exercée par les bateaux de
+                    pêche commerciaux (toujours mieux équipés et très souvent à la limite de la légalité) rendent
+                    critique cette situation, tant pour l'environnement que pour les communautés qui en dépendent.
+                </p>
+            </div>
 
-                <div style="border: 4px solid green;" class="col-md-6 pull-right col-xs-12 mobile" data-category="view">
-                    <h3>Les récompenses</h3>
+            <div class="col-md-6 pull-right col-xs-12 mobile" data-category="view">
+                <h3>Les récompenses</h3>
 
-                    <!-- first reward -->
-                    <a href="#">
-                        <div class="lib-panel">
-                            <div class="row box-shadow">
 
-                                <div class="col-md-6">
-                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
-                                </div>
-                                <div class="col-md-6 reward">
-                                    <div style="border: 3px solid red;" class="row">
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum</p>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum </p>
-                                        </div>
-                                    </div>
-                                    <div class="lib-row lib-header">
-                                        liorem ipsum
-                                        <div class="lib-header-seperator"></div>
-                                    </div>
-                                    <div class="lib-row lib-desc">
-                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
-                                        ipsum
-                                        dolor Lorem ipsum dolor
-                                    </div>
-                                </div>
+                <!-- first reward -->
+                <a class="reward-button" href="#">
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
 
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
                             </div>
-                        </div>
-                    </a>
-                    <!-- .\ end first reward -->
-
-                    <!-- second reward -->
-
-                    <a href="#">
-                        <div class="lib-panel">
-                            <div class="row box-shadow">
-
-                                <div class="col-md-6">
-                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
-                                </div>
-                                <div class="col-md-6 reward">
-                                    <div style="border: 3px solid red;" class="row">
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum</p>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum </p>
-                                        </div>
+                            <div class="col-md-8 reward">
+                                <div class="row">
+                                    <div class="col-sm-8 RewardName text-left">
+                                        <p>Le tournage comme si vous y étiez</p>
+                                        <p>5 séances privées</p>
                                     </div>
-                                    <div class="lib-row lib-header">
-                                        liorem ipsum
-                                        <div class="lib-header-seperator"></div>
-                                    </div>
-                                    <div class="lib-row lib-desc">
-                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
-                                        ipsum
-                                        dolor Lorem ipsum dolor
+                                    <div class="col-sm-2 price text-center">
+                                        <p>10€ </p>
                                     </div>
                                 </div>
 
-                            </div>
-                        </div>
-                    </a>
-                    <!-- .\ end second reward -->
-
-                    <!-- third reward -->
-                    <a href="#">
-                        <div class="lib-panel">
-                            <div class="row box-shadow">
-                                <div class="col-md-6">
-                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
-                                </div>
-                                <div class="col-md-6 reward">
-                                    <div style="border: 3px solid red;" class="row">
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum</p>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <p>Lorem ipsum dolor Lorem ipsum </p>
-                                        </div>
-                                    </div>
-                                    <div class="lib-row lib-header">
-                                        liorem ipsum
-                                        <div class="lib-header-seperator"></div>
-                                    </div>
-                                    <div class="lib-row lib-desc">
-                                        Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
-                                        ipsum
-                                        dolor Lorem ipsum dolor
-                                    </div>
+                                <div class="lib-row lib-desc">
+                                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                    ipsum
+                                    dolor Lorem ipsum dolor
                                 </div>
                             </div>
+
                         </div>
-                    </a>
-                    <!-- .\ end third reward -->
-                </div>
+                    </div>
+                </a>
+                <!-- .\ end first reward -->
+                <!-- first reward -->
+                <a class="reward-button" href="#">
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                            </div>
+                            <div class="col-md-8 reward">
+                                <div class="row">
+                                    <div class="col-sm-8 RewardName text-left">
+                                        <p>Le tournage comme si vous y étiez</p>
+                                        <p>5 séances privées</p>
+                                    </div>
+                                    <div class="col-sm-2 price text-center">
+                                        <p>10€ </p>
+                                    </div>
+                                </div>
+
+                                <div class="lib-row lib-desc">
+                                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                    ipsum
+                                    dolor Lorem ipsum dolor
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+                <!-- .\ end first reward -->
+                <!-- first reward -->
+                <a class="reward-button" href="#">
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                            </div>
+                            <div class="col-md-8 reward">
+                                <div class="row">
+                                    <div class="col-sm-8 RewardName text-left">
+                                        <p>Le tournage comme si vous y étiez</p>
+                                        <p>5 séances privées</p>
+                                    </div>
+                                    <div class="col-sm-2 price text-center">
+                                        <p>10€ </p>
+                                    </div>
+                                </div>
+
+                                <div class="lib-row lib-desc">
+                                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                    ipsum
+                                    dolor Lorem ipsum dolor
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+                <!-- .\ end first reward -->
+                <!-- first reward -->
+                <a class="reward-button" href="#">
+                    <div class="lib-panel">
+                        <div class="row box-shadow">
+
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                            </div>
+                            <div class="col-md-8 reward">
+                                <div class="row">
+                                    <div class="col-sm-8 RewardName text-left">
+                                        <p>Le tournage comme si vous y étiez</p>
+                                        <p>5 séances privées</p>
+                                    </div>
+                                    <div class="col-sm-2 price text-center">
+                                        <p>10€ </p>
+                                    </div>
+                                </div>
+
+                                <div class="lib-row lib-desc">
+                                    Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem
+                                    ipsum
+                                    dolor Lorem ipsum dolor
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+                <!-- .\ end first reward -->
+
 
             </div>
         </div>
     </div>
 
-{% endblock %}
+
+    <style>
+        .RewardName {
+            font-weight: 900;
+
+            font-size: 14px;
+        }
+    </style>
+
+    {% endblock %}

@@ -1,4 +1,9 @@
 
+.reward-button:hover {
+    text-decoration: none !important;
+    box-shadow: 10px 8px 6px -6px red;
+}
+
 #collect {
     margin-top: 7em;
 }
@@ -41,19 +46,19 @@
 
 }
 
- h3 {
+h3 {
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
- /*h3::after {*/
-    /*content: '';*/
-    /*display: block;*/
-    /*height: 3px;*/
-    /*width: 35px;*/
-    /*background-color: #77B9C8;*/
-    /*margin-top: 10px;*/
+/*h3::after {*/
+/*content: '';*/
+/*display: block;*/
+/*height: 3px;*/
+/*width: 35px;*/
+/*background-color: #77B9C8;*/
+/*margin-top: 10px;*/
 /*}*/
 
 .collect-pitch p {
@@ -75,10 +80,11 @@
     margin-left: 10px;
     max-width: 245px;
 }
+
 .PDPInfos > a {
     display: block;
     font-weight: 700;
-    color: #FF5652;
+    /*color: #FF5652;*/
 }
 
 .PDPInfos > .pdp-btn {
@@ -88,10 +94,12 @@
     padding: 0;
     margin-top: 3px;
 }
+
 .socialLinks {
     margin-top: 1em;
     margin-left: 6em;
 }
+
 .socialLinks a {
     padding: .3em;
 
@@ -135,6 +143,7 @@
     background-color: #dcdcdc;
 
 }
+
 #FrameForVisu {
     max-height: 375px;
     height: 100%;
@@ -163,6 +172,7 @@
 .collect-content {
     margin-top: 3em;
 }
+
 .TimeLeft .CampaignDone {
     font-size: 20px;
     padding-right: 0;
@@ -355,27 +365,27 @@
         margin-bottom: 20px;
     }
 }
- /* end progress */
 
+/* end progress */
 
 .lib-panel {
     margin-bottom: 20Px;
     margin-left: 2em;
+
 }
+
 /*.lib-panel img {*/
-    /*width: 100%;*/
-    /*background-color: transparent;*/
+/*width: 100%;*/
+/*background-color: transparent;*/
 /*}*/
 
 .lib-panel .row,
 .lib-panel .col-md-6 {
-    padding: 0;
     background-color: #FFFFFF;
 }
 
-
 .lib-panel .lib-row {
-    padding: 0 20px 0 20px;
+    margin-top: 1em;
 }
 
 .lib-panel .lib-row.lib-header {
@@ -396,8 +406,10 @@
     height: 100%;
     display: block;
     font-size: 13px;
+    padding-bottom: 1em;
 }
-.lib-panel .lib-row.lib-desc a{
+
+.lib-panel .lib-row.lib-desc a {
     position: absolute;
     width: 100%;
     bottom: 10px;
@@ -409,17 +421,16 @@
 }
 
 .box-shadow {
-    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
 }
 
 .no-padding {
     padding: 0;
 }
 
-.reward>row {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+.reward .row {
+    background: #F2F1F2
 }
 
 .ProjectNavigation {
@@ -461,10 +472,38 @@
     -webkit-border-radius: 50px;
 }
 
-@media screen and (max-width: 992px){
+.RewardName {
+    border: 3px solid #F4F3F4;
+    background: white;
+}
+
+.RewardName p:first-child {
+    font-weight: 900;
+    text-transform: uppercase;
+    height: 34px;
+    font-size: 14px;
+}
+
+.RewardName p:last-child {
+    color: #FF5652;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.price p{
+    color: #22ACBF;
+    font-size: 30px !important;
+    font-weight: 700;
+    text-align: center;
+    padding-left: .5em;
+    padding-top: .5em;
+}
+
+@media screen and (max-width: 992px) {
     .mobile {
         text-align: center;
     }
+
     .mobile p {
         text-align: justify;
     }
