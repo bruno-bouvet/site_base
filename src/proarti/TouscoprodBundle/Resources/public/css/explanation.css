@@ -17,3 +17,10 @@
     background-color: #2ab6c7;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 701px) {
+    #EXPLANATION .text-black p {
+        text-align: justify;
+        margin-right: 1em;
+    }
+}

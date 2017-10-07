@@ -4,8 +4,6 @@
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
     min-height: 70px;
-
-    /*border-right:1px solid #dadada;;*/
 }
 
 .navbar-brand > img {
@@ -19,7 +17,6 @@
     display: block;
     height: 52px;
     color: #333;
-    /*font-size: 15px;*/
     text-decoration: none;
     line-height: 0.7;
     transition: all 0.2s ease-in-out;

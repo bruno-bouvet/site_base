@@ -85,7 +85,7 @@ h6 {
     background: #25ADC0;
     color: #ffffff;
     border: none;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 2em;
 
 }
@@ -108,7 +108,7 @@ h6 {
     -moz-transition: 300ms;
     -o-transition: 300ms;
     transition: 300ms;
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 2em;
 }
 
