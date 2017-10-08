@@ -265,6 +265,7 @@
         display: block;
         float: right;
         clear: both;
+        text-align: right;
     }
 
     .carousel-caption .btn {

@@ -1,6 +1,8 @@
 {% extends 'proartiTouscoprodBundle::layout.html.twig' %}
 
 {% block body %}
+
+    <script src=" https://cdn.jsdelivr.net/npm/vue"></script>
     {% stylesheets
     '@proartiTouscoprodBundle/Resources/public/css/index.css'
     '@proartiTouscoprodBundle/Resources/public/css/global.css'
@@ -8,6 +10,7 @@
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
+
 
 
     {% include '@proartiTouscoprod/Default/projects.html.twig' %}<br><br>
@@ -24,19 +27,20 @@
         </div>
     </div>
 
-    <script>
-        //        limit the number of project item to 4
-//        $(".scene:gt(3)").css("display", "none");
+    {#<script>#}
+        {#//        limit the number of project item to 4#}
 
-//        //        shuffle project li - to delete when on twig
-//        $(document).ready(function () {
-//            var parent = $("#shuffle");
-//            var divs = parent.children();
-//            while (divs.length) {
-//                parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-//            }
-//        });
-
-
-    </script>
+        {#$('#indexparallax').css("background","url({{ asset('bundles/proartitouscoprod/image/launch.png') }}) no-repeat fixed center");#}
+        {#$('#indexparallax').css("background-size","cover");#}
+        {#//        shuffle project li - to delete when on twig#}
+        {#$(document).ready(function () {#}
+            {#var parent = $("#shuffle");#}
+            {#var divs = parent.children();#}
+            {#while (divs.length) {#}
+                {#parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);#}
+            {#}#}
+            {#$(".scene").slice(4).hide();#}
+        {#});#}
+        {##}
+    {#</script>#}
 {% endblock body %}

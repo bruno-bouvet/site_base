@@ -6,15 +6,15 @@ a .button {
     text-decoration: none;
     color: initial;
 }
-/*h3::after {*/
-    /*height: 5px;*/
-    /*width: 50px;*/
-    /*content: '';*/
-    /*display: block;*/
-    /*background-color: #2ab6c7;*/
-    /*margin-top: 20px;*/
-/*}*/
 
+/*h3::after {*/
+/*height: 5px;*/
+/*width: 50px;*/
+/*content: '';*/
+/*display: block;*/
+/*background-color: #2ab6c7;*/
+/*margin-top: 20px;*/
+/*}*/
 
 h3 {
     font-size: 28px;
@@ -138,6 +138,7 @@ Movie information
     word-wrap: break-word;
 
 }
+
 .info header h3 {
     padding-top: 1em !important;
     padding-left: -1.2em !important;
@@ -152,7 +153,7 @@ Movie information
 }
 
 .info span,
-.info p{
+.info p {
 
     color: #ffffff;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -171,7 +172,7 @@ Movie information
 
 .info a {
     background: #25ADC0;
-    border:none;
+    border: none;
     color: #ffffff;
 }
 
@@ -180,7 +181,7 @@ Movie information
     color: #ffffff;
 }
 
-.info .btn:active, .info .btn:focus{
+.info .btn:active, .info .btn:focus {
     background: #77B9C8;
     color: #ffffff;
 }
@@ -228,8 +229,8 @@ Media Queries
 **************************************/
 @media screen and (max-width: 60.75em) {
     /*.scene {*/
-        /*float: none;*/
-        /*margin: 30px auto 60px;*/
+    /*float: none;*/
+    /*margin: 30px auto 60px;*/
     /*}*/
 }
 
@@ -452,16 +453,16 @@ table {
 }
 
 /*.codrops-top a {*/
-    /*text-decoration: none;*/
-    /*padding: 0 1em;*/
-    /*letter-spacing: 0.1em;*/
-    /*color: #888;*/
-    /*display: inline-block;*/
+/*text-decoration: none;*/
+/*padding: 0 1em;*/
+/*letter-spacing: 0.1em;*/
+/*color: #888;*/
+/*display: inline-block;*/
 /*}*/
 
 /*.codrops-top a:hover {*/
-    /*background: rgba(255, 255, 255, 0.95);*/
-    /*color: #333;*/
+/*background: rgba(255, 255, 255, 0.95);*/
+/*color: #333;*/
 /*}*/
 
 .codrops-top span.right {
@@ -500,21 +501,21 @@ table {
 }
 
 /*.codrops-demos a {*/
-    /*text-decoration: none;*/
-    /*outline: none;*/
-    /*display: inline-block;*/
-    /*margin: 0.5em;*/
-    /*padding: 0.7em 1.1em;*/
-    /*border: 3px solid #b1aea6;*/
-    /*color: #b1aea6;*/
-    /*font-weight: 700;*/
+/*text-decoration: none;*/
+/*outline: none;*/
+/*display: inline-block;*/
+/*margin: 0.5em;*/
+/*padding: 0.7em 1.1em;*/
+/*border: 3px solid #b1aea6;*/
+/*color: #b1aea6;*/
+/*font-weight: 700;*/
 /*}*/
 
 /*.codrops-demos a:hover,*/
 /*.codrops-demos a.current-demo,*/
 /*.codrops-demos a.current-demo:hover {*/
-    /*border-color: #89867e;*/
-    /*color: #89867e;*/
+/*border-color: #89867e;*/
+/*color: #89867e;*/
 /*}*/
 
 @media screen and (max-width: 25em) {
@@ -529,16 +530,13 @@ table {
     display: none;
 }
 
-
-
-
 .movie .row {
     margin-bottom: 1em;
 }
+
 .ribbon {
     top: 20px;
-    padding:2px;
-
+    padding: 2px;
 
 }
 

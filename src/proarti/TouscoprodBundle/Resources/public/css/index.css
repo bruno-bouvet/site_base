@@ -20,23 +20,46 @@
     height: 20em;
     /* Create the parallax scrolling effect */
 }
+
 #indexparallax section {
     background: rgba(255, 255, 255, .7);
     height: 20em;
 }
+
 #indexparallax h2 {
     color: #2D2D2D;
 }
 
-section{padding: 30px 0; float: left; width: 100%}
+.index-info {
+    border: 4px solid #22ACBF;
+    margin-top: 3em;
+    background: repeating-linear-gradient(
+            -55deg,
+            #22ACBF,
+            #22ACBF 10px,
+            #219eb1 10px,
+            #219eb1 20px
+    );;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 1em;
+    padding-left: 1em;
 
-@media screen and (max-width: 1157px ){
+}
+
+section {
+    padding: 30px 0;
+    float: left;
+    width: 100%
+}
+
+@media screen and (max-width: 1157px ) {
     .discover-btn {
         margin-top: 2em;
     }
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 540px) {
     #indexparallax h2 {
         font-size: 25px;
     }
