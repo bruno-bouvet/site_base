@@ -622,6 +622,10 @@ input[type="checkbox"] { display: inline; }
     margin: 0 auto;
 }
 
+
+.back:hover {
+    background: #F06000;
+}
 /* removed gutters */
 .row.collapsed > .column,
 .row.collapsed > .columns,
@@ -2029,6 +2033,10 @@ call-to-action .button {
     color: #fff;
 }
 
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background: #F06000 !important;
+}
 #contact h1 {
     font: 18px/24px 'opensans-bold', sans-serif;
     text-transform: uppercase;
