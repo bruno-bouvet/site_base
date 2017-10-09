@@ -12,7 +12,7 @@ parameters:
 
 framework:
     #esi: ~
-    #translator: { fallbacks: ['%locale%'] }
+    translator: { fallbacks: [fr] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -34,7 +34,14 @@ framework:
     assets: ~
     php_errors:
         log: true
-
+#Sonata config
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        # ...
 #Assetic configuration
 assetic:
     debug:          '%kernel.debug%'
