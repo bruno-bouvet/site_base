@@ -1,0 +1,69 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+
+{% stylesheets
+'@proartiTouscoprodBundle/Resources/public/css/carousel.css'
+'@proartiTouscoprodBundle/Resources/public/css/global.css'
+
+
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+    {% javascripts
+    '@proartiTouscoprodBundle/Resources/public/javascript/carousel.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="sg-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+            <!-- Carousel items -->
+            <div class="carousel-inner ">
+                <div class="active item">
+                    <div class="blueBkg"></div>
+                    <img class="img-responsive"
+                         src="{{ asset('bundles/proartitouscoprod/image/navbar/5c6cd0a4d890e1243574f2ab6001db9fa5f3b605.jpg') }}"
+                         alt="">
+                    <div class="carousel-caption slideInLeft">
+
+                        <h1 data-animation="animated zoomInLeft"><span>Laissez nous</span> vous <br> accompagner</h1>
+                        <p>Vous avez besoin d'aide pour finaliser votre projet ? N'hésitez pas à contacter nos
+                            coachs,ils se feront un plaisir de vous assister dans la création de votre projet.</p>
+
+                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue ">Contactez
+                            notre équipe</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="blueBkg"></div>
+                    <img class="img-responsive"
+                         src="{{ asset('bundles/proartitouscoprod/image/navbar/987a934b38af0d8f9683db4d7b726d4a2bed77a8.jpg') }}"
+                         alt="">
+                    <div class="carousel-caption slideInLeft">
+
+                        <h1 data-animation="animated zoomInLeft"><span>Laissez nous</span> vous <br>accompagner</h1>
+                        <p>Vous avez besoin d'aide pour finaliser votre projet ? N'hésitez pas à contacter nos
+                            coachs,ils se feront un plaisir de vous assister dans la création de votre projet.</p>
+
+                        <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue ">En
+                            savoir plus</a>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#sg-carousel" data-slide="prev">‹</a>
+                <a class="carousel-control right" href="#sg-carousel" data-slide="next">›</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+    /*.carousel-caption {*/
+        /*text-align: right;*/
+    /*}*/
+
+
+</style>

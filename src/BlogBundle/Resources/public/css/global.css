@@ -76,6 +76,7 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 6em !important;
 }
 
 .navbar-brand>img {
@@ -798,11 +799,11 @@ section#contact .text-danger {
 }
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 ::selection {
     text-shadow: none;
-    background: #fed136;
+    background: #77B9C8;
 }
 img::selection {
     background: transparent;
@@ -810,6 +811,6 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
-body {
-    webkit-tap-highlight-color: #fed136;
-}
+/*body {*/
+    /*webkit-tap-highlight-color: #fed136;*/
+/*}*/

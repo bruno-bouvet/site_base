@@ -1,0 +1,84 @@
+{% extends "proartiTouscoprodBundle::layout.html.twig" %}
+
+{% block body %}
+
+    {% stylesheets
+    '@proartiTouscoprodBundle/Resources/public/css/index.css'
+    '@proartiTouscoprodBundle/Resources/public/css/global.css'
+
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <script>
+
+    </script>
+    {% include '@proartiTouscoprod/includes/carousel.html.twig' %}
+
+    <section class=" index-info text-left">
+        <div class="container ">
+            <div class="row" style="display: inline-block">
+
+
+            <h3 class="jumbotron-heading pull-right"><i class="fa fa-exclamation-triangle pull-left" aria-hidden="true"></i>COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>
+                VOTRE PROJET EST-IL ÉLIGIBLE ?</h3>
+            </div>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
+                vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+                qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+        </div>
+    </section>
+
+    {% include '@proartiTouscoprod/Default/projects.html.twig' %}
+    <div class="row">
+        <div class="col-sm-12 text-center discover-btn">
+            <a href="{{ path('proarti_touscoprod_default_projectindex') }}" class="btn bigbtn-blue">Découvrir plus de
+                projets</a>
+        </div>
+    </div>
+    <div id="indexparallax">
+        <section class=" text-center image-responsive">
+            <div class="container">
+                <h2 class="jumbotron-heading ">COMMENT LANCER UNE CAMPAGNE DE CROWDFUNDING ?<br>
+                    VOTRE PROJET EST-IL ÉLIGIBLE ?</h2>
+                <a href="{{ path('proarti_touscoprod_default_faq') }}" class="btn  bigbtn">En savoir plus</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        //        parallax effect
+        $('#indexparallax').css("background", "url({{ asset('bundles/proartitouscoprod/image/launch.png') }}) no-repeat fixed center");
+        $('#indexparallax').css("background-size", "cover");
+
+
+        //        shuffle project li - to delete when on twig
+        $(document).ready(function () {
+            var parent = $("#shuffle");
+            var divs = parent.children();
+            while (divs.length) {
+                parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+            }
+            //        limit the number of project item to 4
+
+            $(".scene:gt(3)").css("display", "none");
+
+        });
+
+
+    </script>
+
+
+    <style>
+        #indexparallax .bigbtn {
+            margin: 2em;
+        }
+
+    </style>
+
+{% endblock body %}

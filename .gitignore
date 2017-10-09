@@ -31,7 +31,7 @@
 # Assets and user uploads
 /web/bundles/
 /web/uploads/
-
+/web/css
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml
@@ -72,3 +72,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+/vendor/
+/.idea/
+/web/config.php
+/web/js
+/web/css
+/var/*
+!/bin/console

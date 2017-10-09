@@ -1,0 +1,70 @@
+{% extends 'proartiTouscoprodBundle::layout.html.twig' %}
+
+{% block body %}
+
+    {% stylesheets
+    '@proartiTouscoprodBundle/Resources/public/css/explanation.css'
+    '@proartiTouscoprodBundle/Resources/public/css/global.css'
+
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+
+    <div id="EXPLANATION" class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-12">
+                <h3>touscoprod évolue et rejoint proarti</h3>
+                <div class="text-black">
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                        born and I will give you a complete account of the system, and expound the actual teachings of
+                        the great explorer of the truth, the master-builder of human happiness. No one rejects,
+                        dislikes, or avoids pleasure itself, <br><br>
+                        because it is pleasure, but because those who do not know how to pursue pleasure rationally
+                        encounter consequences that are extremely painful. Nor again is there anyone who loves or
+                        pursues or desires to obtain pain of itself, because it is pain, but because occasionally
+                        circumstances occur in which toil and pain can<br><br>
+                        procure him some great pleasure. To take a trivial example, which of us ever undertakes
+                        laborious physical exercise, except to obtain some advantage from it? But who has any right to
+                        find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one
+                        who avoids a pain that produces no resultant pleasure?</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 hint FAQ">
+                <h3>
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    ASTUCE
+                </h3>
+
+                <p> Vous avez des questions complémentaires ?</p>
+                <p>contactez l'équipe proarti: </p>
+
+                <div class="list-group col-sm-offset-1 text-center">
+                    {#<p>adresse</p>#}
+                    {#<a href="http://maps.google.com/?q=7 Rue Bachelet, 75018 Paris" target="_blank" class="list-group-item">7 rue Bachelet 75018 Paris</a><br>#}
+                    <p>Téléphone</p>
+                    <a href="tel:+33652379309" class="list-group-item">06 52 37 93 09</a><br>
+                    <p>Email</p>
+
+                    <a href="mailto:contact@proarti.org" class="list-group-item">contact@proarti.org</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="parallax col-xs-12">
+                    <section class=" text-center">
+                        <div class="container">
+                            <h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>
+                            <a href="https://www.proarti.fr/profile/collect/project/conditions"
+                               class="btn bigbtn-blue ">Créer votre projet
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock body %}

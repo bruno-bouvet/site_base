@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "BlogBundle\\": "src/BlogBundle",
-            "CvBundle\\": "src/CvBundle"
+            "CvBundle\\": "src/CvBundle",
+            "proarti\\TouscoprodBundle\\": "src/proarti/TouscoprodBundle"
         },
         "classmap": [
             "app/AppKernel.php",

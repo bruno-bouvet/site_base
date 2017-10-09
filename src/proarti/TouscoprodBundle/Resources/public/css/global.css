@@ -1,0 +1,158 @@
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.text-muted {
+    color: #777777;
+}
+
+.text-primary {
+    color: #0A7ABC;
+}
+p {
+    font-size: 14px;
+    line-height: 1.75;
+}
+p.large {
+    font-size: 16px;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: none;
+}
+a {
+    color: #0A7ABC;
+}
+/*a:hover,*/
+/*a:focus,*/
+/*a:active,*/
+/*a.active {*/
+    /*color: #0A7ABC;*/
+/*}*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.img-centered {
+    margin: 0 auto;
+}
+
+/*//////////////////////////*/
+/*/////// BUTTONS //////////*/
+/*//////////////////////////*/
+
+
+.bigbtn {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #FF5652;
+    color: #ffffff;
+    border: none;
+}
+
+.bigbtn:hover {
+    padding: 20px 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: rgb(216, 77, 75);
+    color: #ffffff;
+    border: none;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+.bigbtn-blue {
+    padding:1em;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #25ADC0;
+    color: #ffffff;
+    border: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+.bigbtn-blue:active, .bigbtn-blue:focus {
+    background: #77B9C8;
+    color: #ffffff;
+}
+
+
+.bigbtn-blue:hover {
+    padding:1em;
+    font-size: 17px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    background: #77B9C8;
+    border: none;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/*/////// END BUTTONS //////////*/
+
+/*////////// paralax ///////////*/
+
+
+.parallax {
+    /* The image used */
+    margin-top: 1em;
+    /* Set a specific height */
+    height: 20em;
+    /* Create the parallax scrolling effect */
+    /*background: url("https://ununsplash.imgix.net/photo-1416339276121-ba1dfa199912?q=75&amp;fm=jpg&amp;s=9bf9f2ef5be5cb5eee5255e7765cb327") no-repeat fixed center;*/
+    background-size: cover;
+}
+.parallax section {
+    background: rgba(255, 255, 255, .7);
+    height: 20em;
+}
+.parallax h2 {
+    color: #2D2D2D;
+}
+
+/*////////// hint and contact section ///////////*/
+
+.hint a {
+    background: #25ADC0;
+    color: #ffffff;
+}
+
+.hint .a:focus {
+    background: #25ADC0;
+    color: #ffffff;
+}
+.hint a:hover {
+    background: #77B9C8;
+    color: #ffffff;
+    transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -ms-transition: all 0.2s ease 0s;
+    -o-transition: all 0.2s ease 0s;
+}
+
+/*////////// .\ end hint and contact section ///////////*/

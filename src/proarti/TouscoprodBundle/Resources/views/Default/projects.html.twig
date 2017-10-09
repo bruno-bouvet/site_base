@@ -1,0 +1,472 @@
+{% stylesheets
+'@proartiTouscoprodBundle/Resources/public/css/projects.css'
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+{% javascripts
+'@proartiTouscoprodBundle/Resources/public/javascript/projects.js' %}
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<div class="row" style="margin-top: 7em;">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-offset-2 col-xs-offset-2">
+                <h3>
+                    Success Stories
+                </h3>
+            </div>
+        </div>
+        <div class="row ">
+            <div class=" col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                <ul id="shuffle" class="col-md-12 " style="list-style-type: none;">
+                    <!-- first element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/260.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">L'homme du passé</h3>
+                                {#<div class="row">#}
+                                    {#<div class="col-xs-6  ">#}
+                                        {#<div class="ribbon-content">#}
+                                            {#<div class="ribbon base"><span>Movie</span></div>#}
+                                        {#</div>#}
+                                    {#</div>#}
+                                {#</div>#}
+                                <span class="titles">réalisateur: </span><span>Matt Beurois</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Frédéric BOURALY , Nicolas MARIE , Auregan
+                                </p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 12 160 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">L'homme du passé</h4>
+                    </li>
+
+                    <!-- \ end first element -->
+                    <!-- second element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/389.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">GYNÉCÉE</h3>
+
+                                <span class="titles">réalisateur: </span><span> Erick ROBERT</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Inès GUIOLLOT, Jessica GEORGES, Sonya MELLAH</p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 166 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block ">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">GYNÉCÉE</h4>
+                    </li>
+                    <!-- \ end second element -->
+                    <!-- third element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/2526.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">LE RÊVE PERDU DES HOMMES DU FLEUVE</h3>
+
+                                <span class="titles">réalisateur: </span><span> Christophe Cordier</span><br>
+                                <span class="titles">
+                                    acteurs:</span>
+                                <p>Ariel Doukhan, Stéphane Auer, Manda Touré
+                                </p>
+                                <p>
+                                    « Rios de saber », découvrez et soutenez cette fédération pleine d’espoir composée
+                                    de peuples indigènes du Pérou
+                                </p>
+                                <span class="titles">campagne:</span><span>8 030 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">LE RÊVE PERDU DES HOMMES DU FLEUVE</h4>
+                    </li>
+                    <!-- fourth element -->
+
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/740.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">La jolie vie de Mr.M</h3>
+
+                                <span class="titles">réalisateur: </span><span>Maxime Lebas</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Maxime Lebas , Antoine Fouchet
+                                </p>
+                                <p>
+
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 500 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="#" class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">La jolie vie de Mr.M</h4>
+                    </li>
+                    <!-- end fourth element -->
+                    <!-- first element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/260.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">L'homme du passé</h3>
+                                <span class="titles">réalisateur: </span><span>Matt Beurois</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Frédéric BOURALY , Nicolas MARIE , Auregan
+                                </p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 12 160 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">L'homme du passé</h4>
+                    </li>
+
+                    <!-- \ end first element -->
+                    <!-- second element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/389.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">GYNÉCÉE</h3>
+                                <span class="titles">réalisateur: </span><span> Erick ROBERT</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Inès GUIOLLOT, Jessica GEORGES, Sonya MELLAH</p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 166 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block ">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">GYNÉCÉE</h4>
+                    </li>
+                    <!-- \ end second element -->
+                    <!-- third element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/2526.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">LE RÊVE PERDU DES HOMMES DU FLEUVE</h3>
+
+                                <span class="titles">réalisateur: </span><span> Christophe Cordier</span><br>
+                                <span class="titles">
+                                    acteurs:</span>
+                                <p>Ariel Doukhan, Stéphane Auer, Manda Touré
+                                </p>
+                                <p>
+                                    « Rios de saber », découvrez et soutenez cette fédération pleine d’espoir composée
+                                    de peuples indigènes du Pérou
+                                </p>
+                                <span class="titles">campagne:</span><span>8 030 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">LE RÊVE PERDU DES HOMMES DU FLEUVE</h4>
+                    </li>
+                    <!-- fourth element -->
+
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/740.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">La jolie vie de Mr.M</h3>
+
+                                <span class="titles">réalisateur: </span><span>Maxime Lebas</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Maxime Lebas , Antoine Fouchet
+                                </p>
+                                <p>
+
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 500 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="#" class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">La jolie vie de Mr.M</h4>
+                    </li>
+                    <!-- end fourth element -->
+                    <!-- first element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/260.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">L'homme du passé</h3>
+
+                                <span class="titles">réalisateur: </span><span>Matt Beurois</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Frédéric BOURALY , Nicolas MARIE , Auregan
+                                </p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 12 160 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">L'homme du passé</h4>
+                    </li>
+
+                    <!-- \ end first element -->
+                    <!-- second element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/389.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">GYNÉCÉE</h3>
+
+                                <span class="titles">réalisateur: </span><span> Erick ROBERT</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Inès GUIOLLOT, Jessica GEORGES, Sonya MELLAH</p>
+                                <p>
+                                    In Bedford Falls, New York on Christmas Eve, George Bailey is deeply troubled.
+                                    Prayers
+                                    for his well-being from friends and family reach Heaven. Clarence Odbody.
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 166 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block ">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">GYNÉCÉE</h4>
+                    </li>
+                    <!-- \ end second element -->
+                    <!-- third element -->
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/2526.jpg') }});">
+
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">LE RÊVE PERDU DES HOMMES DU FLEUVE</h3>
+
+                                <span class="titles">réalisateur: </span><span> Christophe Cordier</span><br>
+                                <span class="titles">
+                                    acteurs:</span>
+                                <p>Ariel Doukhan, Stéphane Auer, Manda Touré
+                                </p>
+                                <p>
+                                    « Rios de saber », découvrez et soutenez cette fédération pleine d’espoir composée
+                                    de peuples indigènes du Pérou
+                                </p>
+                                <span class="titles">campagne:</span><span>8 030 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="{{ path('proarti_touscoprod_default_collectdefault') }}"
+                                       class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">LE RÊVE PERDU DES HOMMES DU FLEUVE</h4>
+                    </li>
+                    <!-- fourth element -->
+
+                    <li class="scene">
+                        <div class="movie" onclick="return true">
+                            <div class="poster"
+                                 style="  background-image: url({{ asset('bundles/proartitouscoprod/image/projects/740.jpg') }});">
+                                <div class="row" style="margin-top: 25em;">
+                                    <div class="col-xs-6  ">
+                                        <div class="ribbon-content">
+                                            <div class="ribbon base" style="background: red !important;"><span>Movie</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-left: 1em; color: #ffffff">La jolie vie de Mr.M</h3>
+
+                                <span class="titles">réalisateur: </span><span>Maxime Lebas</span><br>
+                                <span class="titles">
+                                    acteurs:</span> <br>
+                                <p>Maxime Lebas , Antoine Fouchet
+                                </p>
+                                <p>
+
+                                </p>
+                                <span class="titles">campagne:</span><span> 1 500 € récoltés </span>
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <br>
+                                    <a href="#" class="btn btn-default center-block">Voir la collecte</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="text-align: center;">La jolie vie de Mr.M</h4>
+                    </li>
+                    <!-- end fourth element -->
+
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</div><!-- /wrapper -->
+
+
