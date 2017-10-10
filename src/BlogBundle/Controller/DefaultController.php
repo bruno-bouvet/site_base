@@ -9,9 +9,15 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/")
+     * @throws \LogicException
      */
     public function indexAction()
     {
-        return $this->render('BlogBundle:Default:index.html.twig');
+        $name = $this->getUser();
+
+        return $this->render('@Blog/Default/index.html.twig', array(
+            'name' => $name,
+        ));
     }
+
 }
