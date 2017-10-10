@@ -76,6 +76,5 @@ Temporary Items
 /.idea/
 /web/config.php
 /web/js
-/web/css
 /var/*
 !/bin/console
