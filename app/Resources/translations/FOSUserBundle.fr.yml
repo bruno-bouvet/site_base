@@ -35,16 +35,18 @@ registration:
     flash:
         user_created: 'L''utilisateur a été créé avec succès.'
     email:
-        subject: 'Bienvenue %username% !'
+        subject: 'Techsquids, merci de valider votre compte!'
         message: |
             Bonjour %username% !
 
-            Pour valider votre compte utilisateur, merci de vous rendre sur %confirmationUrl%
+            Pour valider votre compte utilisateur, merci de vous rendre cliquer sur le liens suivant ou le copier / coller dans votre Navigateur:
+
+             %confirmationUrl%
 
             Ce lien ne peut être utilisé qu'une seule fois pour valider votre compte.
 
             Cordialement,
-            L'équipe
+            L'équipe Techsquids.
 
 resetting:
     check_email: |

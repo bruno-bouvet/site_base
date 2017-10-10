@@ -1,145 +1,299 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+{% stylesheets
+'@BlogBundle/Resources/public/css/nav.css'
+
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
+<nav id="navbarproarti" class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand">Brand</a>
+            <a id="logomobile" class=" visible-xs hidden-sm navbar-brand pull-left"
+               href="{{ path('blog_default_index') }}"><img
+                        src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-black-no-baseline.png') }}"></a>
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
+            <a class=" hidden-xs navbar-brand pull-left" href="{{ path('proarti_touscoprod_default_index') }}"><img
+                        src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-black-no-baseline.png') }}"></a>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Messages</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
+                <li><a class="PrimaryNav" title="Pourquoi proarti"
+                       href="{{ path('proarti_touscoprod_default_explanation') }}"><span>Pourquoi</span><br>proarti
+                        ?</a></li>
+                <li><a class="PrimaryNav" title="Réponses à vos questions"
+                       href="{{ path('proarti_touscoprod_default_faq') }}"><span>Réponses</span><br>à vos question</a>
+                </li>
+                <li><a class="PrimaryNav" title="Nos meilleurs projects"
+                       href="{{ path('proarti_touscoprod_default_projectindex') }}"><span>Retrouvez </span><br>nos
+                        meilleurs projets</a></li>
 
 
+                <!-- LOGIN / LOGOUT => ADMIN  -->
                 {% if  is_granted('ROLE_ADMIN') %}
-                    <li><a href="{{ path('sonata_admin_dashboard') }}">admin</a></li>
-                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-
-                    {% elseif is_granted('ROLE_USER') %}
-                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                <li><a href="{{ path('sonata_admin_dashboard') }}">admin</a></li>
+                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                {% elseif is_granted('ROLE_USER') %}
+                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
                 {% else %}
-                    <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">Register</a></li>
 
                 {% endif %}
+                <!-- end LOGIN / LOGOUT => ADMIN  -->
+
+
             </ul>
+            {#<ul class="nav navbar-nav navbar-right">#}
+            {#<li><a href="#">Login</a></li>#}
+            {#</ul>#}
         </div>
     </div>
 </nav>
-{#=======#}
-    {#<!-- Collect the nav links, forms, and other content for toggling -->#}
-    {#<div class="collapse navbar-collapse" id="navbar-collapse-2">#}
-        {#<ul class="nav navbar-nav navbar-right">#}
-            {#<li class="test"><a href="#">Home</a></li>#}
-            {#<li class="test"><a href="#">Tech</a></li>#}
-            {#<li class="test"><a href="#">Marketing</a></li>#}
-            {#<li class="test"><a href="#">Dev</a></li>#}
-            {#<li class="test"><a href="{{ path('cv_default_index') }}">CV</a></li>#}
-            {#<li class="test"><a href="#">Contact</a></li>#}
-            {#<li>#}
-                {#<a class="btn btn-default btn-outline btn-circle collapsed " data-toggle="collapse"#}
-                   {#href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Connection</a>#}
-            {#</li>#}
-        {#</ul>#}
-        {#<div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">#}
-            {#<form class="navbar-form navbar-right form-inline" role="form">#}
-                {#<div class="form-group">#}
-                    {#<label class="sr-only" for="Email">Email</label>#}
-                    {#<input type="email" class="form-control" id="Email" placeholder="Email" autofocus required/>#}
-                {#</div>#}
-                {#<div class="form-group">#}
-                    {#<label class="sr-only" for="Password">Password</label>#}
-                    {#<input type="password" class="form-control" id="Password" placeholder="Password" required/>#}
-                {#</div>#}
-                {#<button type="submit" class="btn btn-success">Se connecter</button>#}
-                {#<button type="submit" class="btn btn-success">Créer compte</button>#}
-{#>>>>>>> dev#}
 
 
-{#{% block navbar %}#}
-    {#<nav class="navbar navbar-default">#}
-        {#<div class="container">#}
-            {#<!-- Brand and toggle get grouped for better mobile display -->#}
-            {#<div class="navbar-header">#}
-                {#<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">#}
-                    {#<span class="sr-only">Toggle navigation</span>#}
-                    {#<span class="icon-bar"></span>#}
-                    {#<span class="icon-bar"></span>#}
-                    {#<span class="icon-bar"></span>#}
-                {#</button>#}
-                {#<a class="navbar-brand" href="#">Brand</a>#}
-            {#</div>#}
-
-            {#<!-- Collect the nav links, forms, and other content for toggling -->#}
-            {#<div class="collapse navbar-collapse" id="navbar-collapse-2">#}
-                {#<ul class="nav navbar-nav navbar-right">#}
-                    {#<li><a href="#">Home</a></li>#}
-                    {#<li><a href="#">About</a></li>#}
-                    {#<li><a href="#">Services</a></li>#}
-                    {#<li><a href="#">Works</a></li>#}
-                    {#<li><a href="#">News</a></li>#}
-                    {#<li><a href="#">Contact</a></li>#}
-                    {#<li><a href="{{ path('cv_default_index') }}">CV</a></li>#}
-                    {#<li>#}
-                        {#<a class="btn btn-default btn-outline btn-circle"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>#}
-                    {#</li>#}
-                {#</ul>#}
-                {#<div class="collapse nav navbar-nav nav-collapse" id="nav-collapse2">#}
-                    {#<form class="navbar-form navbar-right form-inline" role="form">#}
-                        {#<div class="form-group">#}
-                            {#<label class="sr-only" for="Email">Email</label>#}
-                            {#<input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />#}
-                        {#</div>#}
-                        {#<div class="form-group">#}
-                            {#<label class="sr-only" for="Password">Password</label>#}
-                            {#<input type="password" class="form-control" id="Password" placeholder="Password" required />#}
-                        {#</div>#}
-                        {#<button type="submit" class="btn btn-success">Sign in</button>#}
-                    {#</form>#}
-                {#</div>#}
-            {#</div><!-- /.navbar-collapse -->#}
-        {#</div><!-- /.container -->#}
-    {#</nav><!-- /.navbar -->#}
-    {#{% endblock navbar %}#}
-
-
-{#{% block javascript %}#}
-    {#<script>#}
-        {#$(document).ready(function () {#}
-
-            {#var navPos, winPos, navHeight;#}
-
-            {#function refreshVar() {#}
-                {#navPos = $('nav').offset().top;#}
-                {#navHeight = $('nav').outerHeight(true);#}
+{#<script>#}
+    {#function init() {#}
+        {#window.addEventListener('scroll', function(e){#}
+            {#var distanceY = window.pageYOffset || document.documentElement.scrollTop,#}
+                {#shrinkOn = 300,#}
+                {#header = document.querySelector("header");#}
+            {#if (distanceY > shrinkOn) {#}
+                {#classie.add(header,"smaller");#}
+            {#} else {#}
+                {#if (classie.has(header,"smaller")) {#}
+                    {#classie.remove(header,"smaller");#}
+                {#}#}
             {#}#}
-
-            {#refreshVar();#}
-            {#$(window).resize(refreshVar);#}
-
-            {#$('<div class="clone-nav"></div>').insertBefore('nav').css('height', navHeight).hide();#}
-
-            {#$(window).scroll(function () {#}
-                {#winPos = $(window).scrollTop();#}
-
-                {#if (winPos >= navPos) {#}
-                    {#$('nav').addClass('fixed shadow');#}
-                    {#$('.clone-nav').show();#}
-                {#}#}
-                {#else {#}
-                    {#$('nav').removeClass('fixed shadow');#}
-                    {#$('.clone-nav').hide();#}
-                {#}#}
-            {#});#}
-
         {#});#}
-    {#</script>#}
-{#{% endblock javascript %}#}
+    {#}#}
+    {#window.onload = init();#}
+{#</script>#}
+
+{#<header>#}
+    {#<div class="container clearfix">#}
+        {#<h1 id="logo">#}
+            {#Pratik#}
+        {#</h1>#}
+        {#<nav>#}
+            {#<a href="">Lorem</a>#}
+            {#<a href="">Ipsum</a>#}
+            {#<a href="">Dolor</a>#}
+        {#</nav>#}
+    {#</div>#}
+{#</header><!-- /header -->#}
+
+{#<style>#}
+    {#*,#}
+    {#*:before,#}
+    {#*:after {#}
+        {#-webkit-box-sizing: border-box;#}
+        {#-moz-box-sizing: border-box;#}
+        {#box-sizing: border-box; }#}
+
+    {#header {#}
+        {#width: 100%;#}
+        {#height: 150px;#}
+        {#overflow: hidden;#}
+        {#position: fixed;#}
+        {#top: 0;#}
+        {#left: 0;#}
+        {#z-index: 999;#}
+        {#background-color: #0683c9;#}
+        {#-webkit-transition: height 0.3s;#}
+        {#-moz-transition: height 0.3s;#}
+        {#-ms-transition: height 0.3s;#}
+        {#-o-transition: height 0.3s;#}
+        {#transition: height 0.3s; }#}
+    {#header h1#logo {#}
+        {#display: inline-block;#}
+        {#height: 150px;#}
+        {#line-height: 150px;#}
+        {#float: left;#}
+        {#font-family: "Oswald", sans-serif;#}
+        {#font-size: 60px;#}
+        {#color: white;#}
+        {#font-weight: 400;#}
+        {#-webkit-transition: all 0.3s;#}
+        {#-moz-transition: all 0.3s;#}
+        {#-ms-transition: all 0.3s;#}
+        {#-o-transition: all 0.3s;#}
+        {#transition: all 0.3s; }#}
+    {#header nav {#}
+        {#display: inline-block;#}
+        {#float: right; }#}
+    {#header nav a {#}
+        {#line-height: 150px;#}
+        {#margin-left: 20px;#}
+        {#color: #9fdbfc;#}
+        {#font-weight: 700;#}
+        {#font-size: 18px;#}
+        {#-webkit-transition: all 0.3s;#}
+        {#-moz-transition: all 0.3s;#}
+        {#-ms-transition: all 0.3s;#}
+        {#-o-transition: all 0.3s;#}
+        {#transition: all 0.3s; }#}
+    {#header nav a:hover {#}
+        {#color: white; }#}
+    {#header.smaller {#}
+        {#height: 75px; }#}
+    {#header.smaller h1#logo {#}
+        {#width: 150px;#}
+        {#height: 75px;#}
+        {#line-height: 75px;#}
+        {#font-size: 30px; }#}
+    {#header.smaller nav a {#}
+        {#line-height: 75px; }#}
+
+    {#/* =Footer#}
+    {#-------------------------------------------------------------- */#}
+    {#/* =Extras#}
+    {#-------------------------------------------------------------- */#}
+    {#.clearfix:after {#}
+        {#visibility: hidden;#}
+        {#display: block;#}
+        {#content: "";#}
+        {#clear: both;#}
+        {#height: 0; }#}
+
+    {#/* =Media Queries#}
+    {#-------------------------------------------------------------- */#}
+    {#@media all and (max-width: 660px) {#}
+        {#/* =Header#}
+        {#-------------------------------------------------------------- */#}
+        {#header h1#logo {#}
+            {#display: block;#}
+            {#float: none;#}
+            {#margin: 0 auto;#}
+            {#height: 100px;#}
+            {#line-height: 100px;#}
+            {#text-align: center; }#}
+        {#header nav {#}
+            {#display: block;#}
+            {#float: none;#}
+            {#height: 50px;#}
+            {#text-align: center;#}
+            {#margin: 0 auto; }#}
+        {#header nav a {#}
+            {#line-height: 50px;#}
+            {#margin: 0 10px; }#}
+        {#header.smaller {#}
+            {#height: 75px; }#}
+        {#header.smaller h1#logo {#}
+            {#height: 40px;#}
+            {#line-height: 40px;#}
+            {#font-size: 30px; }#}
+        {#header.smaller nav {#}
+            {#height: 35px; }#}
+        {#header.smaller nav a {#}
+            {#line-height: 35px; } }#}
+    {#@media all and (max-width: 600px) {#}
+        {#.container {#}
+            {#width: 100%; }#}
+
+        {##info-bar a {#}
+            {#display: block; }#}
+        {##info-bar span.all-tutorials,#}
+        {##info-bar span.back-to-tutorial {#}
+            {#width: 100%; }#}
+        {##info-bar span.all-tutorials,#}
+        {##info-bar span.back-to-tutorial {#}
+            {#float: none;#}
+            {#text-align: center; }#}
+        {##info-bar span.all-tutorials {#}
+            {#border-bottom: solid 1px #0793e2; } }#}
+
+{#</style>#}
+
+{#<script>#}
+    {#/*!#}
+ {#* classie v1.0.0#}
+ {#* class helper functions#}
+ {#* from bonzo https://github.com/ded/bonzo#}
+ {#* MIT license#}
+ {#*#}
+ {#* classie.has( elem, 'my-class' ) -> true/false#}
+ {#* classie.add( elem, 'my-new-class' )#}
+ {#* classie.remove( elem, 'my-unwanted-class' )#}
+ {#* classie.toggle( elem, 'my-class' )#}
+ {#*/#}
+
+    {#/*jshint browser: true, strict: true, undef: true, unused: true */#}
+    {#/*global define: false */#}
+
+    {#( function( window ) {#}
+
+        {#'use strict';#}
+
+{#// class helper functions from bonzo https://github.com/ded/bonzo#}
+
+        {#function classReg( className ) {#}
+            {#return new RegExp("(^|\\s+)" + className + "(\\s+|$)");#}
+        {#}#}
+
+{#// classList support for class management#}
+{#// altho to be fair, the api sucks because it won't accept multiple classes at once#}
+        {#var hasClass, addClass, removeClass;#}
+
+        {#if ( 'classList' in document.documentElement ) {#}
+            {#hasClass = function( elem, c ) {#}
+                {#return elem.classList.contains( c );#}
+            {#};#}
+            {#addClass = function( elem, c ) {#}
+                {#elem.classList.add( c );#}
+            {#};#}
+            {#removeClass = function( elem, c ) {#}
+                {#elem.classList.remove( c );#}
+            {#};#}
+        {#}#}
+        {#else {#}
+            {#hasClass = function( elem, c ) {#}
+                {#return classReg( c ).test( elem.className );#}
+            {#};#}
+            {#addClass = function( elem, c ) {#}
+                {#if ( !hasClass( elem, c ) ) {#}
+                    {#elem.className = elem.className + ' ' + c;#}
+                {#}#}
+            {#};#}
+            {#removeClass = function( elem, c ) {#}
+                {#elem.className = elem.className.replace( classReg( c ), ' ' );#}
+            {#};#}
+        {#}#}
+
+        {#function toggleClass( elem, c ) {#}
+            {#var fn = hasClass( elem, c ) ? removeClass : addClass;#}
+            {#fn( elem, c );#}
+        {#}#}
+
+        {#var classie = {#}
+            {#// full names#}
+            {#hasClass: hasClass,#}
+            {#addClass: addClass,#}
+            {#removeClass: removeClass,#}
+            {#toggleClass: toggleClass,#}
+            {#// short names#}
+            {#has: hasClass,#}
+            {#add: addClass,#}
+            {#remove: removeClass,#}
+            {#toggle: toggleClass#}
+        {#};#}
+
+{#// transport#}
+        {#if ( typeof define === 'function' && define.amd ) {#}
+            {#// AMD#}
+            {#define( classie );#}
+        {#} else {#}
+            {#// browser global#}
+            {#window.classie = classie;#}
+        {#}#}
+
+    {#})( window );#}
+
+{#</script>#}

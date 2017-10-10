@@ -13,7 +13,7 @@ parameters:
 
 framework:
     #esi: ~
-#    translator: { fallbacks: [fr] }
+    translator: { fallbacks: [fr] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -103,3 +103,5 @@ fos_user:
     registration:
         form:
             type: BlogBundle\Form\RegistrationFormType
+        confirmation:
+            enabled: true
