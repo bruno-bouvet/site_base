@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new CvBundle\CvBundle(),
             new BlogBundle\BlogBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
 
             //Sonata
             new Sonata\CoreBundle\SonataCoreBundle(),
