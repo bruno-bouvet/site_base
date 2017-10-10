@@ -1,27 +1,94 @@
-footer{
-    background: #424558 !important;
-    position: relative;
-    bottom: 0;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+.footerleft { margin-top:50px; padding:0 36px; }
+.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
+.logofooter img {max-width: 350px;}
+
+.footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+.footerleft p i { width:20px; color:#999;}
+
+
+.paddingtop-bottom {  margin-top:50px;}
+.footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
+.footer-ul li { line-height:29px; font-size:12px;}
+.footer-ul li a { color: #ffffff; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+.footer-ul i { margin-right:10px;}
+.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#77B9C8; text-decoration: none }
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+.icon-ul li { line-height:75px; width:100%; float:left;}
+.icon { float:left; margin-right:5px;}
+
+
+.copyright { min-height:40px; background-color:#000000;}
+.copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+.heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+.post p { font-size:12px; color:#FFF; line-height:20px;}
+.post p span { display:block; color:#8f8f8f;}
+.bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+.bottom_ul li { float:left; line-height:40px;}
+.bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
+.bottom_ul li a { color:#FFF;  font-size:12px;}
+
+.fb-page { margin-bottom:15px; }
+
+.contact-details { color: #ffffff;}
+.contact-details>a{ color: #ffffff; margin-left: 1em; }
+.contact-details a:hover { transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#77B9C8; text-decoration: none }
+
+@media screen and (min-width: 990px )and (max-width: 1199px)  {
+    .logofooter img {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer img, footer li, footer h6, footer p, footer .fb-page, footer .copyright p
+    {
+        text-align: center;
+    }
+}
+
+.box-item { float: left; opacity: 1; overflow: hidden; position: relative; margin-bottom: 2em !important;}
+.box-item:first-child { margin-top: 2em;}
+.box-item img{ width: 100%; -moz-transition:-moz-transform 0.3s ease-in; -webkit-transition:-webkit-transform 0.3s ease-in;
+    -o-transition:-o-transform 0.3s ease-in; max-height: 500px;}
+.box-item img:hover{ -moz-transform:scale(1.1); -webkit-transform:scale(1.1); -o-transform:scale(1.1);}
+.box-item a,span{color:#FFF;}
+.box-item .box-post span.meta { font-family:sans-serif; font-size: 12px; color: #fff; margin-top: 15px; display: block;}
+.box-item .box-post .label { padding-left: 5em; padding-top:.5em; padding-bottom: .5em; border-radius: 0 !important; margin-left: -4em;}
+.box-item .label-success { background-color: #FF7B00;}
+.box-item .box-post span.meta span { margin-right: 15px;}
+.box-item .box-post {
+    position: absolute;
     left: 0;
-    right: 0;
-    height: 35px;
-    text-align: center;
-    color: #CCC;
-    padding: 25px 0;
-    margin-top: 2em;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
 }
+.box-item .box-post h1.post-title { font-size:10pt;}
 
-footer p {
-    margin: 0px;
-    line-height: 100%;
-    color: #ffffff;
-    text-decoration:none;
-}
-footer p:hover, footer a:hover, footer a:active, footer a:focus {
-    background: none !important;
-    color: #ffffff;
-    text-decoration: none;
-}
-footer a { text-decoration: none;
-    color: #0a93a6;}
+@media screen and (max-width: 992px){
+    .copyright p, .copyright ul{
+        text-align: center;
+    }
 
+    .logofooter {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+}
