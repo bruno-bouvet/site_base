@@ -1,5 +1,5 @@
 {% stylesheets
-'bundles/blog/css/nav.css'
+'@BlogBundle/Resources/public/css/nav.css'
 
 filter='cssrewrite' %}
 <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -16,7 +16,8 @@ filter='cssrewrite' %}
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a id="logomobile" class=" visible-xs hidden-sm navbar-brand pull-left" href="{{ path('proarti_touscoprod_default_index') }}"><img
+            <a id="logomobile" class=" visible-xs hidden-sm navbar-brand pull-left"
+               href="{{ path('proarti_touscoprod_default_index') }}"><img
                         src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-black-no-baseline.png') }}"></a>
         </div>
         <!-- Collection of nav links and other content for toggling -->
@@ -33,6 +34,20 @@ filter='cssrewrite' %}
                 <li><a class="PrimaryNav" title="Nos meilleurs projects"
                        href="{{ path('proarti_touscoprod_default_projectindex') }}"><span>Retrouvez </span><br>nos
                         meilleurs projets</a></li>
+
+
+                <!-- LOGIN / LOGOUT => ADMIN  -->
+                {#{% if  is_granted('ROLE_ADMIN') %}#}
+                {#<li><a href="{{ path('sonata_admin_dashboard') }}">admin</a></li>#}
+                {#<li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>#}
+                {#{% elseif is_granted('ROLE_USER') %}#}
+                {#<li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>#}
+                {#{% else %}#}
+                {#<li><a href="{{ path('fos_user_security_login') }}">Login</a></li>#}
+                {#{% endif %}#}
+                <!-- end LOGIN / LOGOUT => ADMIN  -->
+
+
             </ul>
             {#<ul class="nav navbar-nav navbar-right">#}
             {#<li><a href="#">Login</a></li>#}
