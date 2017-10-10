@@ -1,3 +1,6 @@
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
 proarti_touscoprod:
     resource: "@proartiTouscoprodBundle/Controller/"
     type:     annotation
@@ -25,6 +28,3 @@ _sonata_admin:
     resource: .
     type: sonata_admin
     prefix: /admin
-
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

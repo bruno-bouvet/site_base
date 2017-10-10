@@ -8,7 +8,7 @@ security:
  
    providers:
        fos_userbundle:
-           id: fos_user.user_provider.username
+           id: fos_user.user_provider.username_email
  
    firewalls:
        main:
@@ -19,6 +19,8 @@ security:
  
            logout:       true
            anonymous:    true
+           remember_me:
+              secret: '%secret%'
  
    access_control:
        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }

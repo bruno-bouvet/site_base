@@ -13,7 +13,7 @@ parameters:
 
 framework:
     #esi: ~
-    translator: { fallbacks: [fr] }
+#    translator: { fallbacks: [fr] }
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -59,7 +59,8 @@ assetic:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -99,3 +100,6 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+    registration:
+        form:
+            type: BlogBundle\Form\RegistrationFormType

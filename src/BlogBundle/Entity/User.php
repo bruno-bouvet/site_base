@@ -23,10 +23,25 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+//
+//    public function __construct()
+//    {
+//        parent::__construct();
+//        // your own logic
+//    }
 
-    public function __construct()
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
-        parent::__construct();
-        // your own logic
+        return $this->id;
+    }
+
+    public function setEmail($email)
+    {
+        $this->setUsername($email);
+
+        return parent::setEmail($email);
     }
 }
