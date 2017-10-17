@@ -35,6 +35,29 @@ class DefaultController extends Controller
         ));
     }
 
+    /**
+     * @throws \LogicException
+     */
+    public function sideBarAction()
+    {
+        $name = $this->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+
+        $lastPost = $em
+            ->getRepository('BlogBundle:Post')->getLastEntity();
+
+        $tags = $em->getRepository(Post::class)->getPostTags();
+        $posts = $em->getRepository(Post::class)->findArticleByDate();
+
+        return $this->render('@Blog/includes/sidebar-actus.html.twig', array(
+            'name' => $name,
+            'posts' => $posts,
+            'lastPost' => $lastPost,
+            'tags' => $tags,
+        ));
+    }
+
 
 //    /**
 //     * Finds and displays a post entity.

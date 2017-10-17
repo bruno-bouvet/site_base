@@ -14,7 +14,7 @@
 
                         <div class="lib-row lib-desc">
                             <div class="lib-row lib-header">
-                                {{ post.title }}
+                                {{ post.title  |truncate(50, false, "  ...") }}
                                 <div class="lib-header-seperator"></div>
                             </div>
                             <div class="lib-row lib-desc">
