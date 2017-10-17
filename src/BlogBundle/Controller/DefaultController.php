@@ -15,9 +15,17 @@ class DefaultController extends Controller
     {
         $name = $this->getUser();
 
+        $em = $this->getDoctrine()->getManager();
+
+        $lastPost = $em
+            ->getRepository('BlogBundle:Post')->getLastEntity();
+
+        $posts = $em->getRepository('BlogBundle:Post')->findAll();
+
         return $this->render('@Blog/Default/index.html.twig', array(
             'name' => $name,
+            'posts' => $posts,
+            'lastPost' => $lastPost,
         ));
     }
-
 }

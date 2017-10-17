@@ -2,8 +2,7 @@
 
     <i class="fa fa-clock-o fa-2x pull-left" aria-hidden="true"></i>
     <h4>LES DERNIÈRES ACTUS</h4>
-    <small>Dernière mise à jour: 16/09 à 15:00</small>
-
+    <small>Dernière mise à jour: {{ lastPost.date|localizeddate('full', 'none') }}</small>
     <!-- Tab panes -->
     <div class="tab-content sidebar-tabing" id="nav-tabContent">
         <div class="tab-pane active" id="home" role="tabpanel">
@@ -17,29 +16,35 @@
                 </a>
             </div>
             <!-- ./ Date tab -->
-            <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
-                                                 src="{{ asset('bundles/blog/image/media-1.jpeg') }}"
-                                                 alt="Generic placeholder image"></a>
-                <div class="media-body">
-                    <div class="news-title">
-                        <p class="title-small"><a href="#">Key Republicans sign letter warning against
-                                candidate</a></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="news-auther"><p class="time">1h ago</p></div>
+
+            {% for post in posts %}
+
+                <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
+                                                     src="http://lorempixel.com/850/850/?random=123"
+                                                     alt="Generic placeholder image"></a>
+                    <div class="media-body">
+                        <div class="news-title">
+                            <p class="title-small"><a href="#">{{ post.title }}</a></p>
                         </div>
-                        <!-- comments count-->
-                        <div class="col-sm-6 pull-right nbr-comments">
-                            <a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "
-                                                               aria-hidden="true"></i>10</a>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="news-auther"><p class="time">1h ago</p></div>
+                            </div>
+                            <!-- comments count-->
+                            <div class="col-sm-6 pull-right nbr-comments">
+                                <a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "
+                                                                   aria-hidden="true"></i>10</a>
+
+                            </div>
+                            <!-- ./ comments count-->
 
                         </div>
-                        <!-- ./ comments count-->
-
                     </div>
                 </div>
-            </div>
+
+            {% endfor %}
+
+
             <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
                                                  src="{{ asset('bundles/blog/image/media-1.jpeg') }}"
                                                  alt="Generic placeholder image"></a>

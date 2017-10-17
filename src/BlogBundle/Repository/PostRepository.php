@@ -10,4 +10,11 @@ namespace BlogBundle\Repository;
  */
 class PostRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getLastEntity() {
+        return $this->createQueryBuilder('p')->
+        orderBy('p.date', 'DESC')->
+        setMaxResults(1)->
+        getQuery()->
+        getOneOrNullResult();
+    }
 }

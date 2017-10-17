@@ -1,7 +1,7 @@
 
 /* news grid homepage*/
 
-.jasgrid{padding:0; margin-bottom: 100px;}
+.jasgrid{padding:2em; margin-bottom: 100px;}
 
 .box-item { float: left; opacity: 1; overflow: hidden; position: relative; margin-bottom: 2em !important;}
 .box-item:first-child { margin-top: 2em;}
