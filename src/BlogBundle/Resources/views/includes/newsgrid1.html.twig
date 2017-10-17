@@ -1,36 +1,42 @@
 <!-- Article section -->
 
 
-<div  class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
+<div class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
     {% for post in posts %}
-    <a class="reward-button" href="#">
-        <div class="lib-panel">
-            <div class="row box-shadow">
+        <a class="reward-button" href="{{ path('post_show', { 'id': post.id, 'slug': post.slug }) }}">
+            <div class="lib-panel">
+                <div class="row box-shadow">
 
-                <div class="col-md-4">
-                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
-                </div>
-                <div class="col-md-8 ">
+                    <div class="col-md-4">
+                        <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                    </div>
+                    <div class="col-md-8 ">
 
-                    <div class="lib-row lib-desc">
-                        <div class="lib-row lib-header">
-                            {{ post.title }}
-                            <div class="lib-header-seperator"></div>
-                        </div>
                         <div class="lib-row lib-desc">
-                            {{ post.content |striptags |raw |slice(0, 200) }}<br>
-                            <p>{{ post.author }}</p>
-                            {{ post.tag }}<br>
-                            {{ post.date |date('Y-m-d') }}
+                            <div class="lib-row lib-header">
+                                {{ post.title }}
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                                {{ post.content |striptags |raw |slice(0, 200) }} <br>
+                                <p>lire plus ...</p>
+                                <p>{{ post.author }}</p>
+                                <p>{{ post.tag }}</p>
+                                {#{{ dump(post.tag) }}#}
+                                {#{% for tag in tags %}#}
+                                {#{{ tag }}<br>
+                                {{ dump(tag) }}#}
+                                {#{% endfor %}#}
+                                {{ post.date |date('Y-m-d') }}
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
-        </div>
-    </a>
+        </a>
     {% endfor %}
 
 
@@ -39,12 +45,14 @@
 
 <style>
 
+
     a.fill-div {
         display: block;
         height: 100%;
         width: 100%;
         text-decoration: none;
     }
+
     .lib-panel {
         margin-bottom: 20Px;
     }

@@ -17,4 +17,9 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         getQuery()->
         getOneOrNullResult();
     }
+
+    public function getPostTags() {
+        return $this->createQueryBuilder('p')->
+        addSelect('p.tag');
+    }
 }

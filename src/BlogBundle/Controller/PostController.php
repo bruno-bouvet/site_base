@@ -42,8 +42,8 @@ class PostController extends Controller
      *
      * @Route("/new", name="post_new")
      * @Method({"GET", "POST"})
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function newAction(Request $request)
     {
@@ -70,12 +70,14 @@ class PostController extends Controller
      *
      * @Route("/{id}", name="post_show")
      * @Method("GET")
+     * @param Post $post
+     * @return Response
      */
-    public function showAction(Post $post)
+    public function showAction(Post $post): Response
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('@Blog/Default/post/show.html.twig', array(
+        return $this->render('@Blog/Default/article.html.twig', array(
             'post' => $post,
             'delete_form' => $deleteForm->createView(),
         ));

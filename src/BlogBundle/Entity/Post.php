@@ -12,6 +12,35 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Post
 {
+
+    public function slugify($text)
+    {
+        // replace non letter or digits by -
+        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
+
+        // trim
+        $text = trim($text, '-');
+
+        // transliterate
+        if (function_exists('iconv'))
+        {
+            $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+        }
+
+        // lowercase
+        $text = strtolower($text);
+
+        // remove unwanted characters
+        $text = preg_replace('#[^-\w]+#', '', $text);
+
+        if (empty($text))
+        {
+            return 'n-a';
+        }
+
+        return $text;
+    }
+
     /**
      * @var int
      *
@@ -64,6 +93,10 @@ class Post
      */
     private $tag;
 
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $slug;
 
     /**
      * Get id
@@ -85,6 +118,8 @@ class Post
     public function setTitle($title)
     {
         $this->title = $title;
+
+        $this->setSlug($this->title);
 
         return $this;
     }
@@ -212,6 +247,25 @@ class Post
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @param mixed $slug
+     * @return Post
+     */
+    public function setSlug($slug): Post
+    {
+        $this->slug = $this->slugify($slug);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
 
