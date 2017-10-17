@@ -22,12 +22,7 @@
                                 <p>lire plus ...</p>
                                 <p>{{ post.author }}</p>
                                 <p>{{ post.tag }}</p>
-                                {#{{ dump(post.tag) }}#}
-                                {#{% for tag in tags %}#}
-                                {#{{ tag }}<br>
-                                {{ dump(tag) }}#}
-                                {#{% endfor %}#}
-                                {{ post.date |date('Y-m-d') }}
+                                {{ post.date |time_diff }}
                             </div>
 
                         </div>
