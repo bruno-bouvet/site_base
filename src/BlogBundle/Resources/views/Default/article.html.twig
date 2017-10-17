@@ -2,33 +2,27 @@
 
 {% block body %}
     {% stylesheets
+    '@BlogBundle/Resources/public/css/article.css'
     '@BlogBundle/Resources/public/css/nav.css'
     '@BlogBundle/Resources/public/css/global.css'
-    '@BlogBundle/Resources/public/css/newsgrid.css'
-    '@BlogBundle/Resources/public/css/cookiebar.css'
+    '@BlogBundle/Resources/public/css/sidebar.css'
 
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
-    <div class="container">
+    <div class="container ">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 article">
                 <h1>{{ post.title }}</h1>
-                <p>{{ post.author }}</p>
-                <p>{{ post.date |localizeddate('full', 'none') }}</p>
-                
-                <p>{{ post.content |raw  }}</p>
+                <a href="#">{{ post.author }}</a>
+                    <p><a href="#">{{ post.tag }} </a> {{ post.date |localizeddate('full', 'none') }} </p>
+
+                <p>{{ post.content |raw }}</p>
             </div>
-            {#{% include '@Blog/includes/sidebar-actus.html.twig' %}#}
-            {#{% include '@Blog/includes/sidebar-actus.html.twig' %}#}
+            {% include '@Blog/includes/sidebar-actus.html.twig' %}
+
+
         </div>
     </div>
-    {#{% include '@Blog/includes/cookie.html.twig' %}#}
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
-
 
 {% endblock body %}

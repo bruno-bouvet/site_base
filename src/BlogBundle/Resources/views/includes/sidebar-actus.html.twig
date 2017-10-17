@@ -6,29 +6,37 @@
     <!-- Tab panes -->
     <div class="tab-content sidebar-tabing" id="nav-tabContent">
         <div class="tab-pane active" id="home" role="tabpanel">
-            <!-- date tab with link to the all articles by day page -->
-            <div class="row>">
-                <a href="#">
-                    <h5 style="background: #FF7B00; padding: .5em; color: #ffffff; text-align: left; text-decoration: none !important;">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        Samedi 16 Septembre
-                    </h5>
-                </a>
-            </div>
-            <!-- ./ Date tab -->
+            {#<!-- date tab with link to the all articles by day page -->#}
+            {#<div class="row>">#}
+            {#<a href="#">#}
+            {#<h5 style="background: #FF7B00; padding: .5em; color: #ffffff; text-align: left; text-decoration: none !important;">#}
+            {#<i class="fa fa-clock-o" aria-hidden="true"></i>#}
+            {#Samedi 16 Septembre#}
+            {#</h5>#}
+            {#</a>#}
+            {#</div>#}
+            {#<!-- ./ Date tab -->#}
 
             {% for post in posts %}
 
-                <div class="media"><a href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}"> <img class="d-flex mr-3 pull-left"
-                                                     src="http://lorempixel.com/850/850/?random=123"
-                                                     alt="Generic placeholder image"></a>
+                <div class="media"><a href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}"> <img
+                                class="d-flex mr-3 pull-left"
+                                src="http://lorempixel.com/850/850/?random=123"
+                                alt="Generic placeholder image"></a>
                     <div class="media-body">
                         <div class="news-title">
-                            <p class="title-small"><a href="#">{{ post.title }}</a></p>
+                            <p class="title-small"><a
+                                        href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}">{{ post.title |lower |truncate(50, false, "  ...") }}</a>
+                            </p>
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="news-auther"><p class="time">1h ago</p></div>
+
+
+                                <div class="news-auther"><p class="time">il y a {{ post.date |time_diff |slice(0, 1) }}
+                                        {% if post.date |time_diff <= 1 %}heure{% else %}heures{% endif %}
+                                    </p>
+                                </div>
                             </div>
                             <!-- comments count-->
                             <div class="col-sm-6 pull-right nbr-comments">
@@ -45,50 +53,50 @@
             {% endfor %}
 
 
-            <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
-                                                 src="{{ asset('bundles/blog/image/media-1.jpeg') }}"
-                                                 alt="Generic placeholder image"></a>
-                <div class="media-body">
-                    <div class="news-title">
-                        <p class="title-small"><a href="#">Key Republicans sign letter warning against
-                                candidate</a></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="news-auther"><p class="time">1h ago</p></div>
-                        </div>
-                        <!-- comments count-->
-                        <div class="col-sm-6 pull-right">
-                            <a class="pull-right" href="#"> <i class="fa fa-comment-o pull-left nbr-comments"
-                                                               aria-hidden="true"></i>10</a>
+            {#<div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"#}
+            {#src="{{ asset('bundles/blog/image/media-1.jpeg') }}"#}
+            {#alt="Generic placeholder image"></a>#}
+            {#<div class="media-body">#}
+            {#<div class="news-title">#}
+            {#<p class="title-small"><a href="#">Key Republicans sign letter warning against#}
+            {#candidate</a></p>#}
+            {#</div>#}
+            {#<div class="row">#}
+            {#<div class="col-sm-6">#}
+            {#<div class="news-auther"><p class="time">1h ago</p></div>#}
+            {#</div>#}
+            {#<!-- comments count-->#}
+            {#<div class="col-sm-6 pull-right">#}
+            {#<a class="pull-right" href="#"> <i class="fa fa-comment-o pull-left nbr-comments"#}
+            {#aria-hidden="true"></i>10</a>#}
 
-                        </div>
-                        <!-- ./ comments count-->
-                    </div>
-                </div>
-            </div>
-            <div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"
-                                                 src="{{ asset('bundles/blog/image/media-1.jpeg') }}"
-                                                 alt="Generic placeholder image"></a>
-                <div class="media-body">
-                    <div class="news-title">
-                        <p class="title-small"><a href="#">Key Republicans sign letter warning against
-                                candidate</a></p>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="news-auther"><p class="time">1h ago</p></div>
-                        </div>
-                        <!-- comments count-->
-                        <div class="col-sm-6 pull-right">
-                            <a class="pull-right" href="#"> <i class="fa fa-comment-o pull-left nbr-comments"
-                                                               aria-hidden="true"></i>10</a>
+            {#</div>#}
+            {#<!-- ./ comments count-->#}
+            {#</div>#}
+            {#</div>#}
+            {#</div>#}
+            {#<div class="media"><a href="#"> <img class="d-flex mr-3 pull-left"#}
+            {#src="{{ asset('bundles/blog/image/media-1.jpeg') }}"#}
+            {#alt="Generic placeholder image"></a>#}
+            {#<div class="media-body">#}
+            {#<div class="news-title">#}
+            {#<p class="title-small"><a href="#">Key Republicans sign letter warning against#}
+            {#candidate</a></p>#}
+            {#</div>#}
+            {#<div class="row">#}
+            {#<div class="col-sm-6">#}
+            {#<div class="news-auther"><p class="time">1h ago</p></div>#}
+            {#</div>#}
+            {#<!-- comments count-->#}
+            {#<div class="col-sm-6 pull-right">#}
+            {#<a class="pull-right" href="#"> <i class="fa fa-comment-o pull-left nbr-comments"#}
+            {#aria-hidden="true"></i>10</a>#}
 
-                        </div>
-                        <!-- ./ comments count-->
-                    </div>
-                </div>
-            </div>
+            {#</div>#}
+            {#<!-- ./ comments count-->#}
+            {#</div>#}
+            {#</div>#}
+            {#</div>#}
 
         </div>
     </div>

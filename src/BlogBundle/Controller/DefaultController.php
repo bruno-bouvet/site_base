@@ -3,6 +3,8 @@
 namespace BlogBundle\Controller;
 
 use BlogBundle\Entity\Post;
+use DateInterval;
+use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -14,6 +16,7 @@ class DefaultController extends Controller
     /**
      * @Route("/")
      * @throws \LogicException
+     * @throws \Exception
      */
     public function indexAction()
     {
@@ -58,33 +61,6 @@ class DefaultController extends Controller
         ));
     }
 
-
-//    /**
-//     * Finds and displays a post entity.
-//     *
-//     * @Route("/{$id}/{Slug}", name = "article")
-//     * @Method("GET")
-//     * @param $Slug
-//     * @return Response
-//     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-//     * @throws \LogicException
-//     */
-//    public function showAction( $Slug): Response
-//    {
-//        $article = $this->getDoctrine()
-//            ->getRepository(Post::class)
-//            ->findOneBy(array('slug' => $Slug));
-//        dump($article);
-//
-//        if (!$article) {
-//            throw $this->createNotFoundException();
-//        }
-//
-//        return $this->render('@Blog/Default/article.html.twig', array(
-//            'article' => $article,
-//        ));
-//    }
-
     /**
      * Finds and displays a post entity.
      *
@@ -95,9 +71,15 @@ class DefaultController extends Controller
      */
     public function showAction(Post $post): Response
     {
+        $em = $this->getDoctrine()->getManager();
+
+        $lastPost = $em->getRepository('BlogBundle:Post')->getLastEntity();
+        $posts = $em->getRepository(Post::class)->findArticleByDate();
 
         return $this->render('@Blog/Default/article.html.twig', array(
             'post' => $post,
+            'lastPost' => $lastPost,
+            'posts' => $posts,
         ));
     }
 }

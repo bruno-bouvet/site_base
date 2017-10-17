@@ -31,7 +31,7 @@ class PostController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $posts = $em->getRepository('BlogBundle:Post')->findAll();
+        $posts = $em->getRepository('BlogBundle:Post')->findArticleByDate();
 
         return $this->render('@Blog/Default/post/index.html.twig', array(
             'posts' => $posts,

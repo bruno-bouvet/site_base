@@ -1,0 +1,38 @@
+p, h2, ul {
+    text-align: justify;
+}
+
+span {
+    text-decoration: underline;
+}
+
+.article {
+    padding-right: 3em;
+    padding-bottom: 5em;
+}
+
+h1 {
+    margin-bottom: 2em;
+}
+
+h1::after {
+    height: 5px;
+    width: 50px;
+    content: '';
+    display: block;
+    background-color: #2ab6c7;
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+p, li, h1,  h2,  h3,  h4,  h5 {
+    line-height: 1.5;
+}
+
+h1, h2, h3,  h4, h5, h6, hgroup, ul,  ol, dl, blockquote,  p,  address, table, fieldset, figure, pre {
+    margin-bottom: 15px;
+}
