@@ -20,11 +20,12 @@ class PostType extends AbstractType
             ->add('title')
             ->add('author')
             ->add('date')
-            ->add('content', CKEditorType::class, array(
-                'config' => array(
-                    'uiColor' => '#ffffff',
-                ),
-            ))
+            ->add('content')
+//            ->add('content', CKEditorType::class, array(
+//                'config' => array(
+//                    'uiColor' => '#ffffff',
+//                ),
+//            ))
             ->add('comment')
             ->add('tag');
     }

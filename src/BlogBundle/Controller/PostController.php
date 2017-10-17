@@ -10,6 +10,7 @@ use Symfony\Component\Form\Form;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use BlogBundle\Form\PostType;
 
 /**
  * Post controller.
@@ -42,13 +43,14 @@ class PostController extends Controller
      *
      * @Route("/new", name="post_new")
      * @Method({"GET", "POST"})
+     * @param Request $request
+     * @return RedirectResponse|Response
      * @throws \LogicException
-     * @throws \InvalidArgumentException
      */
     public function newAction(Request $request)
     {
         $post = new Post();
-        $form = $this->createForm('BlogBundle\Form\PostType', $post);
+        $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -70,8 +72,10 @@ class PostController extends Controller
      *
      * @Route("/{id}", name="post_show")
      * @Method("GET")
+     * @param Post $post
+     * @return Response
      */
-    public function showAction(Post $post)
+    public function showAction(Post $post): Response
     {
         $deleteForm = $this->createDeleteForm($post);
 
@@ -94,7 +98,7 @@ class PostController extends Controller
     public function editAction(Request $request, Post $post)
     {
         $deleteForm = $this->createDeleteForm($post);
-        $editForm = $this->createForm('BlogBundle\Form\PostType', $post);
+        $editForm = $this->createForm(PostType::class, $post);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

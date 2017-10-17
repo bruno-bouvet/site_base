@@ -3,6 +3,7 @@
 namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Post
@@ -64,6 +65,12 @@ class Post
      */
     private $tag;
 
+    /**
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(length=128, unique=true)
+     *
+     */
+    private $slug;
 
     /**
      * Get id
@@ -85,6 +92,8 @@ class Post
     public function setTitle($title)
     {
         $this->title = $title;
+
+        $this->setSlug($this->title);
 
         return $this;
     }
@@ -213,5 +222,25 @@ class Post
     {
         return $this->content;
     }
+
+    /**
+     * @param mixed $slug
+     * @return Post
+     */
+    public function setSlug($slug): Post
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
 }
 

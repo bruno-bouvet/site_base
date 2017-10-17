@@ -38,15 +38,23 @@
             </tr>
             <tr>
                 <th>Date</th>
-                <td>{% if post.date %}{{ post.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if post.date %}{{ post.date|localizeddate('full', 'none') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Comment</th>
                 <td>{{ post.comment }}</td>
             </tr>
             <tr>
+                <th>Slug</th>
+                <td>{{ post.slug }}</td>
+            </tr>
+            <tr>
                 <th>Tag</th>
                 <td>{{ post.tag }}</td>
+            </tr>
+            <tr>
+                <th>content</th>
+                <td>{{ post.content |raw }}</td>
             </tr>
         </tbody>
     </table>
