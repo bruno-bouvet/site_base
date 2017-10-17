@@ -24,8 +24,8 @@ class DefaultController extends Controller
         $lastPost = $em
             ->getRepository('BlogBundle:Post')->getLastEntity();
 
-        $tags = $em->getRepository('BlogBundle:Post')->getPostTags();
-        $posts = $em->getRepository('BlogBundle:Post')->findAll();
+        $tags = $em->getRepository(Post::class)->getPostTags();
+        $posts = $em->getRepository(Post::class)->findArticleByDate();
 
         return $this->render('@Blog/Default/index.html.twig', array(
             'name' => $name,
@@ -36,63 +36,45 @@ class DefaultController extends Controller
     }
 
 
+//    /**
+//     * Finds and displays a post entity.
+//     *
+//     * @Route("/{$id}/{Slug}", name = "article")
+//     * @Method("GET")
+//     * @param $Slug
+//     * @return Response
+//     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+//     * @throws \LogicException
+//     */
+//    public function showAction( $Slug): Response
+//    {
+//        $article = $this->getDoctrine()
+//            ->getRepository(Post::class)
+//            ->findOneBy(array('slug' => $Slug));
+//        dump($article);
+//
+//        if (!$article) {
+//            throw $this->createNotFoundException();
+//        }
+//
+//        return $this->render('@Blog/Default/article.html.twig', array(
+//            'article' => $article,
+//        ));
+//    }
+
     /**
      * Finds and displays a post entity.
      *
-     * @Route("/{Slug}", name = "article")
+     * @Route("/{id}", name="article")
      * @Method("GET")
-     * @param Request $request
-     * @param $Slug
+     * @param Post $post
      * @return Response
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
-     * @throws \LogicException
      */
-    public function showAction(Request $request, $Slug): Response
+    public function showAction(Post $post): Response
     {
-        $article = $this->getDoctrine()
-            ->getRepository(Post::class)
-            ->findOneBy(array('slug' => $Slug));
-dump($article);
-
-        if (!$article) {
-            throw $this->createNotFoundException();
-        }
 
         return $this->render('@Blog/Default/article.html.twig', array(
-            'article' => $article,
+            'post' => $post,
         ));
-    }
-
-
-    /**
-     * @param $text
-     * @return mixed|string
-     */
-    public function slugify($text)
-    {
-        // replace non letter or digits by -
-        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
-
-        // trim
-        $text = trim($text, '-');
-
-        // transliterate
-        if (function_exists('iconv'))
-        {
-            $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
-        }
-
-        // lowercase
-        $text = strtolower($text);
-
-        // remove unwanted characters
-        $text = preg_replace('#[^-\w]+#', '', $text);
-
-        if (empty($text))
-        {
-            return 'n-a';
-        }
-
-        return $text;
     }
 }

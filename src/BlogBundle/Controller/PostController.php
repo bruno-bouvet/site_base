@@ -44,6 +44,7 @@ class PostController extends Controller
      * @Method({"GET", "POST"})
      * @param Request $request
      * @return RedirectResponse|Response
+     * @throws \LogicException
      */
     public function newAction(Request $request)
     {
@@ -77,7 +78,7 @@ class PostController extends Controller
     {
         $deleteForm = $this->createDeleteForm($post);
 
-        return $this->render('@Blog/Default/article.html.twig', array(
+        return $this->render('@Blog/Default/post/show.html.twig', array(
             'post' => $post,
             'delete_form' => $deleteForm->createView(),
         ));

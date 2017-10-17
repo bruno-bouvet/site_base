@@ -22,4 +22,11 @@ class PostRepository extends \Doctrine\ORM\EntityRepository
         return $this->createQueryBuilder('p')->
         addSelect('p.tag');
     }
+
+    public function findArticleByDate() {
+        return $this->createQueryBuilder('p')->
+        orderBy('p.date', 'DESC')->
+        getQuery()->
+        getResult();
+    }
 }
