@@ -35,6 +35,14 @@ class Post
      */
     private $author;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Content", type="text")
+     */
+    private $content;
+
     /**
      * @var \DateTime
      *
@@ -185,6 +193,25 @@ class Post
     public function getTag()
     {
         return $this->tag;
+    }
+
+    /**
+     * @param mixed $content
+     * @return Post
+     */
+    public function setContent($content): Post
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
     }
 }
 
