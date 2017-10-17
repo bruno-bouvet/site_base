@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new CvBundle\CvBundle(),
             new BlogBundle\BlogBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
 
             //Sonata
             new Sonata\CoreBundle\SonataCoreBundle(),

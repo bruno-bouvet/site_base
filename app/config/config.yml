@@ -105,3 +105,14 @@ fos_user:
             type: BlogBundle\Form\RegistrationFormType
         confirmation:
             enabled: true
+
+services:
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }

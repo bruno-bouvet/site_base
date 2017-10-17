@@ -3,9 +3,11 @@
 namespace BlogBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use BlogBundle\Entity\Post;
+use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 
 class PostType extends AbstractType
 {
@@ -18,7 +20,11 @@ class PostType extends AbstractType
             ->add('title')
             ->add('author')
             ->add('date')
-            ->add('content')
+            ->add('content', CKEditorType::class, array(
+                'config' => array(
+                    'uiColor' => '#ffffff',
+                ),
+            ))
             ->add('comment')
             ->add('tag');
     }
@@ -41,6 +47,8 @@ class PostType extends AbstractType
     {
         return 'blogbundle_post';
     }
+
+
 
 
 }
