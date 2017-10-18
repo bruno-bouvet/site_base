@@ -9,6 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
@@ -68,6 +69,8 @@ class DefaultController extends Controller
      * @Method("GET")
      * @param Post $post
      * @return Response
+     * @throws \LogicException
+     * @throws \InvalidArgumentException
      */
     public function showAction(Post $post): Response
     {

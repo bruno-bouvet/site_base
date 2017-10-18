@@ -17,12 +17,14 @@
                                 {{ post.title  |truncate(50, false, "  ...") }}
                                 <div class="lib-header-seperator"></div>
                             </div>
+                            <div class="lib-row lib-desc tags">
+                                <p class="pull-left">{{ post.author |upper }}</p><p class="pull-left">{{ post.tag |upper }}</p><p >{{ post.date |time_diff }}</p>
+
+                            </div>
                             <div class="lib-row lib-desc">
-                                {{ post.content |striptags |raw |slice(0, 200) }} <br>
-                                <p>lire plus ...</p>
-                                <p>{{ post.author }}</p>
-                                <p>{{ post.tag }}</p>
-                                {{ post.date |time_diff }}
+
+                                <p>{{ post.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
+
                             </div>
 
                         </div>
@@ -40,6 +42,22 @@
 
 <style>
 
+
+    .jasgrid a:hover {
+        background: #2D323E !important;
+    }
+
+    .tags {
+        display: inline-block;
+    }
+
+    .tags p {
+        margin-right: 1em;
+    }
+
+    .lib-desc a {
+        text-align: justify;
+    }
 
     a.fill-div {
         display: block;
