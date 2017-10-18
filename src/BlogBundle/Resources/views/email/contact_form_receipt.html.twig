@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <h3>Nous avons bien reçu votre message !</h3>
+
+    Bonjour {{ name }}! Nous avons bien reçu votre message.<br><br>
+
+
+    Nous reviendrons vers vous le plus vite possible.<br><br>
+
+    N'hésitez pas à aller voir nos dernier articles: <a href="{{ path('blog_default_index') }}">ICI</a>.<br><br>
+
+    Merci et à bientôt!<br><br>
+
+    <img style="max-height: 50px;" src="{{ absolute_url(asset('bundles/blog/image/20271311.jpeg')) }}">
+</head>
+<body>
+
+</body>
+</html>
