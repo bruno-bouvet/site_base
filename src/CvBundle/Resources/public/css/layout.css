@@ -35,7 +35,7 @@ header {
     height: 800px;
     min-height: 500px;
     width: 100%;
-    background: #161415 url(../images/marathon-feet-10_18_2009-1.jpg) no-repeat top center;
+    background: #161415 url(../image/marathon-feet-10_18_2009-1.jpg) no-repeat top center;
     background-size: cover !important;
     -webkit-background-size: cover !important;
     text-align: center;
@@ -56,7 +56,7 @@ header .banner {
     margin: 0 auto;
     width: 85%;
     padding-bottom: 30px;
-    s text-align: center;
+    text-align: center;
 }
 
 header .banner-text {
@@ -68,7 +68,7 @@ header .banner-text h1 {
     color: #fff;
     letter-spacing: -2px;
     margin: 0 auto 18px auto;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
 }
 
 header .banner-text h3 {
@@ -96,7 +96,7 @@ header .social {
     margin: 24px 0;
     padding: 0;
     font-size: 30px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
 }
 
 header .social li {
@@ -119,13 +119,12 @@ header .scrolldown a {
     bottom: 30px;
     left: 50%;
     margin-left: -29px;
-    color: #fff;
     display: block;
     height: 42px;
     width: 42px;
     font-size: 42px;
     line-height: 42px;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 100%;
 
     -webkit-transition: all .3s ease-in-out;
@@ -326,7 +325,7 @@ ul#nav li.current a {
 }
 
 #resume .info {
-    font: 16px/24px 'librebaskerville-italic', serif;
+    font: 16px/24px 'librebaskerville-italic', sans-serif;
     color: #6E7881;
     margin-bottom: 18px;
     margin-top: 9px;
@@ -447,7 +446,7 @@ ul#nav li.current a {
 
 @-moz-keyframes webmarketing {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 70%;
@@ -456,7 +455,7 @@ ul#nav li.current a {
 
 @-moz-keyframes communication {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 80%;
@@ -465,7 +464,7 @@ ul#nav li.current a {
 
 @-moz-keyframes seo {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -474,7 +473,7 @@ ul#nav li.current a {
 
 @-moz-keyframes evenementiel {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -483,7 +482,7 @@ ul#nav li.current a {
 
 @-moz-keyframes cms {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 75%;
@@ -492,7 +491,7 @@ ul#nav li.current a {
 
 @-moz-keyframes design {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 65%;
@@ -501,7 +500,7 @@ ul#nav li.current a {
 
 @-moz-keyframes html5-CSS3 {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -510,7 +509,7 @@ ul#nav li.current a {
 
 @-moz-keyframes hardware_pc {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -519,7 +518,7 @@ ul#nav li.current a {
 
 @-moz-keyframes windows_OSX {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -528,7 +527,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes webmarketing {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 70%;
@@ -537,7 +536,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes communication {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 80%;
@@ -546,7 +545,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes seo {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -555,7 +554,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes evenementiel {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -564,7 +563,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes cms {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 75%;
@@ -573,7 +572,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes design {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 65%;
@@ -582,7 +581,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes html5-CSS3 {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 50%;
@@ -591,7 +590,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes css {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 30%;
@@ -600,7 +599,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes hardware_pc {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -609,7 +608,7 @@ ul#nav li.current a {
 
 @-webkit-keyframes windows_OSX {
     0% {
-        width: 0px;
+        width: 0;
     }
     100% {
         width: 95%;
@@ -675,7 +674,7 @@ ul#nav li.current a {
     -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
 
-    background: url(../images/overlay-bg.png) repeat;
+    background: url(../image/overlay-bg.png) repeat;
 }
 
 .portfolio-item .item-wrap .link-icon {
@@ -839,7 +838,7 @@ ul#nav li.current a {
 }
 
 #call-to-action .header-col h1:before {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', sans-serif;
     content: "\f0ac";
     padding-right: 10px;
     font-size: 72px;
@@ -887,10 +886,10 @@ call-to-action .button {
 
 /*	Blockquotes */
 #testimonials blockquote {
-    margin: 0 0px 30px 0px;
+    margin: 0 0 30px 0;
     padding-left: 0;
     position: relative;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 1);
 }
 
 #testimonials blockquote:before {
@@ -1083,7 +1082,7 @@ call-to-action .button {
 }
 
 #contact h1:before {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome', sans-serif;
     content: "\f0e0";
     padding-right: 10px;
     font-size: 72px;
@@ -1202,7 +1201,7 @@ call-to-action .button {
 }
 
 #twitter li {
-    margin: 6px 0px 12px 0;
+    margin: 6px 0 12px 0;
     line-height: 30px;
 }
 
@@ -1224,7 +1223,6 @@ ul {
     background: #F2F2F2;
     font-size: 13px;
     display: inline-block;
-    border-radius: 10px;
     padding: 6px 15px 6px 15px;
     border-radius: 20px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -1234,7 +1232,6 @@ ul {
     background: #F2F2F2;
     font-size: 13px;
     display: inline-block;
-    border-radius: 10px;
     padding: 6px 15px 6px 15px;
     border-radius: 20px;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
@@ -1307,6 +1304,11 @@ footer .social-links li {
 footer .social-links li:first-child {
     margin-left: 0;
 }
+
+footer .social-links li a:hover {
+    color: #11ABB0;
+}
+
 
 /* Go To Top Button */
 #go-top {

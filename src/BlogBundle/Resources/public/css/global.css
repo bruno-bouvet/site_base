@@ -50,9 +50,30 @@ a:focus,
 a:active,
 a.active {
     outline: none;
+    color: #25ADC0;
 }
 a {
-    color: #0A7ABC;
+    color: #000000;
+}
+
+blockquote {
+    border-left: #25ADC0 solid 5px;
+    padding-top:1em;
+    padding-bottom:1em;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+blockquote:hover {
+    background: #25ADC0;
+    color: #FFFFFF;
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
 }
 /*a:hover,*/
 /*a:focus,*/

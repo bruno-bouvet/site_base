@@ -5,7 +5,8 @@
 
     <!-- Header
     ================================================== -->
-    <header id="home">
+    <header id="home"
+            style="background: #161415 url({{ asset('bundles/cv/image/marathon-feet-10_18_2009-1.jpg') }}) no-repeat top center;">
 
         <nav id="nav-wrap">
 
@@ -26,17 +27,22 @@
         <div class="row banner">
             <div class="banner-text">
                 <h1 class="responsive-headline">Bruno Bouvet.</h1><br>
-                <h3>Basé à Paris,<br> je suis actuellement à la recherche d'un poste de <span>Chargé de Marketing et Communication</span> en France ou à l'international<br> <span>#polyvalent #BtoB #social #startup</span>
+                <h3>Basé à Paris,<br> je suis actuellement à la recherche d'un poste de <span>Chargé de Marketing et Communication</span>
+                    en France ou à l'international<br> <span>#polyvalent #BtoB #social #startup</span>
                     <br><br>
-                    <p>Hi, if you've been reading this page, please note that an english version will be published very soon. Thanks for your interest.</p>
+                    <p>Hi, if you've been reading this page, please note that an english version will be published very
+                        soon. Thanks for your interest.</p>
                     Let's <a class="smoothscroll" href="#about">start scrolling</a>
                     and learn more <a class="smoothscroll" href="#about">about me</a>.
                 </h3>
-                <hr />
+                <hr/>
                 <ul class="social">
                     <li><a href="https://twitter.com/techsquids" target="_new"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/+brunobouvet/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/bruno-bouvet" target="_blank"><i
+                                    class="fa fa-github"aria-hidden="true"></i></a></li>
+
                     <!--
                     <li><a href="#"><i class="fa fa-instagram" target="_blank"></i></a></li>
                     -->
@@ -45,560 +51,50 @@
         </div>
 
         <p class="scrolldown">
-            <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+            <a class="smoothscroll" href="#about"><i class="a-chevron-down"></i></a>
         </p>
 
     </header> <!-- Header End -->
 
-
     <!-- About Section
-    ================================================== -->
-    <section id="about">
-
-        <div class="row">
-
-            <div class="three columns">
-
-                <img class="profile-pic"  src="images/3987820.jpg" alt="" />
-
-            </div>
-
-            <div class="nine columns main-col">
-
-                <h2>Qui suis-je?</h2>
-
-                <p>J'ai près de 5 années d'expérience dans tous les domaines  du marketing et de la communication acquises dans des entreprises allant de la start-up à la multinationale, en France comme à l'étranger.<br>
-
-                    Passionné par les nouvelles tendances tant en marketing que des nouvelles technologies, j'aime m'investir pleinement dans les projets qui me passionnent.<br><br>
-
-                    Langues parlées:<br>
-                    - Français : Langue natale<br>
-                    - English : Full professional proficiency
-
-                <p>
-
-                    <div class="row">
-
-                        <div class="columns contact-details">
-
-                            <h2>Contact</h2>
-                <p class="address">
-                    <span>Bruno Bouvet</span><br>
-                    <!--<span>110 rue du Colonel Fabien<br>
-                          92160, Antony, France
-              </span><br>-->
-                    <span>+33 (0) 7 62 40 66 92</span><br>
-                    <span>bouvet.bruno@gmail.com</span>
-
-                </p>
-
-            </div>
-
-            <div class="columns download">
-                <p>
-                    <a href="images/CV_Bruno_Bouvet_MARS_2016.pdf" class="button"><i class="fa fa-download"></i>Téléchargez mon CV</a>
-                </p>
-            </div>
-
-        </div> <!-- end row -->
-
-        </div> <!-- end .main-col -->
-
-        </div>
-
-    </section> <!-- About Section End-->
-
+        ================================================== -->
+    {% include '@Cv/Default/about.html.twig' %}
 
     <!-- Resume Section
     ================================================== -->
     <section id="resume">
 
-        <!-- Work experience -->
+        <!-- WORK-->
+<hr>
+        {% include '@Cv/Default/work.html.twig' %}
 
-        <div class="row work">
+        <!-- EDUCATION-->
 
-            <div class="three columns header-col">
-
-                <h1><span>Work Experience</span></h1>
-
-            </div>
-
-            <div class="nine columns main-col">
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-
-                        <!--<h3>Europeanconstructions</h3>	 -->
-                        <div>
-                            <a href="http://www.teogest.com" title="Europeanconstructions"> </a>
-                            <img alt="logo Europeanconstructions" src="images/logo-europeanconstructions.jpg">
-                            <div class="overlay">
-                            </div>
-                        </div>
-
-                        <p class="info">Freelance <span>&bull;</span> <em class="date">2016</em><span>&bull;</span><em class="lead"> Paris, France.</em></p>
-
-
-
-                        <p>
-                            - Travail sur la charte graphique et l'image de l'entreprise.<br>
-                            - Design d'une nouvelle plaquette.<br>
-                            - Création des cartes de visite.<br>
-
-
-                    </div>
-
-                </div> <!-- item end -->
-
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-
-                        <!--<h3>Teogest</h3>	 -->
-                        <div>
-                            <a href="http://www.teogest.com" title="Teogest"> </a>
-                            <img alt="logo Teogest" src="images/logo_teogest.png">
-                            <div class="overlay">
-                            </div>
-                        </div>
-
-                        <p class="info">Chargé de Marketing <span>&bull;</span> <em class="date"> 2015 -  2016</em><span>&bull;</span><em class="lead"> Paris, France.</em></p>
-
-
-
-                        <p>
-                            Mise en place et suivi des opérations marketing et communication :<br>
-                            - Création et gestion des campagnes d’e-mails.<br>
-                            - Animation des réseaux sociaux.<br>
-                            - Élaboration des Marketing materials (plaquettes, leaflets, kakemono, etc.).<br>
-                            - Référencement.<br>
-                            - Design et contenu du site web.<br>
-                            - Organisation et gestion de salon au 70ème Congrès des experts-comptables 2015 - stand de 28m2 (choix et suivi des prestataires, gestion et organisation du stand).<br>
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end --><br>
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-
-                        <!--<h3>Ecoambassadeurs</h3> 	-->
-                        <div>
-                            <a href="" title="ecoambassadeurs"> </a>
-                            <img alt="logo ecoambassadeurs" src="images/logo-ecoambassadeurs.png">
-                            <div class="overlay">
-                            </div>
-                        </div>
-
-                        <p class="info">Web Project Manager <span>&bull;</span> <em class="date"> 2013 -  2014</em><span>&bull;</span><em class="lead"> Toronto, Canada.</em></p>
-
-                        <p>
-                            Gestion de projet web (nouveau site bilingue).
-                            Including:<br>
-                            - Création et design du nouveau site avec un développeur - Wordpress.<br>
-                            - Nouveau logo et nouvelle charte graphique - Illustrator / Photoshop.
-                        </p>
-
-                    </div>
-
-                </div><br> <!-- item end -->
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-
-                        <!--<h3>IKO System</h3>-->
-                        <div>
-                            <a href="http://www.iko-system.com" title="IKO System"> </a>
-                            <img alt="logo IKO System" src="images/logo-iko-systems.png">
-                            <div class="overlay">
-                            </div>
-                        </div>
-
-                        <p class="info">Assistant Webmarketing & Web-design <span>&bull;</span> <em class="date"> 2012 -  2013</em><span>&bull;</span><em class="lead"> Paris, France.</em></p>
-
-                        <p>
-                            - Gestion du contenu bilingue  et corporate identity.<br>
-                            - Création et gestion des marketing materials, etc. - Illustrator / Indesign.<br>
-                            - Mise en place de campagnes d’e-mail marketing.<br>
-                            - Mémoire : Les e-CRM, intérêt et impact sur l’entreprise.
-                        </p>
-
-                    </div>
-
-                </div><br> <!-- item end -->
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <!--<h3>Smartfocus</h3>-->
-
-                        <div>
-                            <a href="http://www2.smartfocus.com/fr" title="smartfocus"> </a>
-                            <img alt="logo smartfocus" src="images/logo_smartfocus.jpg">
-                            <div class="overlay">
-                            </div>
-                        </div>
-
-                        <p class="info">Product Marketing Assistant <span>&bull;</span> <em class="date"> 2011 -  2012</em><span>&bull;</span><em class="lead"> Clichy, France.</em></p>
-
-                        <p>
-                            - Gestion de la création d’un site pour les partenaires d’Emailvision sur Drupal.<br>
-                            - Élaboration des supports marketing (Flyers, présentations, etc.) - Indesign.<br>
-                            - Gérer les leads générés lors des events - Salesforce. <br>
-                            - Éffectuer une veille technologique et business.<br>
-                            - Mémoire : E-mail et fidélisation.
-
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end -->
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <!--<h3>Oberthur Technologies</h3>-->
-
-                        <div>
-                            <a href="http://www.oberthur.com/fr/" title="Oberthur Technologies"> </a>
-                            <img alt="logo Oberthur" src="images/logo_oberthur.jpg">
-                            <div class="overlay">
-                            </div>
-                        </div>
-                        <p class="info">Product Marketing Assistant <span>&bull;</span> <em class="date"> 2010 -  2011</em><span>&bull;</span><em class="lead"> La Defense, France.</em></p>
-
-                        <p>
-                            - Création des marketing materials (datasheets, presentations, flash animations).<br>
-                            - Suivi d’une veille technologique et concurrentielle.<br>
-                            - Réalisation et diffusion des Press Reviews hebdomadaires.<br>
-                            - Suivi du développement d’applications SIM.<br>
-                            - Recherche de partenaires pour les applications SIM.<br>
-                            - Salons internationaux (Cartes 2009 : France, MWC 2010 : Espagne).<br>
-                            - Réalisation d’un audit  pour améliorer la mesure quantitative  des ventes
-                            d’applications SIM et optimiser ses processus de remontée d’informations.
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end -->
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <!--<h3>Adesium</h3>-->
-
-                        <div>
-                            <a href="" title="Adesium"> </a>
-                            <img alt="logo Adesium" src="images/logo_adesium.jpg">
-                            <div class="overlay">
-                            </div>
-                        </div>
-                        <p class="info">Assistant Marketing & Commercial B to B<span>&bull;</span> <em class="date"> 2009 -  2010</em><span>&bull;</span><em class="lead"> Courtaboeuf, France.</em></p>
-
-                        <p>
-                            - Gérer le Marketing et la Communication d’un nouveau produit.<br>
-                            - Effectuer un suivi des actions Marketing - ROI, Prévisionnel.<br>
-                            - Réaliser une étude de marché sur la dématérialisation fiscale en France.<br>
-                            - Participer à des salons professionnels.<br>
-                            - Mise en place d'une CRM Open Source (SugarCRM) pour améliorer ventes et service client.<br>
-                            - Réaliser une prospection B to B Grands comptes.
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end -->
-
-            </div> <!-- main-col end -->
-
-        </div> <!-- End Work -->
-
-        <!-- Education-->
-
-        <div class="row education">
-
-            <div class="three columns header-col">
-                <h1><span>Education</span></h1>
-            </div>
-
-            <div class="nine columns main-col">
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <!--<h3>ESCG-Paris</h3>-->
-
-                        <div>
-                            <a href="http://www.escg-paris.com/" title="ESCG-Paris"> </a>
-                            <img alt="logo ESCG-Paris" src="images/logo-escg.jpg">
-                            <div class="overlay"></div>
-                        </div>
-
-                        <p class="info">Master's degree in Marketing <span>&bull;</span> <em class="date">2009 - 2013</em></p>
-
-                        <p>
-                            Manager d’affaire et Gestion des Entreprises.
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end -->
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <!--<h3>ESCG-Paris</h3>-->
-
-                        <div>
-                            <a href="http://www.escg-paris.com/" title="ESCG-Paris"> </a>
-                            <img alt="logo ESCG-Paris" src="images/logo-escg.jpg">
-                            <div class="overlay"></div>
-                        </div>
-                        <p class="info">Bachelor spécialité Marketing <span>&bull;</span> <em class="date">2007 - 2009</em></p>
-                        <p>
-                            Administration et Gestion des Entreprises.
-                        </p>
-
-                    </div>
-
-                </div> <!-- item end -->
-
-            </div> <!-- main-col end -->
-
-        </div> <!-- End Education -->
-
+        {% include '@Cv/Default/education.html.twig' %}
 
         <!-- Skills -->
 
-        <div class="row skill">
-
-            <div class="three columns header-col">
-                <h1><span>Skills</span></h1>
-            </div>
-
-            <div class="nine columns main-col">
-
-                <p>Vous trouverez ci-dessous une liste non représentative de mes skills.
-                </p>
-
-                <div class="bars">
-
-                    <ul class="skills">
-                        <li><span class="bar-expand webmarketing"></span><em>Marketing - Webmarketing</em></li>
-                        <li><span class="bar-expand communication"></span><em>Communication</em></li>
-                        <li><span class="bar-expand seo"></span><em>SEO</em></li>
-                        <li><span class="bar-expand evenementiel"></span><em>Événementiel</em></li>
-                        <li><span class="bar-expand cms"></span><em>CMS</em></li>
-                        <li><span class="bar-expand design"></span><em>Design : Adobe creative suite</em></li>
-                        <li><span class="bar-expand html5-CSS3"></span><em>html5 / CSS3</em></li>
-                        <li><span class="bar-expand hardware_pc"></span><em>hardware pc</em></li>
-                        <li><span class="bar-expand windows_OSX"></span><em>Windows - OSX</em></li>
-                    </ul>
-
-                </div><!-- end skill-bars -->
-
-            </div> <!-- main-col end -->
-
-        </div> <!-- End skills -->
+        {% include '@Cv/Default/skills.html.twig' %}
 
     </section> <!-- Resume Section End-->
 
 
-
     <!-- Portfolio Section
     ================================================== -->
-    <section id="portfolio">
-
-        <div class="row">
-
-            <div class="twelve columns collapsed">
-
-                <h1>Quelques-unes de mes réalisations</h1>
-
-                <!-- portfolio-wrapper -->
-                <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-
-
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-01" title="test">
-                                <img alt="" src="images/portfolio/eco.jpg">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>ecoambassadeurs</h5>
-                                        <p>Nouveau site web bilingue</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon"><i class="icon-plus"></i></div>
-                            </a>
-
-                        </div>
-                    </div> <!-- item end -->
-
-
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-02" title="">
-                                <img alt="" src="images/portfolio/logo_eco_small.jpg">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>Ecoambassadeurs</h5>
-                                        <p>Nouveau logo</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon"><i class="icon-plus"></i></div>
-                            </a>
-
-                        </div>
-                    </div> <!-- item end -->
-
-
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-03" title="">
-                                <img alt="" src="images/portfolio/plaquette_EC.jpg">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>European Constructions</h5>
-                                        <p>Nouvelle plaquette</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon"><i class="icon-plus"></i></div>
-                            </a>
-
-                        </div>
-                    </div> <!-- item end -->
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-04" title="">
-                                <img alt="" src="images/portfolio/carte_visite_EC.jpg">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>European Constructions</h5>
-                                        <p>Nouvelles cartes de visites</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon"><i class="icon-plus"></i></div>
-                            </a>
-
-                        </div>
-                    </div> <!-- item end -->
-
-
-                </div> <!-- portfolio-wrapper end -->
-
-            </div> <!-- twelve columns end -->
-
-
-            <!-- Modal Popup -->
-
-            <div id="modal-01" class="popup-modal mfp-hide">
-
-                <img class="scale-with-grid" src="images/portfolio/modals/m-eco.jpg" alt="" />
-
-                <div class="description-box">
-                    <h4>Ecoambassadeurs</h4>
-                    <p>Design et création du nouveau site bilingue Ecoambassadeurs</p>
-                    <span class="categories"><i class="fa fa-tag"></i>Web project management, Webdesign</span>
-                </div>
-
-                <div class="link-box">
-                    <a href=""></a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div><!-- modal-01 End -->
-
-            <div id="modal-02" class="popup-modal mfp-hide">
-
-                <img class="scale-with-grid" src="images/portfolio/modals/m-logo_eco_small.jpg" alt="" />
-
-                <div class="description-box">
-                    <h4>Ecoambassadeurs</h4>
-                    <p>Nouveau logo et nouvelle charte graphique pour Ecoambassadeurs</p>
-                    <span class="categories"><i class="fa fa-tag"></i>Design, Identité graphique</span>
-                </div>
-
-                <div class="link-box">
-                    <a href=""></a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div><!-- modal-02 End -->
-
-            <div id="modal-03" class="popup-modal mfp-hide">
-
-                <img class="scale-with-grid" src="images/portfolio/modals/m-plaquette_EC.jpg" alt="" />
-
-                <div class="description-box">
-                    <h4>European Constructions</h4>
-                    <p>Nouvelle identité graphique et nouvelle plaquette.</p>
-                    <span class="categories"><i class="fa fa-tag"></i>Branding, Identité graphique</span>
-                </div>
-
-                <div class="link-box">
-                    <a href="http://www.behance.net">Details</a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div><!-- modal-03 End -->
-
-            <div id="modal-04" class="popup-modal mfp-hide">
-
-                <img class="scale-with-grid" src="images/portfolio/modals/m-carte_visite_EC.png" alt="" />
-
-                <div class="description-box">
-                    <h4>European Constructions</h4>
-                    <p>Nouvelles cartes de visites</p>
-                    <span class="categories"><i class="fa fa-tag"></i>Design, Identité graphique</span>
-                </div>
-
-                <div class="link-box">
-                    <a href="http://www.behance.net">Details</a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div><!-- modal-04 End -->
-
-        </div> <!-- row End -->
-
-    </section> <!-- Portfolio Section End-->
-
+    {% include '@Cv/Default/portfolio.html.twig' %}
 
     <!-- Call-To-Action Section
     ================================================== -->
-    <section id="call-to-action">
+    <section id="CTA">
+        <div class="row ">
 
-        <div class="row">
+            <div class="col-md-4 col-xs-12 icon center">
 
-            <div class="two columns header-col">
-
-                <h1><span>CV.</span></h1>
+                <i class="fa fa-globe fa-5x  " aria-hidden="true"></i>
 
             </div>
 
-            <div class="seven columns">
+            <div class="col-md-3 col-xs-12">
 
                 <h2><a href="">Vous êtes intéressé ? </a></h2>
                 <p>Téléchargez mon <span>CV</span> en version <span>PDF</span>.
@@ -606,113 +102,45 @@
 
             </div>
 
-            <div class="three columns action">
+            <div class="col-md-4 col-xs-12">
 
-                <a href="images/CV_Bruno_Bouvet_MARS_2016.pdf" class="button"><i class="fa fa-download"></i>Télécharger le PDF</a>
-
+                 <a target="_blank" href="{{ asset('bundles/cv/image/CV_Bruno_Bouvet_MARS_2016.pdf') }}" class="button"><i class="fa fa-download"></i>Télécharger
+                    le PDF</a>
             </div>
-
-        </div>
+</div>
 
     </section> <!-- Call-To-Action Section End-->
 
+<style>
+    #CTA { background: #1F1F1F; padding-top: 3em; padding-bottom: 3em; }
+    #CTA p { color: #FFFFFF; }
+    #CTA span { font-weight: 700; }
+    .fa-globe { color: #ffffff; margin-top: 10px; }
 
+    @media screen and (max-width: 990px ) {
+        #CTA {
+            text-align: center;
+        }
+    }
+
+
+</style>
+    <script>
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            console.log(width);
+            if (width > 990){
+                $('.fa-globe').addClass('pull-right');
+            }
+        });
+
+    </script>
 
     <!-- Contact Section
     ================================================== -->
-    <section id="contact">
 
-        <div class="row section-head">
-
-            <div class="two columns header-col">
-
-                <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div class="ten columns">
-
-                <p class="lead">Si vous souhaitez me contacter n'hésitez pas à m'envoyer un message. <br>Je vous répondrai dès que possible.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="eight columns">
-
-                <!-- form -->
-                <form action="" method="post" id="contactForm" name="contactForm">
-                    <fieldset>
-
-                        <div>
-                            <label for="contactName">Nom et Prénom <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactName" name="contactName">
-                        </div>
-
-                        <div>
-                            <label for="contactEmail">Email <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                        </div>
-
-                        <div>
-                            <label for="contactSubject">Sujet <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                        </div>
-
-                        <div>
-                            <label for="contactMessage">Votre message <span class="required">*</span></label>
-                            <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                        </div>
-
-                        <div>
-                            <button class="submit">Envoyer</button>
-                            <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                        </div>
-
-                    </fieldset>
-                </form> <!-- Form End -->
-
-                <!-- contact-warning -->
-                <div id="message-warning"> Game Over, Play Again !</div>
-                <!-- contact-success -->
-                <div id="message-success">
-                    <i class="fa fa-check"></i>Votre message m'a bien été envoyé, Merci!<br>
-                </div>
-
-            </div>
-
-
-            <aside class="four columns footer-widgets">
-
-                <div class="widget widget_contact">
-
-                    <h4>Contact</h4>
-                    <p class="address">
-                        Bruno Bouvet<br>
-                        <span> +33 (0) 7 62 40 66 92</span>
-                    </p>
-
-                </div>
-
-                <div class="widget widget_tweets">
-
-                    <h4 class="widget-title">Mes derniers tweets</h4>
-                    <a class="twitter-timeline"  href="https://twitter.com/techsquids"  data-widget-id="502917926303723520">Tweets de @techsquids</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-                </div>
-
-            </aside>
-
-        </div>
-
-    </section> <!-- Contact Section End-->
-
+    {% include '@Cv/Default/cv-contact.html.twig' %}
 
     <!-- footer
     ================================================== -->
@@ -720,15 +148,17 @@
 
         <div class="row">
 
-            <div class="twelve columns">
+            <div class="col-md-12">
 
                 <ul class="social-links">
-                    <li><a href="https://twitter.com/techsquids" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/+brunobouvet/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/techsquids" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i
+                                    class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li><a href="https://github.com/bruno-bouvet" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></li>
 
-
-                    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+                    <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i
+                                    class="fa fa-chevron-up"></i></a>
 
                     </div>
 
