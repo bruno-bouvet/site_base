@@ -5,7 +5,6 @@
     '@BlogBundle/Resources/public/css/article.css'
     '@BlogBundle/Resources/public/css/nav.css'
     '@BlogBundle/Resources/public/css/global.css'
-    '@BlogBundle/Resources/public/css/sidebar.css'
 
     filter='cssrewrite' %}
     <link rel="stylesheet" href="{{ asset_url }}"/>
@@ -18,6 +17,29 @@
                     <p><a href="#">{{ post.tag }} </a> {{ post.date |localizeddate('full', 'none') }} </p>
 
                 <p>{{ post.content |raw }}</p>
+                    <p>Partagez votre participation</p>
+                <a class="twitter-share-button"
+                   href="https://twitter.com/intent/tweet?text=Hello%20world"
+                   data-size="large">
+                    Tweet</a>
+                    {#<a class="twitter-share-button text-right"#}
+                       {#href="https://twitter.com/share"#}
+                       {#data-size="large"#}
+                       {#data-text="Je viens de participer à la campagne de "#}
+                       {#data-url="#"#}
+                            {#data-hashtags="example,demo"#}
+                       {#data-via="techsquids"#}
+                       {#data-related="twitterapi,twitter"#}
+                    {#>#}
+                        {#Tweet#}
+                    {#</a>#}
+                    {#<div class=" fb-like"#}
+                         {#data-href="https://www.proarti.fr/collect/project/{{ post.slug }}/0"#}
+                         {#data-layout="button"#}
+                         {#data-show-faces="true"#}
+                         {#data-size="large"#}
+                         {#data-share="true">#}
+                    {#</div>#}
             </div>
             {% include '@Blog/includes/sidebar-actus.html.twig' %}
 

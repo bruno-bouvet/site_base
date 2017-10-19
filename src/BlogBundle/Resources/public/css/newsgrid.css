@@ -128,3 +128,97 @@ header{float: left; width:100%}
 .navbar-toggle{background: #fff;}
 .navbar-toggle .icon-bar{background:#0A2E61; }
 .navbar-brand{display: none;}
+
+
+
+.author {
+    color: #25ADC0;
+}
+.jasgrid a:hover {
+    color: #2D323E !important;
+}
+
+.lib-card:hover, .lib-card:hover a {
+    background: rgba(119, 185, 200, 1) !important;
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+}
+.lib-card:hover .author {
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+}
+.tags {
+    display: inline-block;
+}
+
+.tags p {
+    margin-right: 1em;
+}
+
+.lib-desc a {
+    text-align: justify;
+}
+
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+
+.lib-panel img {
+    width: 100%;
+    background-color: transparent;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    background-color: #FFFFFF;
+}
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header {
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    background-color: #d9d9d9;
+    margin: 7px 0 7px 0;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 13px;
+}
+
+.lib-panel .lib-row.lib-desc a {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+}

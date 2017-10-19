@@ -1,3 +1,10 @@
+{% stylesheets
+'@BlogBundle/Resources/public/css/sidebar.css'
+
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+
 <div class="col-lg-4 col-md-4 col-sm-12 side-bar">
 
     <i class="fa fa-clock-o fa-2x pull-left" aria-hidden="true"></i>
@@ -32,21 +39,18 @@
                                 </a>
                             </p>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6 pull-left">
-                                <p class="time" style="text-align: left!important;">il y
-                                    a {{ post.date |time_diff |slice(0, 2) }}
-                                    {% if post.date |time_diff <= 1 %}heure{% else %}heures{% endif %}
+
+                            <div class="col-md-12 ">
+                                <p class="time">{{ post.date |time_diff  }}
                                 </p>
                             </div>
-                            <!-- comments count-->
-                            <div class="col-sm-6 pull-right nbr-comments">
-                                <a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "
-                                                                   aria-hidden="true"></i>10</a>
+                            {#<!-- comments count-->#}
+                            {#<div class="col-md-6 pull-right nbr-comments">#}
+                                {#<a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "#}
+                                                                   {#aria-hidden="true"></i>10</a>#}
 
-                            </div>
+                            {#</div>#}
                             <!-- ./ comments count-->
-                        </div>
                     </div>
                 </div>
 

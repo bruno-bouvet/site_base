@@ -1,5 +1,5 @@
 #navbarproarti {
-    background: #ffffff;
+    background: #FFFFFF;
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
@@ -23,21 +23,7 @@
     text-align: center;
     font-size: 10pt;
     font-weight: 500;
-    border-left: 1px solid #dadada;
     padding-left: 1em;
-}
-
-.PrimaryNav:first-child {
-    border-left: 1px solid #dadada;
-}
-
-.PrimaryNav:last-child {
-    border-right: 1px solid #dadada;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover {
-    background: rgba(119, 185, 200, 1.00);
-    color: #ffffff;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover span {
@@ -49,6 +35,11 @@
     padding-right: 3em;
 }
 
+.navbar-inverse .navbar-nav > li > a:hover {
+    background: rgba(119, 185, 200, 1.00);
+    color: #ffffff;
+}
+
 .navbar-nav > li > a {
     padding-bottom: 4em;
     border-bottom: none !important;
@@ -58,6 +49,7 @@
     font-size: 12pt;
     color: #2AB6C7;
     font-weight: 700;
+    text-decoration: none !important;
 }
 
 nav.navbar {

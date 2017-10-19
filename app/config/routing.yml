@@ -23,11 +23,6 @@ fos_user_change_password:
 
 #Site#
 
-proarti_touscoprod:
-    resource: "@proartiTouscoprodBundle/Controller/"
-    type:     annotation
-    prefix:   /touscoprod
-
 blog:
     resource: "@BlogBundle/Controller/"
     type:     annotation
@@ -37,6 +32,11 @@ cv:
     resource: "@CvBundle/Controller/"
     type:     annotation
     prefix:   /CV
+
+proarti_touscoprod:
+    resource: "@proartiTouscoprodBundle/Controller/"
+    type:     annotation
+    prefix:   /touscoprod
 
 #Sonata#
 
