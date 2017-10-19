@@ -6,13 +6,16 @@ filter='cssrewrite' %}
 {% endstylesheets %}
 
 <div class="col-lg-4 col-md-4 col-sm-12 side-bar">
-
-    <i class="fa fa-clock-o fa-2x pull-left" aria-hidden="true"></i>
-    <h4>LES DERNIÈRES ACTUS</h4>
-    <small>Dernière mise à jour: {{ lastPost.date|localizeddate('full', 'none') }}</small>
+    <div class="col-lg-12 col-md-12 col-sm-12 side-bar-top">
+        <i class="fa fa-clock-o fa-2x pull-left" aria-hidden="true"></i>
+        <h4>LES DERNIÈRES ACTUS</h4>
+        <small>Dernière mise à jour: {{ lastPost.date|localizeddate('full', 'none') }}</small>
+    </div>
     <!-- Tab panes -->
     <div class="tab-content sidebar-tabing" id="nav-tabContent">
         <div class="tab-pane active" id="home" role="tabpanel">
+
+
             {#<!-- date tab with link to the all articles by day page -->#}
             {#<div class="row>">#}
             {#<a href="#">#}
@@ -40,17 +43,19 @@ filter='cssrewrite' %}
                             </p>
                         </div>
 
-                            <div class="col-md-12 ">
-                                <p class="time">{{ post.date |time_diff  }}
-                                </p>
-                            </div>
-                            {#<!-- comments count-->#}
-                            {#<div class="col-md-6 pull-right nbr-comments">#}
-                                {#<a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "#}
-                                                                   {#aria-hidden="true"></i>10</a>#}
+                        <div class="col-md-12 ">
+                            <p class="time">{{ post.date |time_diff }}
+                            </p>
+                        </div>
 
-                            {#</div>#}
-                            <!-- ./ comments count-->
+
+                        {#<!-- comments count-->#}
+                        {#<div class="col-md-6 pull-right nbr-comments">#}
+                        {#<a class="pull-right " href="#"><i class="fa fa-comment-o pull-left "#}
+                        {#aria-hidden="true"></i>10</a>#}
+
+                        {#</div>#}
+                        <!-- ./ comments count-->
                     </div>
                 </div>
 

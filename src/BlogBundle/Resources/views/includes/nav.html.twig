@@ -18,26 +18,26 @@ filter='cssrewrite' %}
             </button>
             <a id="logomobile" class=" visible-xs hidden-sm navbar-brand pull-left"
                href="{{ path('blog_default_index') }}"><img
-                        src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-black-no-baseline.png') }}"></a>
+                        src="{{ asset('bundles/blog/image/logo-inline-techsquids.png') }}"></a>
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <a class=" hidden-xs navbar-brand pull-left" href="{{ path('blog_default_index') }}"><img
-                        src="{{ asset('bundles/proartitouscoprod/image/navbar/touscoprod-by-proarti-black-no-baseline.png') }}"></a>
+                        src="{{ asset('bundles/blog/image/logo-inline-techsquids.png') }}"></a>
             <ul class="nav navbar-nav">
                 <li><a class="PrimaryNav" title="Pourquoi proarti"
-                       href="{{ path('proarti_touscoprod_default_explanation') }}"><span>Pourquoi</span><br>proarti
-                        ?</a></li>
+                       href="{{ path('proarti_touscoprod_default_explanation') }}">Les<br><span>News</span>
+                        </a></li>
                 <li><a class="PrimaryNav" title="Réponses à vos questions"
-                       href="{{ path('proarti_touscoprod_default_faq') }}"><span>Réponses</span><br>à vos question</a>
+                       href="{{ path('proarti_touscoprod_default_faq') }}">Les<br><span>Tests</span></a>
                 </li>
-                <li><a class="PrimaryNav" title="Nos meilleurs projects"
-                       href="{{ path('proarti_touscoprod_default_projectindex') }}"><span>Retrouvez </span><br>nos
-                        meilleurs projets</a></li>
+                {#<li><a class="PrimaryNav" title="Nos meilleurs projects"#}
+                       {#href="{{ path('proarti_touscoprod_default_projectindex') }}"><span>Retrouvez </span><br>nos#}
+                        {#meilleurs projets</a></li>#}
                 <li><a class="PrimaryNav" title="Contact"
-                       href="{{ path('blog_contact_contactblog') }}"><span>Contactez </span><br>nous</a></li>
-                <li><a class="PrimaryNav" title="CV"
-                       href="{{ path('cv_default_index') }}">CV </a></li>
+                       href="{{ path('blog_contact_contactblog') }}">Nous<br><span>Contacter</span></a></li>
+                <li><a id="cv-link" class="PrimaryNav" title="CV"
+                       href="{{ path('cv_default_index') }}">Mon<br> <span>CV</span> </a></li>
 
 
                 {#<!-- LOGIN / LOGOUT => ADMIN  -->#}
@@ -58,249 +58,8 @@ filter='cssrewrite' %}
 
 
             </ul>
-            {#<ul class="nav navbar-nav navbar-right">#}
-            {#<li><a href="#">Login</a></li>#}
-            {#</ul>#}
+
+
         </div>
     </div>
 </nav>
-
-
-{#<script>#}
-    {#function init() {#}
-        {#window.addEventListener('scroll', function(e){#}
-            {#var distanceY = window.pageYOffset || document.documentElement.scrollTop,#}
-                {#shrinkOn = 300,#}
-                {#header = document.querySelector("header");#}
-            {#if (distanceY > shrinkOn) {#}
-                {#classie.add(header,"smaller");#}
-            {#} else {#}
-                {#if (classie.has(header,"smaller")) {#}
-                    {#classie.remove(header,"smaller");#}
-                {#}#}
-            {#}#}
-        {#});#}
-    {#}#}
-    {#window.onload = init();#}
-{#</script>#}
-
-{#<header>#}
-    {#<div class="container clearfix">#}
-        {#<h1 id="logo">#}
-            {#Pratik#}
-        {#</h1>#}
-        {#<nav>#}
-            {#<a href="">Lorem</a>#}
-            {#<a href="">Ipsum</a>#}
-            {#<a href="">Dolor</a>#}
-        {#</nav>#}
-    {#</div>#}
-{#</header><!-- /header -->#}
-
-{#<style>#}
-    {#*,#}
-    {#*:before,#}
-    {#*:after {#}
-        {#-webkit-box-sizing: border-box;#}
-        {#-moz-box-sizing: border-box;#}
-        {#box-sizing: border-box; }#}
-
-    {#header {#}
-        {#width: 100%;#}
-        {#height: 150px;#}
-        {#overflow: hidden;#}
-        {#position: fixed;#}
-        {#top: 0;#}
-        {#left: 0;#}
-        {#z-index: 999;#}
-        {#background-color: #0683c9;#}
-        {#-webkit-transition: height 0.3s;#}
-        {#-moz-transition: height 0.3s;#}
-        {#-ms-transition: height 0.3s;#}
-        {#-o-transition: height 0.3s;#}
-        {#transition: height 0.3s; }#}
-    {#header h1#logo {#}
-        {#display: inline-block;#}
-        {#height: 150px;#}
-        {#line-height: 150px;#}
-        {#float: left;#}
-        {#font-family: "Oswald", sans-serif;#}
-        {#font-size: 60px;#}
-        {#color: white;#}
-        {#font-weight: 400;#}
-        {#-webkit-transition: all 0.3s;#}
-        {#-moz-transition: all 0.3s;#}
-        {#-ms-transition: all 0.3s;#}
-        {#-o-transition: all 0.3s;#}
-        {#transition: all 0.3s; }#}
-    {#header nav {#}
-        {#display: inline-block;#}
-        {#float: right; }#}
-    {#header nav a {#}
-        {#line-height: 150px;#}
-        {#margin-left: 20px;#}
-        {#color: #9fdbfc;#}
-        {#font-weight: 700;#}
-        {#font-size: 18px;#}
-        {#-webkit-transition: all 0.3s;#}
-        {#-moz-transition: all 0.3s;#}
-        {#-ms-transition: all 0.3s;#}
-        {#-o-transition: all 0.3s;#}
-        {#transition: all 0.3s; }#}
-    {#header nav a:hover {#}
-        {#color: white; }#}
-    {#header.smaller {#}
-        {#height: 75px; }#}
-    {#header.smaller h1#logo {#}
-        {#width: 150px;#}
-        {#height: 75px;#}
-        {#line-height: 75px;#}
-        {#font-size: 30px; }#}
-    {#header.smaller nav a {#}
-        {#line-height: 75px; }#}
-
-    {#/* =Footer#}
-    {#-------------------------------------------------------------- */#}
-    {#/* =Extras#}
-    {#-------------------------------------------------------------- */#}
-    {#.clearfix:after {#}
-        {#visibility: hidden;#}
-        {#display: block;#}
-        {#content: "";#}
-        {#clear: both;#}
-        {#height: 0; }#}
-
-    {#/* =Media Queries#}
-    {#-------------------------------------------------------------- */#}
-    {#@media all and (max-width: 660px) {#}
-        {#/* =Header#}
-        {#-------------------------------------------------------------- */#}
-        {#header h1#logo {#}
-            {#display: block;#}
-            {#float: none;#}
-            {#margin: 0 auto;#}
-            {#height: 100px;#}
-            {#line-height: 100px;#}
-            {#text-align: center; }#}
-        {#header nav {#}
-            {#display: block;#}
-            {#float: none;#}
-            {#height: 50px;#}
-            {#text-align: center;#}
-            {#margin: 0 auto; }#}
-        {#header nav a {#}
-            {#line-height: 50px;#}
-            {#margin: 0 10px; }#}
-        {#header.smaller {#}
-            {#height: 75px; }#}
-        {#header.smaller h1#logo {#}
-            {#height: 40px;#}
-            {#line-height: 40px;#}
-            {#font-size: 30px; }#}
-        {#header.smaller nav {#}
-            {#height: 35px; }#}
-        {#header.smaller nav a {#}
-            {#line-height: 35px; } }#}
-    {#@media all and (max-width: 600px) {#}
-        {#.container {#}
-            {#width: 100%; }#}
-
-        {##info-bar a {#}
-            {#display: block; }#}
-        {##info-bar span.all-tutorials,#}
-        {##info-bar span.back-to-tutorial {#}
-            {#width: 100%; }#}
-        {##info-bar span.all-tutorials,#}
-        {##info-bar span.back-to-tutorial {#}
-            {#float: none;#}
-            {#text-align: center; }#}
-        {##info-bar span.all-tutorials {#}
-            {#border-bottom: solid 1px #0793e2; } }#}
-
-{#</style>#}
-
-{#<script>#}
-    {#/*!#}
- {#* classie v1.0.0#}
- {#* class helper functions#}
- {#* from bonzo https://github.com/ded/bonzo#}
- {#* MIT license#}
- {#*#}
- {#* classie.has( elem, 'my-class' ) -> true/false#}
- {#* classie.add( elem, 'my-new-class' )#}
- {#* classie.remove( elem, 'my-unwanted-class' )#}
- {#* classie.toggle( elem, 'my-class' )#}
- {#*/#}
-
-    {#/*jshint browser: true, strict: true, undef: true, unused: true */#}
-    {#/*global define: false */#}
-
-    {#( function( window ) {#}
-
-        {#'use strict';#}
-
-{#// class helper functions from bonzo https://github.com/ded/bonzo#}
-
-        {#function classReg( className ) {#}
-            {#return new RegExp("(^|\\s+)" + className + "(\\s+|$)");#}
-        {#}#}
-
-{#// classList support for class management#}
-{#// altho to be fair, the api sucks because it won't accept multiple classes at once#}
-        {#var hasClass, addClass, removeClass;#}
-
-        {#if ( 'classList' in document.documentElement ) {#}
-            {#hasClass = function( elem, c ) {#}
-                {#return elem.classList.contains( c );#}
-            {#};#}
-            {#addClass = function( elem, c ) {#}
-                {#elem.classList.add( c );#}
-            {#};#}
-            {#removeClass = function( elem, c ) {#}
-                {#elem.classList.remove( c );#}
-            {#};#}
-        {#}#}
-        {#else {#}
-            {#hasClass = function( elem, c ) {#}
-                {#return classReg( c ).test( elem.className );#}
-            {#};#}
-            {#addClass = function( elem, c ) {#}
-                {#if ( !hasClass( elem, c ) ) {#}
-                    {#elem.className = elem.className + ' ' + c;#}
-                {#}#}
-            {#};#}
-            {#removeClass = function( elem, c ) {#}
-                {#elem.className = elem.className.replace( classReg( c ), ' ' );#}
-            {#};#}
-        {#}#}
-
-        {#function toggleClass( elem, c ) {#}
-            {#var fn = hasClass( elem, c ) ? removeClass : addClass;#}
-            {#fn( elem, c );#}
-        {#}#}
-
-        {#var classie = {#}
-            {#// full names#}
-            {#hasClass: hasClass,#}
-            {#addClass: addClass,#}
-            {#removeClass: removeClass,#}
-            {#toggleClass: toggleClass,#}
-            {#// short names#}
-            {#has: hasClass,#}
-            {#add: addClass,#}
-            {#remove: removeClass,#}
-            {#toggle: toggleClass#}
-        {#};#}
-
-{#// transport#}
-        {#if ( typeof define === 'function' && define.amd ) {#}
-            {#// AMD#}
-            {#define( classie );#}
-        {#} else {#}
-            {#// browser global#}
-            {#window.classie = classie;#}
-        {#}#}
-
-    {#})( window );#}
-
-{#</script>#}
