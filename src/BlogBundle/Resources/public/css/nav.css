@@ -36,7 +36,7 @@
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    background: rgba(119, 185, 200, 1.00);
+    background: #3378B5;
     color: #ffffff;
 }
 
@@ -47,7 +47,7 @@
 
 .PrimaryNav span {
     font-size: 12pt;
-    color: #2AB6C7;
+    color: #343A45;
     font-weight: 700;
     text-decoration: none !important;
 }
@@ -85,14 +85,6 @@ nav.navbar {
     transition: transform 0.3s;
 }
 
-.test:hover {
-    background: #2881BB;
-
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-}
 
 .navbar-nav.navbar-right li > a {
     color: #ffffff;
@@ -106,6 +98,10 @@ nav.navbar {
     color: #ffffff;
     background: #FF7B00;
 }
+.navbar-nav #cv-link { background: #FF5A00;
+    color: #FFFFFF; }
+.navbar-nav #cv-link:hover { background: #e25900; }
+.navbar-nav #cv-link span { color: #FFFFFF;vertical-align: middle }
 
 .navbar .navbar-collapse {
     position: relative;

@@ -1,12 +1,13 @@
 /* sidebar */
 
-.side-bar { margin-top: 1em; }
+.side-bar { margin-top: 1em; background: #f7f7f7; padding: 0 !important; border-bottom: #3378B5 solid 5em }
 .side-bar .nav-tabs{border-bottom:none; margin-top: 1em}
 .side-bar .nav-tabs .nav-link {color: #aeaeae; text-transform: uppercase; border: none;}
 .side-bar .nav-tabs .nav-link.active, .side-bar .nav-tabs .nav-link:hover{border-bottom:2px solid #ff0000;  text-transform: uppercase; color: #222}
+.side-bar-top{ background: #3378B5; padding: 1em; color: #FFFFFF;}
 .sidebar-tabing .media{margin-top: 20px; float: left; max-height: 100px}
+.sidebar-tabing .media:last-child{margin-bottom: 2em}
 .sidebar-tabing .media:hover, .sidebar-tabing {
-    background: rgba(119, 185, 200, 1) !important;
     color: #ffffff !important;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -14,14 +15,16 @@
     -ms-transition: all 0.5s ease 0s;
     -o-transition: all 0.5s ease 0s;
 }
-.sidebar-tabing .media:hover a {
-    color: #ffffff !important;
-    transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -ms-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
+.sidebar-tabing .media:hover a, .sidebar-tabing .media:hover .time  {
+    color: #3378B5 !important;
+    transition: all 1s ;
+    -moz-transition: all ;
+    -webkit-transition: all 1s ;
+    -ms-transition: all 1s;
+    -o-transition: all 1s ;
 }
+.time {
+    color: black;}
 .sidebar-tabing {max-height: 1000px;}
 .sidebar-tabing img{width: 120px;height: 100px;}
 .sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px; text-decoration: none; margin-left: 10px;}

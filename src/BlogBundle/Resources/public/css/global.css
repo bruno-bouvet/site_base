@@ -24,7 +24,8 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-top: 10em !important;
+    margin-top: 7em !important;
+    background: #f3f2f3;
 }
 
 .navbar-brand>img {
@@ -717,70 +718,6 @@ section#contact .text-danger {
 }
 
 
-
-
-/*/////////////////////////////////////////*/
-/*/////////////////FOOTER//////////////////*/
-/*////////////////////////////////////////*/
-
-
-/*footer {*/
-    /*padding: 25px 0;*/
-    /*text-align: center;*/
-    /*background: #dadada;*/
-    /*margin-top: 2em;*/
-/*}*/
-
-/*footer span.copyright {*/
-    /*line-height: 40px;*/
-    /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-    /*text-transform: uppercase;*/
-    /*text-transform: none;*/
-/*}*/
-/*footer ul.quicklinks {*/
-    /*margin-bottom: 0;*/
-    /*line-height: 40px;*/
-    /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-    /*text-transform: uppercase;*/
-    /*text-transform: none;*/
-/*}*/
-/*ul.social-buttons {*/
-    /*margin-bottom: 0;*/
-/*}*/
-/*ul.social-buttons li a {*/
-    /*display: block;*/
-    /*background-color: #222222;*/
-    /*height: 40px;*/
-    /*width: 40px;*/
-    /*border-radius: 100%;*/
-    /*font-size: 20px;*/
-    /*line-height: 40px;*/
-    /*color: white;*/
-    /*outline: none;*/
-    /*-webkit-transition: all 0.3s;*/
-    /*-moz-transition: all 0.3s;*/
-    /*transition: all 0.3s;*/
-/*}*/
-/*ul.social-buttons li a:hover,*/
-/*ul.social-buttons li a:focus,*/
-/*ul.social-buttons li a:active {*/
-    /*background-color: #fed136;*/
-/*}*/
-
-/*.list {*/
-    /*list-style-type: none;*/
-    /*text-align: left;*/
-/*}*/
-/*.btn:focus,*/
-/*.btn:active,*/
-/*.btn.active,*/
-/*.btn:active:focus {*/
-    /*outline: none;*/
-/*}*/
-
-
-
-
 /*/////////////////////////////////////////*/
 /*///////////PORTFOLIO - MODAL////////////*/
 /*////////////////////////////////////////*/
@@ -874,6 +811,3 @@ img::selection {
 img::-moz-selection {
     background: transparent;
 }
-/*body {*/
-    /*webkit-tap-highlight-color: #fed136;*/
-/*}*/

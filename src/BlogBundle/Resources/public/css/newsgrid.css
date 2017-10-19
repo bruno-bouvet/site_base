@@ -1,7 +1,7 @@
 
 /* news grid homepage*/
 
-.jasgrid{padding:2em; margin-bottom: 100px;}
+.jasgrid{ padding-right: 3em; padding-top: 1em;; margin-bottom: 100px;}
 
 .box-item { float: left; opacity: 1; overflow: hidden; position: relative; margin-bottom: 2em !important;}
 .box-item:first-child { margin-top: 2em;}
@@ -132,14 +132,15 @@ header{float: left; width:100%}
 
 
 .author {
-    color: #25ADC0;
+    color: #3378B5;
+    font-weight: 700;
 }
 .jasgrid a:hover {
     color: #2D323E !important;
 }
 
 .lib-card:hover, .lib-card:hover a {
-    background: rgba(119, 185, 200, 1) !important;
+    background: #3378B5 !important;
     color: #ffffff;
     transition: all 0.5s ease 0s;
     -moz-transition: all 0.5s ease 0s;
@@ -158,9 +159,16 @@ header{float: left; width:100%}
 .tags {
     display: inline-block;
 }
-
+.tags #category {
+    color: #FFFFFF;
+    font-weight: 700;
+    background: #FF5A00;
+    padding-right: 10px;
+    padding-left: 10px;
+}
 .tags p {
     margin-right: 1em;
+
 }
 
 .lib-desc a {
