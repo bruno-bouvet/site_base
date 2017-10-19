@@ -38,10 +38,11 @@
                 <hr/>
                 <ul class="social">
                     <li><a href="https://twitter.com/techsquids" target="_new"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/+brunobouvet/posts" target="_blank"><i
-                                    class="fa fa-google-plus"></i></a></li>
                     <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i
                                     class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/bruno-bouvet" target="_blank"><i
+                                    class="fa fa-github"aria-hidden="true"></i></a></li>
+
                     <!--
                     <li><a href="#"><i class="fa fa-instagram" target="_blank"></i></a></li>
                     -->
@@ -50,7 +51,7 @@
         </div>
 
         <p class="scrolldown">
-            <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
+            <a class="smoothscroll" href="#about"><i class="a-chevron-down"></i></a>
         </p>
 
     </header> <!-- Header End -->
@@ -64,7 +65,7 @@
     <section id="resume">
 
         <!-- WORK-->
-
+<hr>
         {% include '@Cv/Default/work.html.twig' %}
 
         <!-- EDUCATION-->
@@ -84,17 +85,16 @@
 
     <!-- Call-To-Action Section
     ================================================== -->
-    <section id="call-to-action">
+    <section id="CTA">
+        <div class="row ">
 
-        <div class="row">
+            <div class="col-md-4 col-xs-12 icon center">
 
-            <div class="two columns header-col">
-
-                <h1><span>CV.</span></h1>
+                <i class="fa fa-globe fa-5x  " aria-hidden="true"></i>
 
             </div>
 
-            <div class="seven columns">
+            <div class="col-md-3 col-xs-12">
 
                 <h2><a href="">Vous êtes intéressé ? </a></h2>
                 <p>Téléchargez mon <span>CV</span> en version <span>PDF</span>.
@@ -102,124 +102,45 @@
 
             </div>
 
-            <div class="three columns action">
+            <div class="col-md-4 col-xs-12">
 
-                <a href="images/CV_Bruno_Bouvet_MARS_2016.pdf" class="button"><i class="fa fa-download"></i>Télécharger
+                 <a target="_blank" href="{{ asset('bundles/cv/image/CV_Bruno_Bouvet_MARS_2016.pdf') }}" class="button"><i class="fa fa-download"></i>Télécharger
                     le PDF</a>
-
             </div>
-
-        </div>
+</div>
 
     </section> <!-- Call-To-Action Section End-->
 
+<style>
+    #CTA { background: #1F1F1F; padding-top: 3em; padding-bottom: 3em; }
+    #CTA p { color: #FFFFFF; }
+    #CTA span { font-weight: 700; }
+    .fa-globe { color: #ffffff; margin-top: 10px; }
+
+    @media screen and (max-width: 990px ) {
+        #CTA {
+            text-align: center;
+        }
+    }
+
+
+</style>
+    <script>
+
+        $(window).resize(function(){
+            var width = $(window).width();
+            console.log(width);
+            if (width > 990){
+                $('.fa-globe').addClass('pull-right');
+            }
+        });
+
+    </script>
 
     <!-- Contact Section
     ================================================== -->
-    <section id="contact">
 
-        <div class="row section-head">
-
-            <div class="two columns header-col">
-
-                <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div class="ten columns">
-
-                <p class="lead">Si vous souhaitez me contacter n'hésitez pas à m'envoyer un message. <br>Je vous
-                    répondrai dès que possible.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="eight columns">
-
-                <!-- form -->
-                <form action="" method="post" id="contactForm" name="contactForm">
-                    <fieldset>
-
-                        <div>
-                            <label for="contactName">Nom et Prénom <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactName" name="contactName">
-                        </div>
-
-                        <div>
-                            <label for="contactEmail">Email <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                        </div>
-
-                        <div>
-                            <label for="contactSubject">Sujet <span class="required">*</span></label>
-                            <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                        </div>
-
-                        <div>
-                            <label for="contactMessage">Votre message <span class="required">*</span></label>
-                            <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                        </div>
-
-                        <div>
-                            <button class="submit">Envoyer</button>
-                            <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                        </div>
-
-                    </fieldset>
-                </form> <!-- Form End -->
-
-                <!-- contact-warning -->
-                <div id="message-warning"> Game Over, Play Again !</div>
-                <!-- contact-success -->
-                <div id="message-success">
-                    <i class="fa fa-check"></i>Votre message m'a bien été envoyé, Merci!<br>
-                </div>
-
-            </div>
-
-
-            <aside class="four columns footer-widgets">
-
-                <div class="widget widget_contact">
-
-                    <h4>Contact</h4>
-                    <p class="address">
-                        Bruno Bouvet<br>
-                        <span> +33 (0) 7 62 40 66 92</span>
-                    </p>
-
-                </div>
-
-                <div class="widget widget_tweets">
-
-                    <h4 class="widget-title">Mes derniers tweets</h4>
-                    <a class="twitter-timeline" href="https://twitter.com/techsquids"
-                       data-widget-id="502917926303723520">Tweets de @techsquids</a>
-                    <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                                p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = p + "://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");</script>
-
-                </div>
-
-            </aside>
-
-        </div>
-
-    </section> <!-- Contact Section End-->
-
+    {% include '@Cv/Default/cv-contact.html.twig' %}
 
     <!-- footer
     ================================================== -->
@@ -227,18 +148,17 @@
 
         <div class="row">
 
-            <div class="twelve columns">
+            <div class="col-md-12">
 
                 <ul class="social-links">
-                    <li><a href="https://twitter.com/techsquids" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/+brunobouvet/posts" target="_blank"><i
-                                    class="fa fa-google-plus"></i></a></li>
+                    <li><a href="https://twitter.com/techsquids" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
                     <li><a href="http://www.linkedin.com/pub/bruno-bouvet/15/bb1/857" target="_blank"><i
-                                    class="fa fa-linkedin"></i></a></li>
-
+                                    class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li><a href="https://github.com/bruno-bouvet" target="_blank"><i
+                                    class="fa fa-github fa-2x"></i></a></li>
 
                     <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><i
-                                    class="icon-up-open"></i></a>
+                                    class="fa fa-chevron-up"></i></a>
 
                     </div>
 

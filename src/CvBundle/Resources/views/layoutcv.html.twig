@@ -12,7 +12,9 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('bundles/cv/image/favicon.png') }}"/>
 
         {% block stylesheets %}
-
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                    crossorigin="anonymous"></script>
             {% stylesheets
             '@CvBundle/Resources/public/css/default.css'
             '@CvBundle/Resources/public/css/fonts.css'
@@ -49,7 +51,6 @@
 {% endblock body %}
 
 {% block footer %}
-    {#{% include '@Blog/includes/footer.html.twig' %}#}
 {% endblock %}
 
 

@@ -1305,6 +1305,11 @@ footer .social-links li:first-child {
     margin-left: 0;
 }
 
+footer .social-links li a:hover {
+    color: #11ABB0;
+}
+
+
 /* Go To Top Button */
 #go-top {
     position: absolute;
