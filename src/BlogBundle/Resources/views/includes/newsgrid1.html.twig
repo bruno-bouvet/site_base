@@ -1,7 +1,10 @@
-<!-- Article section -->
+{% stylesheets
+'@BlogBundle/Resources/public/css/newsgrid.css'
 
-
-<div class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
+filter='cssrewrite' %}
+<link rel="stylesheet" href="{{ asset_url }}"/>
+{% endstylesheets %}
+<div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
     {% for post in posts %}
         <a class="reward-button" href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}">
             <div class="lib-panel">
@@ -33,44 +36,12 @@
 
                 </div>
             </div>
-        </a>
+        </a><!-- end reward-button -->
     {% endfor %}
-
-
-</div>
+</div><!-- /. end col -->
 
 
 <style>
-
+x
 
 </style>
-<!-- /.Article section -->
-
-<!-- Last news section -->
-
-<!-- /////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////
-CORRIGER LA ZONE EN MOBILE QUI REMONTE JUSQU'AU BURGER-->
-
-
-<script> $('#myTab a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
-
-    $(window).load(function () {
-        var boxheight = $('#myCarousel .carousel-inner').innerHeight();
-        var itemlength = $('#myCarousel .item').length;
-        var triggerheight = Math.round(boxheight / itemlength + 1);
-        $('#myCarousel .list-group-item').outerHeight(triggerheight);
-    });
-
-    var monthNames = ["January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"];
-    var dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-
-    var newDate = new Date();
-    newDate.setDate(newDate.getDate() + 1);
-    $('#Date').html(dayNames[newDate.getDay()] + ", " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-</script>

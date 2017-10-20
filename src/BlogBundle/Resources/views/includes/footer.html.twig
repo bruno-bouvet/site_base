@@ -8,21 +8,25 @@ filter='cssrewrite' %}
 {% endstylesheets %}
 
 
-<footer style="min-font-size: 0!important;">
+<footer>
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6 col-sm-6 map">
-               <a href="{{ path('blog_default_index') }}">HOME</a><a href="#">TESTS</a><a href="{{ path('blog_contact_contactblog') }}">CONTACT</a>
+            <div class="col-md-6 col-sm-6 col-xs-12 map">
+                <a href="{{ path('blog_default_index') }}">HOME</a><a href="#">TESTS</a><a
+                        href="{{ path('blog_contact_contactblog') }}">CONTACT</a>
             </div>
 
-            <div class="col-md-6 ">
+            <div class="col-md-6 col-xs-12">
                 <ul class="social-network social-circle">
                     {#<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>#}
                     <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/techsquids" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://github.com/bruno-bouvet" class="icoGithub" title="Google +"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/brunobouvet/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/techsquids" class="icoTwitter" title="Twitter"><i
+                                    class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/bruno-bouvet" class="icoGithub" title="Google +"><i
+                                    class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/brunobouvet/" class="icoLinkedin" title="Linkedin"><i
+                                    class="fa fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -32,10 +36,10 @@ filter='cssrewrite' %}
 
 <div class="copyright">
     <div class="container">
-        <div class="col-md-6">
+        <div class="col-md-6 col-xs-12">
             <p>© 2017 - Techsquids Tous droits réservés</p>
         </div>
-        <div class="col-md-6 text-center ">
+        <div class="col-md-6 col-xs-12 text-center ">
             <ul class="bottom_ul mobile ">
                 <li><a href="https://www.proarti.fr">Conditions générales</a></li>
                 <li><a href="{{ path('proarti_touscoprod_default_index') }}">proarti / Touscoprod</a></li>
@@ -45,3 +49,11 @@ filter='cssrewrite' %}
         </div>
     </div>
 </div>
+
+<style>
+    @media screen {
+        footer .col-xs-12 {
+            text-align: center;
+        }
+    }
+</style>

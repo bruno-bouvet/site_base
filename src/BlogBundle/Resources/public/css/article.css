@@ -1,8 +1,8 @@
-p, h2, ul {
+.article p, h2, ul {
     text-align: justify;
 }
 
-span {
+.article span {
     text-decoration: underline;
 }
 
@@ -11,11 +11,11 @@ span {
     padding-bottom: 5em;
 }
 
-h1 {
+.article h1 {
     margin-bottom: 2em;
 }
 
-h1::after {
+.article h1::after {
     height: 5px;
     width: 50px;
     content: '';
@@ -24,15 +24,15 @@ h1::after {
     margin-top: 20px;
 }
 
-h2 {
+.article h2 {
     margin-bottom: 2em;
     margin-top: 2em;
 }
 
-p, li, h1,  h2,  h3,  h4,  h5 {
+.article p, li, h1,  h2,  h3,  h4,  h5 {
     line-height: 1.5;
 }
 
-h1, h2, h3,  h4, h5, h6, hgroup, ul,  ol, dl, blockquote,  p,  address, table, fieldset, figure, pre {
-    margin-bottom: 15px;
-}
+/*.article h1, h2, h3,  h4, h5, h6, hgroup, ul,  ol, dl, blockquote,  p,  address, table, fieldset, figure, pre {*/
+    /*margin-bottom: 15px;*/
+/*}*/

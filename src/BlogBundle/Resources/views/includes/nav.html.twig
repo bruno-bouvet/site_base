@@ -40,21 +40,21 @@ filter='cssrewrite' %}
                        href="{{ path('cv_default_index') }}">Mon<br> <span>CV</span> </a></li>
 
 
-                {#<!-- LOGIN / LOGOUT => ADMIN  -->#}
-                {#{% if  is_granted('ROLE_ADMIN') %}#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('sonata_admin_dashboard') }}">admin</a></li>#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">Logout</a></li>#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>#}
-                {#{% elseif is_granted('ROLE_USER') %}#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">Logout</a></li>#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>#}
+                <!-- LOGIN / LOGOUT => ADMIN  -->
+                {% if  is_granted('ROLE_ADMIN') %}
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('sonata_admin_dashboard') }}">admin</a></li>
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>
+                {% elseif is_granted('ROLE_USER') %}
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_profile_show') }}">{{ app.user.username }}</a></li>
 
-                {#{% else %}#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_login') }}">Login</a></li>#}
-                    {#<li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_registration_register') }}">Register</a></li>#}
+                {% else %}
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_security_login') }}">Login</a></li>
+                    <li><a class="PrimaryNav" title="Nos meilleurs projects" href="{{ path('fos_user_registration_register') }}">Register</a></li>
 
-                {#{% endif %}#}
-                {#<!-- end LOGIN / LOGOUT => ADMIN  -->#}
+                {% endif %}
+                <!-- end LOGIN / LOGOUT => ADMIN  -->
 
 
             </ul>
