@@ -5,7 +5,7 @@ filter='cssrewrite' %}
 <link rel="stylesheet" href="{{ asset_url }}"/>
 {% endstylesheets %}
 
-<div class="col-lg-4 col-md-4 col-sm-12 side-bar">
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 side-bar">
     <div class="col-lg-12 col-md-12 col-sm-12 side-bar-top">
         <i class="fa fa-clock-o fa-2x pull-left" aria-hidden="true"></i>
         <h4>LES DERNIÈRES ACTUS</h4>
@@ -42,7 +42,7 @@ filter='cssrewrite' %}
                                 </a>
                             </p>
                         </div>
-
+                        <br>
                         <div class="col-md-12 ">
                             <p class="time">{{ post.date |time_diff }}
                             </p>
@@ -63,4 +63,10 @@ filter='cssrewrite' %}
         </div>
     </div>
 </div>
-
+<style>
+    @media screen and (max-width: 1199px) and (min-width: 992px){
+        .side-bar {
+            margin-top: 5em;
+        }
+    }
+</style>

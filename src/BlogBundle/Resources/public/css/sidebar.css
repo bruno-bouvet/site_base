@@ -1,7 +1,7 @@
 /* sidebar */
 
-.side-bar { margin-top: 1em; background: #f7f7f7; padding: 0 !important; border-bottom: #3378B5 solid 5em }
-.side-bar .nav-tabs{border-bottom:none; margin-top: 1em}
+.side-bar { background: #f7f7f7; padding: 0 !important; border-bottom: #3378B5 solid 5em }
+.side-bar .nav-tabs{border-bottom:none; }
 .side-bar .nav-tabs .nav-link {color: #aeaeae; text-transform: uppercase; border: none;}
 .side-bar .nav-tabs .nav-link.active, .side-bar .nav-tabs .nav-link:hover{border-bottom:2px solid #ff0000;  text-transform: uppercase; color: #222}
 .side-bar-top{ background: #3378B5; padding: 1em; color: #FFFFFF;}
@@ -27,8 +27,8 @@
     color: black;}
 .sidebar-tabing {max-height: 1000px;}
 .sidebar-tabing img{width: 120px;height: 100px;}
-.sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px; text-decoration: none; margin-left: 10px;}
-.sidebar-tabing .title-small>a {text-decoration: none}
+.sidebar-tabing .title-small {line-height: 23px; margin-top: 5px; font-size: 18px; text-decoration: none; margin-left: 10px; text-align: left !important;}
+.sidebar-tabing .title-small>a {text-decoration: none; text-align: left !important;}
 .sidebar-tabing .news-auther {margin-left: 1em}
 .sidebar-tabing .nbr-comments { margin:5px;}
 .sidebar-tabing .nbr-comments>a:hover,.sidebar-tabing .nbr-comments>a:hover>i { color: #FF7B00; text-decoration: none}
