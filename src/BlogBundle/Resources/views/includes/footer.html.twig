@@ -37,7 +37,19 @@ filter='cssrewrite' %}
 <div class="copyright">
     <div class="container">
         <div class="col-md-6 col-xs-12">
-            <p>© 2017 - Techsquids Tous droits réservés</p>
+
+            {% if  is_granted('ROLE_ADMIN') %}
+                <p><a class="connect" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">©</a> 2017
+                    - Techsquids Tous droits réservés</p>
+            {% elseif is_granted('ROLE_USER') %}
+                <p><a class="connect" title="Nos meilleurs projects" href="{{ path('fos_user_security_logout') }}">©</a> 2017
+                    - Techsquids Tous droits réservés</p>
+
+            {% else %}
+                <p><a class="connect" title="Nos meilleurs projects" href="{{ path('fos_user_security_login') }}">©</a> 2017
+                    - Techsquids Tous droits réservés</p>
+            {% endif %}
+
         </div>
         <div class="col-md-6 col-xs-12 text-center ">
             <ul class="bottom_ul mobile ">
@@ -51,6 +63,13 @@ filter='cssrewrite' %}
 </div>
 
 <style>
+    .connect {
+        color: #FFFFFF;
+    }
+    .connect:hover {
+        text-decoration: none !important;
+    }
+
     @media screen {
         footer .col-xs-12 {
             text-align: center;
