@@ -18,6 +18,14 @@
     margin-top: 20px;
 }
 
+#EXPLANATION span {
+    color: #6DD5EB;
+}
+
+#EXPLANATION .tousproarti {
+    color: #20A4B8;
+}
+
 @media screen and (max-width: 701px) {
     #EXPLANATION .text-black p {
         text-align: justify;

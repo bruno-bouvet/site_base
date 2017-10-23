@@ -10,131 +10,578 @@
     {% endstylesheets %}
 
     {% javascripts
-    '@proartiTouscoprodBundle/Resources/public/javascript/faq.js'
-    %}
+    '@proartiTouscoprodBundle/Resources/public/javascript/faq.js' %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 
 
-<div id="faq" class="container">
-<div class="row">
+    <div id="faq" class="container">
+        <div class="row">
 
 
-    <div class="col-md-8 col-sm-8 col-xs-12 FAQ">
-        <h3>FAQ</h3><br>
-        <h4>Voici une faq qui répondra à toutes vos questions</h4><br>
-        <div class="panel-group wrap" id="bs-collapse">
+            <div class="col-md-8 col-sm-8 col-xs-12 FAQ">
+                <h3>FAQ</h3><br>
+                <h4>Voici une faq qui répondra à toutes vos questions</h4><br>
+                <div class="panel-group wrap" id="bs-collapse">
 
-            <div class="panel">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#bs-collapse" href="#one">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#one">
 
-                            Qui est touscoprod by proarti ?
-                        </a>
-                    </h4>
-                </div>
-                <div id="one" class="panel-collapse collapse in">
-                    <div class="panel-body">
+                                    Qui est touscoprod by proarti ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in">
+                            <div class="panel-body">
 
-                        Where now are the horse and the rider? Where is the horn that was blowing? Where is the helm and the hauberk, and the bright hair flowing?
+                                <p>Touscoprod by proarti, c’est l'association des plateformes de financement
+                                    participatif
+                                    Touscoprod, spécialisée dans l’audiovisuel, et de proarti, dédiée à la création
+                                    artistique.</p>
+
+                                <p>Par son caractère spécialisé et sa position d’expert du secteur culturel « Touscoprod
+                                    by
+                                    proarti » garantit le meilleur des accompagnements pour tous les porteurs de projets
+                                    audiovisuels qui souhaitent lancer une campagne de financement participatif.</p>
+
+                                <p>Pour en savoir plus c’est par <a
+                                            href="{{ path('proarti_touscoprod_default_explanation') }}">ICI</a></p>
+
+                                <p>Pour commencer à déposer son projet c’est par là ! (lien vers landing page)</p>
+
+                                <p>Information importante : pour plus de facilité, tous les projets sont désormais à
+                                    déposer
+                                    directement sur le site de proarti.</div>
+                        </div>
+
                     </div>
-                </div>
+                    <!-- end of panel -->
 
-            </div>
-            <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#two">
+                                    Quels projets sont acceptés ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse">
+                            <div class="panel-body">
 
-            <div class="panel">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#bs-collapse" href="#two">
-                            Quels projets sont acceptés ?
-                        </a>
-                    </h4>
-                </div>
-                <div id="two" class="panel-collapse collapse">
-                    <div class="panel-body">
+                                <p>Les projets accompagnés doivent répondre à l’ensemble de ces critères :</p>
 
-                        Where is the harp on the harpstring, and the red fire glowing? Where is the spring and the harvest and the tall corn growing?
+                                <p>-      <strong>Votre projet est porté par une structure artistique professionnelle ou
+                                        amateure,
+                                        ou
+                                        par un artiste professionnel ou en devenir</strong>. En cas de projet porté par
+                                    une personne
+                                    physique (i.e. un particulier), celle-ci doit avoir au moins 18 ans, doit avoir
+                                    suivi
+                                    une formation spécialisée dans son domaine et doit consacrer le plus de temps
+                                    possible à
+                                    sa pratique artistique.</p>
+                                <p>-      votre projet vise à financer la production ou la diffusion d’une œuvre artistique
+                                    ou
+                                    poursuit un objectif de démocratisation culturelle. Il doit être a-confessionnel,
+                                    a-politique et prévoir au moins un temps de <strong>présentation au public</strong>
+                                    et si possible de
+                                    rencontre avec le public.</p>
+                                <p>-      votre projet <strong>respecte les principaux critères du secteur professionnel
+                                        :</strong>
+                                    rémunération
+                                    de l’équipe, affiliation à des organismes professionnels et à des sociétés de
+                                    gestion de
+                                    droits. Des exceptions peuvent être tolérées, mais doivent être justifiées par la
+                                    nature
+                                    même du projet (ex : projet de fin d’études, cause bénévole, ...).</p>
+                                <p>-      votre projet dispose d’un plan de financement ou d’un <strong>budget précis,
+                                        sincère et
+                                        transparent.</strong></p>
+                                <p>-      vous êtes prêts et motivés à animer votre campagne et à mobiliser votre réseau
+                                    autour
+                                    de votre projet !</p>
 
+                            </div>
+
+                        </div>
                     </div>
+                    <!-- end of panel -->
 
-                </div>
-            </div>
-            <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#three">
+                                    Qu’est-ce que le financement participatif ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Le financement participatif (ou crowdfunding) désigne les différents outils et
+                                    méthodes
+                                    visant à financer un projet, de quelque nature que ce soit, en faisant appel à un
+                                    grand
+                                    nombre de personnes. </p>
+                                    <p>Permis grâce à Internet et aux réseaux sociaux, il constitue
+                                    une
+                                    solution innovante qui s'inscrit dans un mouvement plus global de production
+                                    collaborative
+                                    et d'économie sociale et solidaire.</p>
 
-            <div class="panel">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#bs-collapse" href="#three">
-                            Qu’est ce que le  nancement participatif ?
-                        </a>
-                    </h4>
-                </div>
-                <div id="three" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        ave gone down in the West behind the hills into shadow. Who shall gather the smoke of the deadwood burning, Or behold the flowing years from the Sea returning? The days have gone down in the West behind the hills into shadow. Who shall gather the smoke of the deadwood burning, Or behold the flowing years from the Sea returning? The days have gone down in the West behind the hills into shadow. Who shall gather the smoke of the deadwood burning, Or behold the flowing years from the Sea returning? The days have gone down in the West behind the hills into shadow. Who shall gather the smoke of the deadwood burning, Or behold the flowing years from the Sea returning?
+                                <p>Pouvant exister sous plusieurs formes, il est généralement basé sur un système de
+                                    contreparties (ou récompenses) accordées aux donateurs selon leur soutien.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- end of panel -->
+                    <!-- end of panel -->
 
-            <div class="panel">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#bs-collapse" href="#four">
-                            Content 4
-                        </a>
-                    </h4>
-                </div>
-                <div id="four" class="panel-collapse collapse">
-                    <div class="panel-body">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#four">
+                                    Qu’est-ce que le mécénat ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse">
+                            <div class="panel-body">
 
-                        They have passed like rain on the mountain, like a wind in the meadow; The days have gone down in the West behind the hills into shadow.
+                                <p>La loi du 1er août 2003 relative au mécénat accorde une réduction d’impôt très
+                                    incitative
+                                    pour les personnes physiques et morales effectuant des dons à des projets répondant
+                                    à
+                                    certains critères.</p>
+                                <p>-      Pour les particuliers assujettis à l’impôt sur le revenu (IRPP) :<strong> réduction
+                                        d’impôt
+                                        équivalente à 66% du montant du don</strong>, dans la limite de 20% du revenu
+                                    imposable (article
+                                    200
+                                    du CGI)</p>
+                                <p>-      Pour les personnes morales assujetties à l’Impôt sur les Sociétés (IS): <strong>réduction
+                                        d’impôt
+                                        équivalente à 60% du montant du don</strong>, dans la limite de 0,5% du chiffre
+                                    d’affaire HT
+                                    (article
+                                    238 bis du CGI).</p>
+                                <p>Il est possible de bénéficier du mécénat dans le cadre du financement participatif si
+                                    la
+                                    structure qui porte le projet répond aux critères d’éligibilité.</p>
+                            </div>
+                        </div>
                     </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#five">
+                                    Comment savoir si mon projet est éligible au mécénat ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Touscoprod by proati héberge deux types différents de collecte de financement
+                                    participatif :
+                                    les collectes standards et les collectes avec mécénat, qui ouvrent droit à réduction
+                                    fiscale pour les donateurs.  </p>
+
+                                <p>L’équipe proarti aide tous les porteurs de projets qui souhaitent lancer une campagne
+                                    de
+                                    financement participatif à vérifier leur éligibilité au mécénat et à choisir leur
+                                    type
+                                    de
+                                    collecte :</p>
+
+                                 <p>Si le projet est éligible : proarti s’occupe de tout et les donateurs du projet
+                                    pourront
+                                    bénéficier de la réduction fiscale</p>
+
+                                <p>si le projet n’est pas éligible : pas de problème ! Le projet peut tout de même
+                                    lancer
+                                    une
+                                    collecte sur proarti mais les donateurs ne bénéficieront pas de la réduction
+                                    fiscale.</p>
+
+                                <p>L’éligibilité au mécénat se vérifie au cas par cas. Mais pour être éligible, la
+                                    structure
+                                    qui porte le projet doit au moins remplir ces différentes conditions :</p>
+
+                                <p>-      sa gestion doit être désintéressée, ce qui exclut les entreprises commerciales
+                                    et
+                                    les
+                                    particuliers.</p>
+                                <p>-      son activité doit s’exercer dans au moins un des domaines d’intérêt général
+                                    ;</p>
+                                <p>-      son activité doit être non-lucrative, c’est-à-dire qu’elle ne doit pas
+                                    concurrencer
+                                    le
+                                    secteur marchand et ne doit pas être soumise aux impôts commerciaux. À l’exception
+                                    notamment
+                                    des structures dont la gestion est désintéressée et dont l’activité principale est
+                                    la
+                                    présentation au public d’œuvres artistiques ou culturelles qui peuvent être
+                                    éligibles
+                                    tout
+                                    en exerçant une activité lucrative.</p>
+                                <p>-      elle ne pas fonctionner au profit d’un cercle restreint de personnes,
+                                    c’est-à-dire
+                                    ne
+                                    pas
+                                    bénéficier qu’à ses seules membres.</p>
+                                <p>-      son activité doit s’exercer principalement en France (sauf exceptions)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#six">
+                                    Comment déposer son projet ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Pour déposer un projet, suivez ce lien vers le site de proarti. Désormais, tous les
+                                    projets
+                                    touscoprod sont à déposer sur le site de proarti.</p>
+                                <p>Vous pouvez nous contacter afin de bénéficier de notre expertise et de précieux
+                                    conseils
+                                    pour réussir votre campagne : envoyez-nous un message par e-mail à <a
+                                            href="mailto:contact@proarti.org" class="">contact@proarti.org</a>
+                                    ou
+                                    appelez-nous au <a href="tel:+33652379309">06 52 37 93 09 </a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#seven">
+                                    Comment se traduit l’accompagnement proposé par proarti ?
+
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Chez proarti nous accompagnons de manière individualisé tous les porteurs de projets.<br>
+                                    Cet
+                                    accompagnement se traduit par un rendez-vous dans nos locaux ou par téléphone en
+                                    amont
+                                    de la
+                                    collecte pour préparer votre stratégie, des conseils pendant le dépôt de votre
+                                    projet,
+                                    et un
+                                    suivi pendant et après votre campagne de financement.</p>
+
+                                <p>Si vous souhaitez bénéficier de cette accompagnement, n’hésitez pas à nous contacter
+                                    par
+                                    e-mail à <a href="mailto:contact@proarti.org" class="">contact@proarti.org</a> ou
+                                    par téléphone au <a href="tel:+33652379309">06 52 37 93 09 </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#eight">
+                                    Comment fixer mon objectif de collecte ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Il faut parvenir à trouver un équilibre entre deux choses :</p>
+                                <p>-      la somme dont vous avez besoin pour réaliser votre projet</p>
+                                <p>-      la somme que vous vous estimez capable de pouvoir réunir en mobilisant vos
+                                    réseaux</p>
+
+                                <p>À titre de comparaison, le montant moyen d’une collecte de don est d’environ 4 500
+                                    €.</p>
+
+                                <p>Bon à savoir : à l’inverse de nombreuses autres plateformes, touscoprod by proarti
+                                    s’adapte aux particularités de chaque projet en n’appliquant pas la règle stricte du
+                                    «
+                                    tout ou rien », qui peut s’avérer contreproductive dans certains cas. Afin
+                                    d'accompagner
+                                    et de soutenir la création artistique le plus efficacement possible, nous avons
+                                    adopté
+                                    la méthode des paliers.</p>
+                                <p>Plusieurs paliers de financement sont ainsi fixés avec vous en fonction des postes
+                                    budgétaires choisis pour la collecte. En général le premier palier correspond au
+                                    montant
+                                    minimum à collecter pour que le projet puisse voir le jour dans des conditions
+                                    viables.
+                                    Ce montant est parfois inférieur à l'objectif de collecte principal. Si le projet
+                                    atteint son premier palier, les fonds vous seront remis, y compris si l'objectif de
+                                    collecte principal n'est pas atteint.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#nine">
+                                    Quelle durée de collecte choisir ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Nous recommandons d’organiser une collecte courte (de 1 à 2 mois, voire au
+                                    maximum 3
+                                    mois) pour plus d’efficacité. Mais tout dépend de vous ! </p>
+                                <p>Nous pourrons vous
+                                    donner
+                                    un conseil plus précis après avoir examiné votre projet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#ten">
+                                    Comment construire ma page de collecte ?  
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Il est important de soigner la présentation du projet pour convaincre vos
+                                    donateurs :</p><br>
+                                <p>-      adoptez un ton mobilisateur, en n’hésitant pas à vous adresser directement au
+                                    lecteur.</p>
+                                <p>-      soyez clair et concis.</p>
+                                <p>-      donnez à voir la crédibilité de votre projet : n’oubliez pas de présenter les
+                                    références de l’équipe artistique, vos partenaires, vos inspirations, votre
+                                    calendrier.</p>
+                                <p>-      structurez votre propos avec des paragraphes, en faisant ressortir
+                                    visuellement (gras, couleur, taille…) les éléments incontournables.</p>  
+                                <p>-      choisissez des visuels séduisants, de bonne qualité et qui donnent à voir
+                                    l’esthétique de votre projet.</p>
+                                <p>-      faites une vidéo de présentation de votre projet.</p>
+                                <p>-      soyez transparents et précis sur l’utilisation des fonds : présentez votre
+                                    budget et choisissez d’affecter les dons à un ou plusieurs postes de dépenses
+                                    concrets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#eleven">
+                                    Comment construire mes contreparties ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Pour récompenser vos donateurs, il est recommandé de leur offrir des
+                                    contreparties. Celles-ci ne sont pas obligatoirement matérielles, elles peuvent
+                                    être symboliques. Le principe des contreparties est de créer un lien privilégié
+                                    entre les artistes et ceux qui les soutiennent.</p>
+                                <p><u>Deux cas de figure :</u></p>
+
+                                <p>-      Le projet ouvre droit à réduction fiscale : dans ce cas, les contreparties
+                                    sont strictement encadrées. La valeur marchande des contreparties offertes ne
+                                    doit pas excéder 25% du montant du don. Pour les contreparties offertes aux
+                                    donateurs particuliers, une seconde limite s’applique : la valeur marchande des
+                                    contreparties offertes ne doit pas excéder une limite forfaitaire 65€.</p>
+
+                                <p>-      Le projet n’ouvre pas droit à réduction fiscale. Dans ce cas, les
+                                    contreparties ne sont pas encadrées : vous êtes libres d’offrir ce que vous
+                                    souhaitez à vos donateurs. Profitez-en pour proposer des contreparties
+                                    séduisantes mais attention toutefois à bien calculer ce que cela va vous coûter
+                                    car cela sera autant d’argent en moins pour votre projet !</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#twelve">
+                                    Quelle stratégie de collecte adopter ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>Il est très important de fixer les grandes lignes de votre stratégie en amont de
+                                    la collecte ! Plus vous vous serez préparé en amont, plus il sera simple
+                                    d’animer votre campagne lorsqu’elle sera lancée.</p>
+
+                                <p>Dans la mesure du possible, impliquez plusieurs personnes de l’équipe sur le
+                                    projet pour gagner du temps et accroître la taille de votre réseau.</p>
+
+                                <p><u>Quelques conseils utiles :</u></p>
+                                <p>-      Identifiez les personnes clés à mobiliser autour de votre projet, et les
+                                    relais de communication potentiels (presse, associations, sites,...).</p>
+                                <p>-      Choisissez les outils de communication avec lesquels vous êtes à l’aise :
+                                    réseaux sociaux, mails,...</p>
+                                <p>-      N’oubliez pas de parler aussi de vive voix de votre projet autour de vous
+                                    !</p>
+                                <p>-      Structurez et séquencez votre plan de communication autour des « trois cercles
+                                    » de donateurs auxquels vous devrez vous adresser. Commencez ainsi par contacter
+                                    votre premier cercle (famille, amis, « fans » : ceux qui vous soutiendront les
+                                    yeux fermés) le plus tôt possible et de manière individualisée et personnalisée,
+                                    avant de vous adresser à des cercles plus larges (réseaux sociaux,
+                                    newsletters,…).</p>
+                                <p>-      Tout au long de la collecte, plus votre communication est ciblée plus elle
+                                    sera efficace.</p>
+                                <p>-      Incitez vos donateurs à partager votre projet !</p>
+                                <p>-      Prenez le temps de remercier et de relancer à intervalles régulières.</p>
+                                <p>-      Animez la collecte en partageant de nouvelles informations sur le projet
+                                    régulièrement. Vous pouvez utiliser le franchissement de paliers important dans
+                                    votre collecte (25%, 50%, 90%...) pour organiser votre plan.</p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#thirteen">
+                                    Que se passe-t-il si je n’arrive pas à atteindre mon objectif de collecte ?
+
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>À l’inverse de nombreuses autres plateformes, touscoprod by proarti s’adapte aux
+                                    particularités de chaque projet en n’appliquant pas la règle stricte du « tout
+                                    ou rien », qui peut s’avérer contreproductive dans certains cas. Afin
+                                    d'accompagner et de soutenir la création artistique le plus efficacement
+                                    possible, nous avons adopté la méthode des paliers.</p>
+                                <p>Plusieurs paliers de financement sont ainsi fixés avec vous en fonction des
+                                    postes budgétaires choisis pour la collecte. En général le premier palier
+                                    correspond au montant minimum à collecter pour que le projet puisse voir le jour
+                                    dans des conditions viables. Ce montant est parfois inférieur à l'objectif de
+                                    collecte principal.</p>
+                                <p> Si le projet atteint son premier palier, les fonds vous
+                                    seront remis, y compris si l'objectif de collecte principal n'est pas atteint.</p>
+                                <p>Si le projet n’atteint pas son premier pallier, les donateurs sont intégralement
+                                    remboursés.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#fourteen">
+                                    Que se passe-t-il après ma collecte ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="fourteen" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p><u>Reversement des fonds</u></p>
+                                <p>Si la collecte est réussie, les fonds vous seront reversés. Vous récupérerez 92%
+                                    des sommes collectés, les 8% restants étant affectés au développement et à la
+                                    maintenance de la plateforme. Les fonds peuvent être reversés de deux manières
+                                    différentes :</p>
+
+                                <p>-      En un seul versement si vous possédez déjà des justificatifs de dépenses
+                                    relatifs au projet pour lequel la collecte a été organisée et dont le montant
+                                    total couvre au moins la somme collectée sur la plateforme.</p>
+                                <p>-      En deux versements, si vous n’avez pas encore effectué de dépenses pour votre
+                                    projet. Dans ce cas, un acompte de 80% de la somme à reverser est effectuée à
+                                    l’issue de la collecte, suivi par un second versement de 20% une fois transmis
+                                    les justificatifs relatifs au projet pour lequel la collecte a été organisé et
+                                    dont le montant total couvre au moins la somme collectée sur la plateforme.</p>
+                                <br>
+                                <p><u>Relations avec les donateurs & communication</u></p>
+                                <p>Il est très important de profiter de l’élan généré par une campagne de
+                                    financement participatif pour construire une nouvelle relation avec ceux qui
+                                    vous ont soutenu ! À l’issue de la collecte, n’oubliez donc pas :</p>
+                                <p>-      de les remercier une nouvelle fois</p>
+                                <p>-      d’envoyer les contreparties commandées</p>
+                                <p>-      de les tenir fréquemment informés de l’avancée de votre projet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#bs-collapse" href="#fifteen">
+                                    Comment vous joindre ?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="fifteen" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <p>En nous envoyant un e-mail à l’adresse <a href="mailto:contact@proarti.org" class="">contact@proarti.org</a>
+                                    ou par téléphone au
+                                    <a href="tel:+33652379309">06 52 37 93 09 </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of panel -->
+                </div> <!-- end of #bs-collapse  -->
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12 hint FAQ">
+                <h3>
+                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                    ASTUCE
+                </h3>
+
+                <p> Vous avez des questions complémentaires ?</p>
+                <p>contactez l'équipe proarti: </p>
+
+                <div class="list-group col-sm-offset-1 text-center">
+                    {#<p>adresse</p>#}
+                    {#<a href="http://maps.google.com/?q=7 Rue Bachelet, 75018 Paris" target="_blank" class="list-group-item">7 rue Bachelet 75018 Paris</a><br>#}
+                    <p>Téléphone</p>
+                    <a href="tel:+33652379309" class="list-group-item">06 52 37 93 09</a><br>
+                    <p>Email</p>
+
+                    <a href="mailto:contact@proarti.org" class="list-group-item">contact@proarti.org</a>
                 </div>
             </div>
-            <!-- end of panel -->
+
 
         </div>
-        <!-- end of #bs-collapse  -->
-
     </div>
-    <div class="col-md-4 col-sm-4 col-xs-12 hint FAQ">
-        <h3 >
-            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-            ASTUCE
-        </h3>
-
-        <p> Vous avez des questions complémentaires ?</p>
-        <p>contactez l'équipe proarti: </p>
-
-        <div class="list-group col-sm-offset-1 text-center">
-            {#<p>adresse</p>#}
-            {#<a href="http://maps.google.com/?q=7 Rue Bachelet, 75018 Paris" target="_blank" class="list-group-item">7 rue Bachelet 75018 Paris</a><br>#}
-            <p>Téléphone</p>
-            <a href="tel:+33652379309" class="list-group-item">06 52 37 93 09</a><br>
-            <p>Email</p>
-
-            <a href="mailto:contact@proarti.org" class="list-group-item">contact@proarti.org</a>
-        </div>
-    </div>
-
-
-</div>
-</div>
     <div class="row">
         <div class="parallax col-xs-12">
             <section class=" text-center">
                 <div class="container">
                     <h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>
-                    <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue">En savoir plus</a>
+                    <a href="https://www.proarti.fr/profile/collect/project/conditions" class="btn bigbtn-blue">En
+                        savoir plus</a>
                 </div>
             </section>
 
         </div>
     </div>
 
-<!-- end of container -->
+    <!-- end of container -->
 
 {% endblock body %}
+
