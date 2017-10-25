@@ -12,9 +12,11 @@
     <div class="container">
         <div class="row">
 
+            <h3>Tous les articles de {{ post.author}}</h3>
 
             <div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
                 {% for post in posts %}
+
                     <a class="reward-button" href="{{ path('article', { 'slug': post.slug }) }}">
                         <div class="lib-panel">
                             <div class="row box-shadow lib-card">
