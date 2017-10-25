@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<div class="row">
+    <div class="container">
+        <div class="row" style="margin-top: 5em">
+            <div class="col-md-12">
     <h1>Post creation</h1>
 
     {{ form_start(form) }}
@@ -13,4 +17,8 @@
             <a href="{{ path('post_index') }}">Back to the list</a>
         </li>
     </ul>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
