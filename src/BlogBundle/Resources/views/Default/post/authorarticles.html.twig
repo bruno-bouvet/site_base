@@ -1,0 +1,57 @@
+{% extends '@Blog/layout.html.twig' %}
+
+{% block body %}
+
+    {% stylesheets
+    '@BlogBundle/Resources/public/css/newsgrid.css'
+
+
+    filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+    <div class="container">
+        <div class="row">
+
+
+            <div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
+                {% for post in posts %}
+                    <a class="reward-button" href="{{ path('article', { 'slug': post.slug }) }}">
+                        <div class="lib-panel">
+                            <div class="row box-shadow lib-card">
+
+                                <div class="col-md-4">
+                                    <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
+                                </div>
+                                <div class="col-md-8 ">
+
+                                    <div class="lib-row lib-desc">
+                                        <div class="lib-row lib-header">
+                                            {{ post.title  |truncate(50, false, "  ...") }}
+                                            <div class="lib-header-seperator"></div>
+                                        </div>
+                                        <div class="lib-row lib-desc tags">
+                                            <p class="pull-left author">{{ post.author |upper }}</p>
+                                            <p id="category" class="pull-left">{{ post.tag |upper }}</p>
+                                            <p>{{ post.date |time_diff }}</p>
+
+                                        </div>
+                                        <div class="lib-row lib-desc">
+
+                                            <p>{{ post.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </a><!-- end reward-button -->
+                {% endfor %}
+            </div><!-- /. end col -->
+
+        </div>
+
+    </div>
+{% endblock body %}
