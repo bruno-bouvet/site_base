@@ -12,8 +12,8 @@
     <div class="container ">
         <div class="row">
             <div class="col-md-7 col-xs-12 article" style="background: white; margin-right: 1em">
-                <h1 style="background: #3378B5; color: #FFFFFF; padding: 1em;">{{ post.title }}</h1>
-                <a href="#">{{ post.author }}</a>
+                <h1>{{ post.title }}</h1>
+                <a class="authorlink" href="{{ path('author', { 'slug': post.slug }) }}">{{ post.author |upper }}</a>
                     <p><a href="#">{{ post.tag }} </a> {{ post.date |localizeddate('full', 'none') }} </p>
 
                 <p>{{ post.content |raw }}</p>

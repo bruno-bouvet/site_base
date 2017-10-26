@@ -30,7 +30,7 @@ filter='cssrewrite' %}
             {% for post in posts %}
 
                 <div class="media">
-                    <a href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}"> <img
+                    <a href="{{ path('article', { 'slug': post.slug }) }}"> <img
                                 class="d-flex mr-3 pull-left"
                                 src="http://lorempixel.com/850/850/?random=123"
                                 alt="Generic placeholder image">

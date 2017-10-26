@@ -156,9 +156,9 @@ header{float: left; width:100%}
 
 }
 
-/*.lib-desc a {*/
-    /*text-align: justify;*/
-/*}*/
+.lib-desc a {
+    text-align: justify;
+}
 
 
 .lib-panel {
@@ -208,12 +208,18 @@ header{float: left; width:100%}
     font-size: 13px;
 }
 
-.lib-panel .lib-row.lib-desc a {
+.lib-panel .lib-row.lib-desc a .reward-button{
     position: absolute;
     width: 100%;
     bottom: 10px;
     left: 20px;
 }
+
+.lib-panel .lib-row.lib-desc a .authorlink{
+    bottom: 10px;
+    left: 20px;
+}
+
 
 .box-shadow {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);

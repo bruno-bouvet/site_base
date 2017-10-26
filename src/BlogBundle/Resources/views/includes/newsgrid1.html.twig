@@ -6,7 +6,7 @@ filter='cssrewrite' %}
 {% endstylesheets %}
 <div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
     {% for post in posts %}
-        <a class="reward-button" href="{{ path('article', { 'id': post.id, 'slug': post.slug }) }}">
+        <a class="reward-button" href="{{ path('article', { 'slug': post.slug }) }}">
             <div class="lib-panel">
                 <div class="row box-shadow lib-card">
 
@@ -37,11 +37,8 @@ filter='cssrewrite' %}
                 </div>
             </div>
         </a><!-- end reward-button -->
+        {#{{ post.author }}#}
+        {#<a class="reward-button" href="{{ path('author', { 'slug': post.slug }) }}">{{ post.author }}</a>#}
     {% endfor %}
 </div><!-- /. end col -->
 
-
-<style>
-x
-
-</style>
