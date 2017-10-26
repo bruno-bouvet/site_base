@@ -24,15 +24,15 @@ class Post
 
     /**
      * @var string
-     *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
 
     /**
      * @var string
+     * @ORM\ManyToOne(targetEntity="BlogBundle\Entity\Author", inversedBy="posts")
+     * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
      *
-     * @ORM\Column(name="author", type="string", length=255)
      */
     private $author;
 
@@ -66,7 +66,7 @@ class Post
     private $tag;
 
     /**
-     * @Gedmo\Slug(fields={"title", "author"})
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(length=128, unique=true)
      *
      */
@@ -119,8 +119,6 @@ class Post
     {
         $this->author = $author;
 
-        $this->setSlug($this->author);
-
         return $this;
     }
 
@@ -139,7 +137,7 @@ class Post
      *
      * @param \DateTime $date
      *
-     * @return Post
+     * @return Post/null
      */
     public function setDate($date)
     {
@@ -151,7 +149,7 @@ class Post
     /**
      * Get date
      *
-     * @return \DateTime
+     * @return \DateTime/null
      */
     public function getDate()
     {

@@ -23,12 +23,13 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-//
-//    public function __construct()
-//    {
-//        parent::__construct();
-//        // your own logic
-//    }
+
+    /**
+     * One Cart has One Customer.
+     * @ORM\OneToOne(targetEntity="BlogBundle\Entity\Author", inversedBy="user")
+     * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
+     */
+    private $author;
 
     /**
      * @return mixed

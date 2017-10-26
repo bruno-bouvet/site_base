@@ -26,22 +26,15 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $name = $this->getUser();
-
+        $params = array();
         $em = $this->getDoctrine()->getManager();
 
-        $lastPost = $em
-            ->getRepository('BlogBundle:Post')->getLastEntity();
+        $params['name'] = $this->getUser();
+        $params['lastPost'] = $em->getRepository('BlogBundle:Post')->getLastEntity();
+        $params['tags'] = $em->getRepository(Post::class)->getPostTags();
+        $params['posts'] = $em->getRepository(Post::class)->findArticleByDate();
 
-        $tags = $em->getRepository(Post::class)->getPostTags();
-        $posts = $em->getRepository(Post::class)->findArticleByDate();
-
-        return $this->render('@Blog/Default/index.html.twig', array(
-            'name' => $name,
-            'posts' => $posts,
-            'lastPost' => $lastPost,
-            'tags' => $tags,
-        ));
+        return $this->render('@Blog/Default/index.html.twig', $params);
     }
 
     /**
@@ -67,34 +60,11 @@ class DefaultController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a post entity.
-     *
-     * @Route("/article/{slug}", name="article")
-     * @Method("GET")
-     * @param Post $post
-     * @return Response
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
-     */
-    public function showAction(Post $post): Response
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $lastPost = $em->getRepository('BlogBundle:Post')->getLastEntity();
-        $posts = $em->getRepository(Post::class)->findArticleByDate();
-
-        return $this->render('@Blog/Default/article.html.twig', array(
-            'post' => $post,
-            'lastPost' => $lastPost,
-            'posts' => $posts,
-        ));
-    }
 
     /**
      * Finds and displays a post entity.
      *
-     * @Route("/author/{slug}", name="author")
+     * @Route("/author/{slug}", name="author", defaults={"slug" = false}, requirements={"slug" = "[0-9a-zA-Z\/\-]*"})
      * @Method("GET")
      * @param Post $post
      * @return Response
@@ -106,11 +76,11 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $author = $post->getAuthor();
-        $posts = $em->getRepository(Post::class)->findArticleByAuthor($author);
+        $authors = $em->getRepository(Post::class)->findArticleByAuthor($author);
 
         return $this->render('@Blog/Default/post/authorarticles.html.twig', array(
             'post' => $post,
-            'posts' => $posts,
+            'authors' => $authors,
         ));
     }
 }

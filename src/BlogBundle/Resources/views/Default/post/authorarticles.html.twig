@@ -15,7 +15,7 @@
             <h3>Tous les articles de {{ post.author}}</h3>
 
             <div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
-                {% for post in posts %}
+                {% for author in authors %}
 
                     <a class="reward-button" href="{{ path('article', { 'slug': post.slug }) }}">
                         <div class="lib-panel">
@@ -28,18 +28,18 @@
 
                                     <div class="lib-row lib-desc">
                                         <div class="lib-row lib-header">
-                                            {{ post.title  |truncate(50, false, "  ...") }}
+                                            {{ author.title  |truncate(50, false, "  ...") }}
                                             <div class="lib-header-seperator"></div>
                                         </div>
                                         <div class="lib-row lib-desc tags">
-                                            <p class="pull-left author">{{ post.author |upper }}</p>
-                                            <p id="category" class="pull-left">{{ post.tag |upper }}</p>
-                                            <p>{{ post.date |time_diff }}</p>
+                                            <p class="pull-left author">{{ author.author |upper }}</p>
+                                            <p id="category" class="pull-left">{{ author.tag |upper }}</p>
+                                            <p>{{ author.date |time_diff }}</p>
 
                                         </div>
                                         <div class="lib-row lib-desc">
 
-                                            <p>{{ post.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
+                                            <p>{{ author.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
 
                                         </div>
 

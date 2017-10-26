@@ -21,14 +21,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 /**
  * Post controller.
  *
- * @Route("contact")
+ * @Route("/contact")
  */
 class ContactController extends Controller
 {
     /**
      * Creates a contact message and sends an email
      *
-     * @route("/contact")
+     * @route("/")
      * @Method({"GET", "POST"})
      * @param Request $request
      * @param \Swift_Mailer $mailer
