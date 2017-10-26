@@ -9,14 +9,11 @@
 namespace BlogBundle\Controller;
 
 
+use BlogBundle\Entity\Author;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use BlogBundle\Entity\Post;
-use DateInterval;
-use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -33,8 +30,6 @@ class ArticleController extends Controller
      * @Method("GET")
      * @param Post $post
      * @return Response
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
      */
     public function showAction(Post $post): Response
     {
@@ -43,10 +38,15 @@ class ArticleController extends Controller
         $lastPost = $em->getRepository('BlogBundle:Post')->getLastEntity();
         $posts = $em->getRepository(Post::class)->findArticleByDate();
 
+
+        $author = [];
+        $author = $em->getRepository(Author::class)->findBy($author);
+
         return $this->render('@Blog/Default/article.html.twig', array(
             'post' => $post,
             'lastPost' => $lastPost,
             'posts' => $posts,
+            'author' => $author,
         ));
     }
 

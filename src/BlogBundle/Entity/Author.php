@@ -14,6 +14,11 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Author
 {
+    public function __toString()
+    {
+        return $this->name;
+    }
+
     /**
      * @var int
      *
@@ -50,7 +55,8 @@ class Author
      */
     private $posts;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->posts = new ArrayCollection();
     }
 
@@ -114,5 +120,39 @@ class Author
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \BlogBundle\Entity\User
+     */
+    public function getUser()
+    {
+        $username = $this->getUser()->getUsername();
+        return $this->user;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        $username = $this->getUser()->getUsername();
+
+        return $this->$username();
+    }
+
+
+    /**
+     * Get posts
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPosts()
+    {
+        return $this->posts;
     }
 }

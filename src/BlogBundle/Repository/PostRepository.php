@@ -34,15 +34,7 @@ class PostRepository extends EntityRepository
         getResult();
     }
 
-    public function findArticleByAuthor($author) {
-        return $this->createQueryBuilder('p')->
-        orderBy('p.author', 'DESC')
-        ->where('p.author = :author')
-        ->setParameter('author', $author)
-        ->orderBy('p.date', 'DESC')
-        ->getQuery()->
-        getResult();
-    }
+
 
     public function getDatetimeByArticle() {
         return $this->createQueryBuilder('p')->

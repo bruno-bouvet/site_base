@@ -14,19 +14,20 @@ filter='cssrewrite' %}
                         <img class="img-responsive" src="http://lorempixel.com/850/850/?random=123">
                     </div>
                     <div class="col-md-8 ">
-
                         <div class="lib-row lib-desc">
                             <div class="lib-row lib-header">
                                 {{ post.title  |truncate(50, false, "  ...") }}
                                 <div class="lib-header-seperator"></div>
                             </div>
                             <div class="lib-row lib-desc tags">
-                                <p class="pull-left author">{{ post.author |upper }}</p><p id="category" class="pull-left">{{ post.tag |upper }}</p><p >{{ post.date |time_diff }}</p>
+                                <p class="pull-left author">{{ post.author |upper }}</p>
+                                <p id="category" class="pull-left">{{ post.tag |upper }}</p>
+                                <p>{{ post.date |time_diff }}</p>
 
                             </div>
                             <div class="lib-row lib-desc">
 
-                                <p>{{ post.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
+                                <p>{{ post.content|striptags |slice(0, 150)  |raw  }} lire plus ...</p> <br>
 
                             </div>
 

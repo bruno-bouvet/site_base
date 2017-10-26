@@ -10,4 +10,24 @@ namespace BlogBundle\Repository;
  */
 class AuthorRepository extends \Doctrine\ORM\EntityRepository
 {
+//    public function findstuff() {
+//        return $this->createQueryBuilder('a')->
+//            leftJoin('a.posts', 'p')
+//            ->where('a.posts')
+//            ->addSelect('p.')
+//            ->getQuery()->
+//            getResult();
+//    }
+//    public function findArticleByAuthor($author) {
+//        return $this->createQueryBuilder('a')->
+//        leftJoin('a.posts', 'p')->
+//        addSelect('p')->
+//        orderBy('p.author', 'DESC')
+//            ->where('p.author = :author')
+//            ->setParameter('author', $author)
+//            ->orderBy('p.date', 'DESC')
+//            ->getQuery()->
+//            getResult();
+//    }
+
 }

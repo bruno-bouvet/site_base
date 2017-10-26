@@ -137,7 +137,7 @@ class Post
      *
      * @param \DateTime $date
      *
-     * @return Post/null
+     * @return Post
      */
     public function setDate($date)
     {
@@ -149,7 +149,7 @@ class Post
     /**
      * Get date
      *
-     * @return \DateTime/null
+     * @return \DateTime
      */
     public function getDate()
     {

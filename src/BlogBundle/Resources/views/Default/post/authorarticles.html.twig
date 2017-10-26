@@ -12,12 +12,12 @@
     <div class="container">
         <div class="row">
 
-            <h3>Tous les articles de {{ post.author}}</h3>
+            {#<h3>Tous les articles de {{ author.name }}</h3>#}
 
             <div id="grid" class="col-lg-8  col-md-8 col-sm-12 col-xs-12 jasgrid pull-left">
-                {% for author in authors %}
+                {% for author in author %}
 
-                    <a class="reward-button" href="{{ path('article', { 'slug': post.slug }) }}">
+                    <a class="reward-button" href="{{ path('article', { 'slug': posts.slug }) }}">
                         <div class="lib-panel">
                             <div class="row box-shadow lib-card">
 
@@ -39,7 +39,8 @@
                                         </div>
                                         <div class="lib-row lib-desc">
 
-                                            <p>{{ author.content |striptags |raw |slice(0, 150) }} lire plus ...</p> <br>
+                                            <p>{{ author.content |striptags |slice(0, 150) |raw  }} lire plus ...</p>
+                                            <br>
 
                                         </div>
 

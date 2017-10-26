@@ -2,6 +2,7 @@
 
 namespace BlogBundle\Controller;
 
+use BlogBundle\Entity\Author;
 use BlogBundle\Entity\Post;
 use DateInterval;
 use DateTime;
@@ -61,26 +62,4 @@ class DefaultController extends Controller
     }
 
 
-    /**
-     * Finds and displays a post entity.
-     *
-     * @Route("/author/{slug}", name="author", defaults={"slug" = false}, requirements={"slug" = "[0-9a-zA-Z\/\-]*"})
-     * @Method("GET")
-     * @param Post $post
-     * @return Response
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
-     */
-    public function showAuthorAction(Post $post): Response
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $author = $post->getAuthor();
-        $authors = $em->getRepository(Post::class)->findArticleByAuthor($author);
-
-        return $this->render('@Blog/Default/post/authorarticles.html.twig', array(
-            'post' => $post,
-            'authors' => $authors,
-        ));
-    }
 }

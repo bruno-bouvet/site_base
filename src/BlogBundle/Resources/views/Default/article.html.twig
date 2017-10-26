@@ -13,33 +13,16 @@
         <div class="row">
             <div class="col-md-7 col-xs-12 article" style="background: white; margin-right: 1em">
                 <h1>{{ post.title }}</h1>
-                <a class="authorlink" href="{{ path('author', { 'slug': post.slug }) }}">{{ post.author |upper }}</a>
-                    <p><a href="#">{{ post.tag }} </a> {{ post.date |localizeddate('full', 'none') }} </p>
+                <a class="authorlink" href="{{ path('author', { 'slug': post.author }) }}">{{ post.author |upper }}</a>
+                <p><a href="#">{{ post.tag }} </a> {{ post.date |localizeddate('full', 'none') }} </p>
 
                 <p>{{ post.content |raw }}</p>
-                    <p>Partagez votre participation</p>
+                <p>Partagez votre participation</p>
                 <a class="twitter-share-button"
                    href="https://twitter.com/intent/tweet?text=Hello%20world"
                    data-size="large">
                     Tweet</a>
-                    {#<a class="twitter-share-button text-right"#}
-                       {#href="https://twitter.com/share"#}
-                       {#data-size="large"#}
-                       {#data-text="Je viens de participer à la campagne de "#}
-                       {#data-url="#"#}
-                            {#data-hashtags="example,demo"#}
-                       {#data-via="techsquids"#}
-                       {#data-related="twitterapi,twitter"#}
-                    {#>#}
-                        {#Tweet#}
-                    {#</a>#}
-                    {#<div class=" fb-like"#}
-                         {#data-href="https://www.proarti.fr/collect/project/{{ post.slug }}/0"#}
-                         {#data-layout="button"#}
-                         {#data-show-faces="true"#}
-                         {#data-size="large"#}
-                         {#data-share="true">#}
-                    {#</div>#}
+
             </div>
             {% include '@Blog/includes/sidebar-actus.html.twig' %}
 

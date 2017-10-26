@@ -2,6 +2,7 @@
 
 namespace BlogBundle\Controller;
 
+use BlogBundle\Entity\Author;
 use BlogBundle\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -11,6 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use BlogBundle\Form\PostType;
+use Symfony\Component\DependencyInjection\Container;
 
 /**
  * Post controller.
@@ -45,13 +47,21 @@ class PostController extends Controller
      * @Method({"GET", "POST"})
      * @param Request $request
      * @return RedirectResponse|Response
-     * @throws \LogicException
      */
     public function newAction(Request $request)
     {
         $post = new Post();
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
+
+        $test = $this->getUser();
+//        $suite = $test->getUsername;
+        dump($test);
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $username = $em->getRepository(Author::class)->findBy(array('user' => $username));
+//        dump($username);
+
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
