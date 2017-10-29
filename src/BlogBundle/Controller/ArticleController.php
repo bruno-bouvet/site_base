@@ -10,10 +10,12 @@ namespace BlogBundle\Controller;
 
 
 use BlogBundle\Entity\Author;
+use BlogBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use BlogBundle\Entity\Post;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -30,6 +32,8 @@ class ArticleController extends Controller
      * @Method("GET")
      * @param Post $post
      * @return Response
+     * @throws \InvalidArgumentException
+     * @throws \LogicException
      */
     public function showAction(Post $post): Response
     {
@@ -38,6 +42,10 @@ class ArticleController extends Controller
         $lastPost = $em->getRepository('BlogBundle:Post')->getLastEntity();
         $posts = $em->getRepository(Post::class)->findArticleByDate();
 
+
+
+        $test = $this->getUser();
+        dump($test);
 
         $author = [];
         $author = $em->getRepository(Author::class)->findBy($author);
