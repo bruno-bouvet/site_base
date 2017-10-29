@@ -91,26 +91,26 @@ class DefaultController extends Controller
         ));
     }
 
-    /**
-     * Finds and displays a post entity.
-     *
-     * @Route("/author/{slug}", name="author")
-     * @Method("GET")
-     * @param Post $post
-     * @return Response
-     * @throws \LogicException
-     * @throws \InvalidArgumentException
-     */
-    public function showAuthorAction(Post $post): Response
-    {
-        $em = $this->getDoctrine()->getManager();
-
-        $author = $post->getAuthor();
-        $posts = $em->getRepository(Post::class)->findArticleByAuthor($author);
-
-        return $this->render('@Blog/Default/post/authorarticles.html.twig', array(
-            'post' => $post,
-            'posts' => $posts,
-        ));
-    }
+//    /**
+//     * Finds and displays a post entity.
+//     *
+//     * @Route("/author/{slug}", name="author")
+//     * @Method("GET")
+//     * @param Post $post
+//     * @return Response
+//     * @throws \LogicException
+//     * @throws \InvalidArgumentException
+//     */
+//    public function showAuthorAction(Post $post): Response
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $author = $post->getAuthor();
+//        $posts = $em->getRepository(Post::class)->findArticleByAuthor($author);
+//
+//        return $this->render('@Blog/Default/post/authorarticles.html.twig', array(
+//            'post' => $post,
+//            'posts' => $posts,
+//        ));
+//    }
 }
