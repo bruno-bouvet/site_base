@@ -66,7 +66,7 @@ class Post
     private $tag;
 
     /**
-     * @Gedmo\Slug(fields={"title", "author"})
+     * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(length=128, unique=true)
      *
      */
@@ -118,9 +118,7 @@ class Post
     public function setAuthor($author)
     {
         $this->author = $author;
-
-        $this->setSlug($this->author);
-
+        
         return $this;
     }
 
