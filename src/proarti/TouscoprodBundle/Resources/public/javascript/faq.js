@@ -7,6 +7,27 @@ $(document).ready(function () {
         .on('hide.bs.collapse', function (a) {
             $(a.target).prev('.panel-heading').removeClass('active');
         });
+    $('#accordion, #bs-collapse2')
+        .on('show.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').addClass('active');
+        })
+        .on('hide.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').removeClass('active');
+        });
+    $('#accordion, #bs-collapse3')
+        .on('show.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').addClass('active');
+        })
+        .on('hide.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').removeClass('active');
+        });
+    $('#accordion, #bs-collapse4')
+        .on('show.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').addClass('active');
+        })
+        .on('hide.bs.collapse', function (a) {
+            $(a.target).prev('.panel-heading').removeClass('active');
+        });
 });
 
 // if other sections
