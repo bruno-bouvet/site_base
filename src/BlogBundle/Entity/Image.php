@@ -3,6 +3,8 @@
 namespace BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\ManyToOne;
 
 /**
  * Image
@@ -26,7 +28,16 @@ class Image
      *
      * @ORM\Column(name="url", type="string", length=255, unique=true)
      */
-    private $url;
+    private $image;
+
+    /**
+     * @var string
+     *
+     * @ManyToOne(targetEntity="BlogBundle\Entity\Post", inversedBy="images")
+     * @JoinColumn(name="image_id", referencedColumnName="id")
+     */
+    private $post;
+
 
 
     /**
@@ -40,27 +51,42 @@ class Image
     }
 
     /**
-     * Set url
-     *
-     * @param string $url
+     * @param string $image
      *
      * @return Image
      */
-    public function setUrl($url)
+    public function setImage(string $image): Image
     {
-        $this->url = $url;
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Get url
-     *
      * @return string
      */
-    public function getUrl()
+    public function getImage(): string
     {
-        return $this->url;
+        return $this->image;
+    }
+
+    /**
+     * @param string $post
+     * @return Image
+     */
+    public function setPost(string $post): Image
+    {
+        $this->post = $post;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPost(): string
+    {
+        return $this->post;
     }
 }
 

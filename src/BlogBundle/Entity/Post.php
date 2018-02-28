@@ -2,7 +2,9 @@
 
 namespace BlogBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\OneToMany;
 use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
@@ -13,6 +15,11 @@ use Gedmo\Mapping\Annotation as Gedmo;
  */
 class Post
 {
+
+    public function __construct() {
+        $this->image= new ArrayCollection();
+    }
+
     /**
      * @var int
      *
@@ -71,6 +78,13 @@ class Post
      *
      */
     private $slug;
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @OneToMany(targetEntity="BlogBundle\Entity\Image", mappedBy="post")
+     */
+    private $images;
 
     /**
      * Get id
@@ -240,6 +254,25 @@ class Post
     public function getSlug()
     {
         return $this->slug;
+    }
+
+    /**
+     * @param mixed $images
+     * @return Post
+     */
+    public function setImages($images)
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImages()
+    {
+        return $this->images;
     }
 
 }

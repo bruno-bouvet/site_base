@@ -47,6 +47,9 @@ a:active {
 .panel-group > .panel:first-child .panel-heading {
     border-radius: 4px 4px 0 0;
 }
+.panel-group > h4::after {
+    margin-bottom: 3em;
+}
 
 .panel-group .panel {
     border-radius: 0;

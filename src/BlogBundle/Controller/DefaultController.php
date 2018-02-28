@@ -21,6 +21,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/")
+     * @throws \Doctrine\ORM\NonUniqueResultException
      * @throws \LogicException
      * @throws \Exception
      */
@@ -46,6 +47,7 @@ class DefaultController extends Controller
 
     /**
      * @throws \LogicException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function sideBarAction()
     {
@@ -76,6 +78,7 @@ class DefaultController extends Controller
      * @return Response
      * @throws \LogicException
      * @throws \InvalidArgumentException
+     * @throws \Doctrine\ORM\NonUniqueResultException
      */
     public function showAction(Post $post): Response
     {

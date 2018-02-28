@@ -4,6 +4,7 @@ namespace BlogBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use BlogBundle\Entity\Post;
@@ -21,6 +22,7 @@ class PostType extends AbstractType
             ->add('author')
             ->add('date')
             ->add('content')
+            ->add('images', FileType::class)
 //            ->add('content', CKEditorType::class, array(
 //                'config' => array(
 //                    'uiColor' => '#ffffff',

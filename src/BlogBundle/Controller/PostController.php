@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use BlogBundle\Form\PostType;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Post controller.
@@ -54,6 +55,23 @@ class PostController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            // $file stores the uploaded PDF file
+            $file = $post->getImages();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid('', true)).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('image_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $post->setImages($fileName);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
             $em->flush();

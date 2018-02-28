@@ -3,11 +3,11 @@
 {% block body %}
 
     {% stylesheets
-    '@proartiTouscoprodBundle/Resources/public/css/explanation.css'
-    '@proartiTouscoprodBundle/Resources/public/css/global.css'
+        '@proartiTouscoprodBundle/Resources/public/css/explanation.css'
+        '@proartiTouscoprodBundle/Resources/public/css/global.css'
 
-    filter='cssrewrite' %}
-    <link rel="stylesheet" href="{{ asset_url }}"/>
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
     {% endstylesheets %}
 
     <div id="EXPLANATION" class="container">
@@ -16,14 +16,16 @@
             <div class="col-md-8 col-sm-8 col-xs-12">
 
                 <h3>touscoprod évolue et rejoint proarti</h3>
-<div class="row">
-                <div class="col-md-12" style="border: 1px solid black; margin-bottom: 2em">
-                    <img class="img-responsive" style="max-width: 70%;padding-top: 2em; padding-bottom: 2em; display: block;  margin: 0 auto;" src="{{ asset('bundles/proartitouscoprod/image/test-logo_tcbp.png') }}">
+                <div class="row">
+                    <div class="col-md-12" style="border: 1px solid black; margin-bottom: 2em">
+                        <img class="img-responsive"
+                             style="max-width: 70%;padding-top: 2em; padding-bottom: 2em; display: block;  margin: 0 auto;"
+                             src="{{ asset('bundles/proartitouscoprod/image/test-logo_tcbp.png') }}">
 
+
+                    </div>
 
                 </div>
-
-</div>
                 <div class="text-black">
                     <div class="explenation-block-blue">
                         <p>Depuis la création de la plateforme Touscoprod en 2009, vous avez été plus de 50 000 à
@@ -96,8 +98,10 @@
                             nombreux porteurs de projets.
                         </p>
                         <p>Cette spécialisation dans le domaine de la création nous permet aussi de mieux nous adapter
-                            aux enjeux et aux spécificités de chaque projet. <b>Ainsi, chez nous, pas de « tout ou rien »
-                                sur les collectes !</b> Différents paliers de collecte sont fixés avec chaque porteur de
+                            aux enjeux et aux spécificités de chaque projet. <b>Ainsi, chez nous, pas de « tout ou
+                                rien »
+                                sur les collectes !</b> Différents paliers de collecte sont fixés avec chaque porteur
+                            de
                             projets pour limiter les risques d’échec.</p>
 
                     </div>
@@ -164,17 +168,17 @@
                 </div>
             </div>
             {#<div class="row">#}
-                {#<div class="parallax col-xs-12">#}
-                    {#<section class=" text-center">#}
-                        {#<div class="container">#}
-                            {#<h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>#}
-                            {#<a href="https://www.proarti.fr/profile/collect/project/conditions"#}
-                               {#class="btn bigbtn-blue ">Créer votre projet#}
-                            {#</a>#}
-                        {#</div>#}
-                    {#</section>#}
+            {#<div class="parallax col-xs-12">#}
+            {#<section class=" text-center">#}
+            {#<div class="container">#}
+            {#<h2 class="jumbotron-heading ">Lancez votre projet sur proarti</h2>#}
+            {#<a href="https://www.proarti.fr/profile/collect/project/conditions"#}
+            {#class="btn bigbtn-blue ">Créer votre projet#}
+            {#</a>#}
+            {#</div>#}
+            {#</section>#}
 
-                {#</div>#}
+            {#</div>#}
             {#</div>#}
 
         </div>
@@ -182,25 +186,25 @@
     </div>
 
     {#<script>#}
-        {#//        parallax effect#}
-        {#$('#indexparallax').css("background", "url({{ asset('bundles/proartitouscoprod/image/launch.png') }}) no-repeat fixed center");#}
-        {#$('#indexparallax').css("background-size", "cover");#}
+    {#//        parallax effect#}
+    {#$('#indexparallax').css("background", "url({{ asset('bundles/proartitouscoprod/image/launch.png') }}) no-repeat fixed center");#}
+    {#$('#indexparallax').css("background-size", "cover");#}
 
 
-        {#//        shuffle project li - to delete when on twig#}
-        {#$(document).ready(function () {#}
-            {#var parent = $("#shuffle");#}
-            {#var divs = parent.children();#}
-            {#while (divs.length) {#}
-                {#parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);#}
-            {#}#}
-            {#//        limit the number of project item to 4#}
+    {#//        shuffle project li - to delete when on twig#}
+    {#$(document).ready(function () {#}
+    {#var parent = $("#shuffle");#}
+    {#var divs = parent.children();#}
+    {#while (divs.length) {#}
+    {#parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);#}
+    {#}#}
+    {#//        limit the number of project item to 4#}
 
-            {#$(".scene:gt(3)").css("display", "none");#}
+    {#$(".scene:gt(3)").css("display", "none");#}
 
-        {#});#}
+    {#});#}
 
 
     {#</script>#}
-    
+
 {% endblock body %}
